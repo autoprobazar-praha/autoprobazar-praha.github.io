@@ -102,6 +102,7 @@ ul { list-style:none; }
 .nav-links { display:flex; gap:32px; flex:1; }
 .nav-links a { font-family:var(--font-body); font-size:16px; font-weight:500; color:var(--gray-lt); transition:color 0.2s; }
 .nav-links a:hover { color:var(--white); }
+.nav-links a.active { color:var(--violet); }
 .nav-right { margin-left:auto; display:flex; align-items:center; gap:16px; }
 .header-controls { display:flex; align-items:center; gap:10px; }
 .nav-socials { display:flex; align-items:center; gap:2px; }
@@ -171,16 +172,13 @@ ul { list-style:none; }
 /* NAVBAR mobile */
 .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; }
 .burger span { display:block; width:22px; height:2px; background:var(--white); border-radius:2px; transition:transform 0.25s, opacity 0.25s; }
-.mobile-menu-backdrop { position:fixed; inset:0; top:70px; background:rgba(10,7,14,0.82); z-index:95; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
-.mobile-menu-backdrop.open { opacity:1; pointer-events:auto; }
-.mobile-menu { position:fixed; left:0; right:0; bottom:0; min-height:52vh; background:#141118; border-top:1px solid rgba(168,85,247,0.15); border-radius:20px 20px 0 0; box-shadow:0 -8px 24px rgba(0,0,0,0.4); z-index:110; padding:14px 0 max(24px, env(safe-area-inset-bottom)); display:flex; flex-direction:column; gap:0; transform:translateY(100%); transition:transform 0.35s cubic-bezier(0.16,1,0.3,1); touch-action:none; }
-.mobile-menu.open { transform:translateY(0); touch-action:pan-y; }
-.mobile-menu-handle { width:36px; height:4px; background:rgba(255,255,255,0.15); border-radius:2px; margin:0 auto 14px; flex-shrink:0; }
-.mobile-menu-links { display:flex; flex-direction:column; justify-content:space-evenly; flex:1; }
-.mobile-menu a { display:flex; align-items:center; padding:22px 24px; font-size:18px; font-weight:500; color:var(--gray-lt); letter-spacing:0.05em; text-transform:uppercase; border-bottom:1px solid rgba(255,255,255,0.06); text-align:left; transition:color 0.2s; }
+.mobile-menu { position:fixed; inset:0; background:rgba(10,7,14,0.94); z-index:110; display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.3s ease; }
+.mobile-menu.open { opacity:1; pointer-events:auto; }
+.mobile-menu-links { display:flex; flex-direction:column; align-items:center; gap:30px; }
+.mobile-menu a { font-family:var(--font-body); font-size:20px; font-weight:500; color:var(--gray-lt); letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; }
 .mobile-menu a:hover { color:var(--white); }
 .mobile-menu a.active { color:var(--violet); }
-.mobile-menu a:last-child { border-bottom:none; }
+.mobile-menu-logo { margin-top:56px; font-family:var(--font-head); font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); opacity:0.5; }
 @media (max-width:768px) {
   .nav-links { display:none; }
   .burger { display:flex; }
@@ -509,8 +507,7 @@ ul { list-style:none; }
 .car-info-panel { display:flex; flex-direction:column; gap:20px; }
 .car-info-eyebrow { font-size:16px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--violet); }
 .car-info-title { font-family:var(--font-head); font-size:clamp(28px,3.2vw,40px); font-weight:700; line-height:1.15; }
-.title-break { display:none; }
-@media (max-width:900px) { .title-break { display:inline; } }
+
 .car-info-price { font-family:var(--font-head); font-size:32px; font-weight:800; color:var(--white); }
 .car-info-price .old-price { font-family:var(--font-body); font-size:16px; font-weight:400; color:var(--gray); text-decoration:line-through; margin-left:10px; }
 .car-info-price .price-note { font-family:var(--font-body); font-size:16px; font-weight:400; color:var(--gray); }
@@ -596,7 +593,7 @@ ul { list-style:none; }
     <a href="index.html" class="nav-logo"><b>Auto</b><span>ProBazar</span></a>
     <ul class="nav-links">
       <li><a href="index.html" data-ua="ГОЛОВНА" data-cz="DOMŮ">DOMŮ</a></li>
-      <li><a href="katalog.html" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a></li>
+      <li><a href="katalog.html" class="active" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a></li>
       <li><a href="index.html#odtah" data-ua="ЕВАКУАТОР" data-cz="ODTAH">ODTAH</a></li>
       <li><a href="index.html#onas" data-ua="ПРО НАС" data-cz="O NÁS">O NÁS</a></li>
       <li><a href="index.html#kontakt-form" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a></li>
@@ -631,9 +628,7 @@ ul { list-style:none; }
     </div>
   </div>
 </nav>
-<div class="mobile-menu-backdrop" id="mobileMenuBackdrop" onclick="toggleMenu()"></div>
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-handle"></div>
+<div class="mobile-menu" id="mobileMenu" onclick="if(event.target===this) toggleMenu()">
 <div class="mobile-menu-links">
   <a href="index.html" onclick="toggleMenu()" data-ua="ГОЛОВНА" data-cz="DOMŮ">DOMŮ</a>
   <a href="katalog.html" class="active" onclick="toggleMenu()" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a>
@@ -641,6 +636,7 @@ ul { list-style:none; }
   <a href="index.html#onas" onclick="toggleMenu()" data-ua="ПРО НАС" data-cz="O NÁS">O NÁS</a>
   <a href="index.html#kontakt-form" onclick="toggleMenu()" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a>
 </div>
+<div class="mobile-menu-logo">Auto<span style="color:var(--violet)">ProBazar</span></div>
 </div>
 
 <section class="breadcrumb"><div class="container"><a href="katalog.html" class="reveal" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div></section>
@@ -663,7 +659,7 @@ ul { list-style:none; }
   <img id="lightboxImg" src="" alt="">
 </div>    <div class="car-info-panel">
       <div class="car-info-eyebrow reveal">Škoda</div>
-      <h1 class="car-info-title reveal reveal-delay-1">Superb III Combi<br class="title-break"><span style="color:var(--violet)">Laurin & Klement 2.0 TDI DSG</span></h1>
+      <h1 class="car-info-title reveal reveal-delay-1">Superb III Combi <br class="title-break"><span style="color:var(--violet)">Laurin & Klement 2.0 TDI DSG</span></h1>
       <div class="car-info-price reveal reveal-delay-2">350 000 Kč</div>
       <div class="car-quick-specs reveal reveal-delay-3"><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span data-ua="2016" data-cz="2016">2016</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15M4 21h10M18 8l2 2v6a1.5 1.5 0 0 1-3 0v-2h-2"/></svg><span data-ua="Дизель" data-cz="Diesel">Diesel</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg><span data-ua="DSG Automatic, 6-ступенева" data-cz="DSG Automat, 6stupňový">DSG Automat, 6stupňový</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg><span data-ua="140 кВт (190 к.с.)" data-cz="140 kW (190 k)">140 kW (190 k)</span></div></div>
       <div class="car-cta-row reveal reveal-delay-4">
@@ -847,38 +843,13 @@ function shiftLightbox(dir) {
 <script>
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
-  const backdrop = document.getElementById('mobileMenuBackdrop');
   const burger = document.querySelector('.burger');
   const isOpen = menu.classList.toggle('open');
-  if (backdrop) backdrop.classList.toggle('open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
   burger.innerHTML = isOpen
     ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
     : '<span></span><span></span><span></span>';
 }
-(function() {
-  const menu = document.getElementById('mobileMenu');
-  if (!menu) return;
-  let startY = 0, currentY = 0, dragging = false;
-  menu.addEventListener('touchstart', e => {
-    startY = e.touches[0].clientY;
-    dragging = true;
-    menu.style.transition = 'none';
-  }, { passive: true });
-  menu.addEventListener('touchmove', e => {
-    if (!dragging) return;
-    currentY = Math.max(0, e.touches[0].clientY - startY);
-    menu.style.transform = 'translateY(' + currentY + 'px)';
-  }, { passive: true });
-  menu.addEventListener('touchend', () => {
-    if (!dragging) return;
-    dragging = false;
-    menu.style.transition = '';
-    menu.style.transform = '';
-    if (currentY > 80) toggleMenu();
-    currentY = 0;
-  });
-})();
 const FLAG_SVG = {
   cz: '<svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#fff"/><rect y="12" width="24" height="12" fill="#d7141a"/><path d="M0 0L12 12L0 24Z" fill="#11457e"/></svg>',
   ua: '<svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#0057b7"/><rect y="12" width="24" height="12" fill="#ffd700"/></svg>'
