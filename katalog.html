@@ -105,6 +105,17 @@ ul { list-style:none; }
 .nav-right { margin-left:auto; display:flex; align-items:center; gap:16px; }
 .header-controls { display:flex; align-items:center; gap:10px; }
 .nav-socials { display:flex; align-items:center; gap:2px; }
+.lang-switch { position:relative; }
+.lang-current-btn { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); cursor:pointer; padding:0; transition:border-color 0.2s, background 0.2s; }
+.lang-current-btn:hover { border-color:rgba(168,85,247,0.4); background:rgba(168,85,247,0.14); }
+.lang-current-btn .flag { width:20px; height:20px; }
+.lang-menu { position:absolute; top:calc(100% + 10px); right:0; background:rgba(15,12,20,0.98); border:1px solid var(--border); border-radius:12px; box-shadow:0 16px 32px rgba(0,0,0,0.45); padding:6px; min-width:168px; display:none; flex-direction:column; gap:2px; z-index:200; }
+.lang-menu.open { display:flex; }
+.lang-option { display:flex; align-items:center; gap:10px; padding:10px 11px; border-radius:8px; background:none; border:none; cursor:pointer; color:var(--gray-lt); font-family:var(--font-body); font-size:14px; font-weight:500; text-align:left; transition:background 0.15s, color 0.15s; }
+.lang-option:hover { background:rgba(168,85,247,0.14); color:var(--white); }
+.lang-option .flag { width:22px; height:22px; flex-shrink:0; }
+.flag { display:inline-block; border-radius:50%; overflow:hidden; }
+.flag svg { width:100%; height:100%; display:block; }
 .nav-social-btn { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; color:var(--gray-lt); transition:color 0.2s, background 0.2s, border-color 0.2s; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); cursor:pointer; text-decoration:none; }
 .nav-social-btn:hover { color:var(--white); background:rgba(168,85,247,0.14); border-color:rgba(168,85,247,0.4); }
 .nav-social-btn svg { width:16px; height:16px; }
@@ -201,10 +212,12 @@ ul { list-style:none; }
 .car-specs { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
 .car-spec { font-size:16px; color:var(--gray); display:flex; align-items:center; gap:4px; }
 .car-spec::before { content:''; width:3px; height:3px; border-radius:50%; background:var(--purple); display:block; }
-.car-price { font-family:var(--font-head); font-size:24px; font-weight:800; color:var(--white); margin-bottom:14px; }
+.car-price-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-right:5px; }
+.car-price { font-family:var(--font-head); font-size:24px; font-weight:800; color:var(--white); display:flex; align-items:baseline; gap:6px; }
 .car-price span { font-size:16px; color:var(--gray); font-family:var(--font-body); font-weight:400; }
-.car-btn { display:flex; align-items:center; justify-content:center; width:100%; padding:11px; background:transparent; border:1.5px solid rgba(122,90,158,0.55); border-radius:var(--radius); color:var(--gray-lt); font-size:20px; font-weight:600; text-align:center; cursor:pointer; transition:all 0.2s; }
-.car-btn:hover { background:var(--violet-dim); color:var(--white); border-color:var(--violet); }
+.car-more-arrow { color:var(--gray-lt); font-size:26px; line-height:1; display:inline-flex; flex-shrink:0; transition:color 0.2s; animation:carArrowPulse 1.6s ease-in-out infinite; }
+.car-card:hover .car-more-arrow { color:var(--white); }
+@keyframes carArrowPulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.55; transform:scale(0.85); } }
 .cars-cta { text-align:left; margin-top:16px; }
 .cars-cta a { display:inline-block; }
 @media (max-width:768px) { .cars-cta { margin-top:16px; } }
@@ -572,24 +585,25 @@ ul { list-style:none; }
     <div class="nav-right">
       <div class="header-controls">
         <div class="nav-socials">
-          <a href="https://www.instagram.com/klubey_" target="_blank" class="nav-social-btn" aria-label="Instagram" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@autoprobazar" target="_blank" class="nav-social-btn" aria-label="TikTok" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:16px;height:16px;"><path d="M16.6 5.1c-.9-.8-1.4-2-1.4-3.1h-3v13.6c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1v-3.1c-.3 0-.5-.1-.8-.1-3.1 0-5.6 2.5-5.6 5.6s2.5 5.6 5.6 5.6 5.6-2.5 5.6-5.6V9.2c1.2.9 2.6 1.4 4.1 1.4V7.6c-1.1 0-2.1-.5-2.8-1.5z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/share/1BuM8MwdeT/?mibextid=wwXIfr" target="_blank" class="nav-social-btn" aria-label="Facebook" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 12.06C22 6.53 17.52 2.04 12 2.04S2 6.53 2 12.06c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.89h-2.34v6.99C18.34 21.19 22 17.05 22 12.06z"/></svg>
-          </a>
           <a href="#" onclick="openContactPopup(event)" class="nav-social-btn" aria-label="Zavolat">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 10.8c1.4 2.7 3.7 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1.1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1v3.6c0 .6-.4 1-1 1C10.6 21.1 3 13.5 3 4.4c0-.6.4-1 1-1H7.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1.1L6.6 10.8z"/></svg>
           </a>
         </div>
         <div class="ctrl-divider"></div>
-        <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang('cz')">CZ</button>
-          <span class="lang-sep">/</span>
-          <button class="lang-btn" onclick="setLang('ua')">UA</button>
+        <div class="lang-switch">
+          <button class="lang-current-btn" onclick="toggleLangMenu(event)" aria-label="Vybrat jazyk / Обрати мову">
+            <span class="flag flag-cz" id="langCurrentFlag"><svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#fff"/><rect y="12" width="24" height="12" fill="#d7141a"/><path d="M0 0L12 12L0 24Z" fill="#11457e"/></svg></span>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <button class="lang-option" onclick="setLang('cz')">
+              <span class="flag flag-cz"><svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#fff"/><rect y="12" width="24" height="12" fill="#d7141a"/><path d="M0 0L12 12L0 24Z" fill="#11457e"/></svg></span>
+              <span>Čeština</span>
+            </button>
+            <button class="lang-option" onclick="setLang('ua')">
+              <span class="flag flag-ua"><svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#0057b7"/><rect y="12" width="24" height="12" fill="#ffd700"/></svg></span>
+              <span>Українська</span>
+            </button>
+          </div>
         </div>
       </div>
       <button class="burger" onclick="toggleMenu()" aria-label="Menu">
@@ -620,10 +634,9 @@ ul { list-style:none; }
           <div class="car-make">Škoda</div>
           <div class="car-model">Superb III Combi</div>
           <div class="car-specs"><span class="car-spec" data-ua="2020 · 207 000 км · Дизель" data-cz="2020 · 207 000 km · Diesel">2020 · 207 000 km · Diesel</span></div>
-          <div class="car-price"><span data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
-      <a href="auto-1.html" class="car-btn" data-ua="→" data-cz="→">→</a>
     </div>
     <div class="car-card reveal reveal-delay-2">
       <a href="auto-2.html" class="car-link">
@@ -632,10 +645,9 @@ ul { list-style:none; }
           <div class="car-make">Volkswagen</div>
           <div class="car-model">Passat B8 Variant</div>
           <div class="car-specs"><span class="car-spec" data-ua="2019 · 220 000 км · Дизель" data-cz="2019 · 220 000 km · Diesel">2019 · 220 000 km · Diesel</span></div>
-          <div class="car-price"><span data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
-      <a href="auto-2.html" class="car-btn" data-ua="→" data-cz="→">→</a>
     </div>
     <div class="car-card reveal reveal-delay-3">
       <a href="auto-3.html" class="car-link">
@@ -644,10 +656,9 @@ ul { list-style:none; }
           <div class="car-make">Volkswagen</div>
           <div class="car-model">Caddy Maxi</div>
           <div class="car-specs"><span class="car-spec" data-ua="2015 · 270 000 км · Дизель" data-cz="2015 · 270 000 km · Diesel">2015 · 270 000 km · Diesel</span></div>
-          <div class="car-price"><span data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
-      <a href="auto-3.html" class="car-btn" data-ua="→" data-cz="→">→</a>
     </div>
     <div class="car-card reveal reveal-delay-1">
       <a href="auto-4.html" class="car-link">
@@ -656,10 +667,9 @@ ul { list-style:none; }
           <div class="car-make">Škoda</div>
           <div class="car-model">Octavia III Combi</div>
           <div class="car-specs"><span class="car-spec" data-ua="2013 · 239 000 км · Дизель" data-cz="2013 · 239 000 km · Diesel">2013 · 239 000 km · Diesel</span></div>
-          <div class="car-price"><span data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
-      <a href="auto-4.html" class="car-btn" data-ua="→" data-cz="→">→</a>
     </div>
     <div class="car-card reveal reveal-delay-2">
       <a href="auto-5.html" class="car-link">
@@ -668,10 +678,9 @@ ul { list-style:none; }
           <div class="car-make">Škoda</div>
           <div class="car-model">Superb</div>
           <div class="car-specs"><span class="car-spec" data-ua="2016 · Дизель" data-cz="2016 · Diesel">2016 · Diesel</span></div>
-          <div class="car-price">350 000 Kč</div>
+          <div class="car-price-row"><div class="car-price">350 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
-      <a href="auto-5.html" class="car-btn" data-ua="→" data-cz="→">→</a>
     </div>
     <div class="car-card reveal reveal-delay-3">
       <a href="auto-6.html" class="car-link">
@@ -680,10 +689,9 @@ ul { list-style:none; }
           <div class="car-make">BMW</div>
           <div class="car-model">X5</div>
           <div class="car-specs"><span class="car-spec" data-ua="2006 · Дизель" data-cz="2006 · Diesel">2006 · Diesel</span></div>
-          <div class="car-price">110 000 Kč</div>
+          <div class="car-price-row"><div class="car-price">110 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
-      <a href="auto-6.html" class="car-btn" data-ua="→" data-cz="→">→</a>
     </div></div>
 </div></section>
 
@@ -728,11 +736,6 @@ ul { list-style:none; }
 <div class="footer-legal">
   <div class="container footer-bottom">
     <span class="footer-copy">© 2025 AUTOBAZAR Praha</span>
-    <div class="footer-socials">
-      <a href="https://instagram.com/klubey_">Instagram @klubey_</a>
-      <a href="https://www.tiktok.com/@autoprobazar" target="_blank" rel="noopener noreferrer">TikTok @autoprobazar</a>
-      <a href="https://www.facebook.com/share/1BuM8MwdeT/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook OdtahPro</a>
-    </div>
     <div class="footer-legal-links">
       <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
       <a href="cookies.html">Cookies</a>
@@ -751,16 +754,35 @@ function toggleMenu() {
     ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
     : '<span></span><span></span><span></span>';
 }
+const FLAG_SVG = {
+  cz: '<svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#fff"/><rect y="12" width="24" height="12" fill="#d7141a"/><path d="M0 0L12 12L0 24Z" fill="#11457e"/></svg>',
+  ua: '<svg viewBox="0 0 24 24"><rect width="24" height="12" fill="#0057b7"/><rect y="12" width="24" height="12" fill="#ffd700"/></svg>'
+};
 function setLang(lang) {
   localStorage.setItem('lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang);
-  });
+  const flagEl = document.getElementById('langCurrentFlag');
+  if (flagEl && FLAG_SVG[lang]) {
+    flagEl.className = 'flag flag-' + lang;
+    flagEl.innerHTML = FLAG_SVG[lang];
+  }
   document.querySelectorAll('[data-ua],[data-cz]').forEach(el => {
     const val = el.getAttribute('data-' + lang);
     if (val !== null) el.innerHTML = val;
   });
+  const menu = document.getElementById('langMenu');
+  if (menu) menu.classList.remove('open');
 }
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  const menu = document.getElementById('langMenu');
+  if (menu) menu.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('langMenu');
+  if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !e.target.closest('.lang-current-btn')) {
+    menu.classList.remove('open');
+  }
+});
 document.addEventListener('DOMContentLoaded', function() {
   const saved = localStorage.getItem('lang') || 'cz';
   setLang(saved);
