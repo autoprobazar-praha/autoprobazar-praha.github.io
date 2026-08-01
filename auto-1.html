@@ -513,6 +513,7 @@ ul { list-style:none; }
 
 /* ===== CAR DETAIL: SECTIONS ===== */
 .car-section { padding:0 0 56px; }
+.car-section--last { padding-bottom:32px; }
 .car-section h2 { font-family:var(--font-head); font-size:clamp(22px,2.4vw,30px); font-weight:700; margin-bottom:20px; }
 .car-desc-text { font-size:18px; color:var(--gray-lt); line-height:1.9; max-width:900px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; }
 
@@ -551,6 +552,7 @@ ul { list-style:none; }
   .gallery-arrow { width:36px; height:36px; font-size:16px; }
   .catalog-grid { gap:20px 16px; padding-bottom:56px; }
   .car-section { padding-bottom:40px; }
+  .car-section--last { padding-bottom:20px; }
   .car-bottom-cta { padding:28px 20px; }
   .car-desc-text { padding:20px; font-size:17px; }
   .car-bottom-cta-btns { flex-shrink:1; width:100%; }
@@ -628,11 +630,11 @@ ul { list-style:none; }
   <a href="index.html#kontakt-form" onclick="toggleMenu()" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a>
 </div>
 
-<section class="breadcrumb"><div class="container"><a href="katalog.html" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div></section>
+<section class="breadcrumb"><div class="container"><a href="katalog.html" class="reveal" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div></section>
 
 <section class="car-detail-top"><div class="container">
   <div class="car-gallery-wrap">
-    <div class="reveal">
+    <div class="reveal reveal-delay-2">
       <div class="car-gallery-main">
         <img id="mainPhoto" src="images/car1-1.jpg" width="576" height="768" alt="Škoda Superb III Combi 2.0 TDI DSG">
         <div class="gallery-arrow prev" onclick="shiftPhoto(-1)">&#8249;</div><div class="gallery-arrow next" onclick="shiftPhoto(1)">&#8250;</div><div class="gallery-counter" id="galleryCounter">1 / 11</div>
@@ -680,7 +682,7 @@ ul { list-style:none; }
   <div class="condition-list reveal reveal-delay-1"><div class="condition-item"><span data-ua="Пробіг — 207 000 км" data-cz="Nájezd — 207 000 km">Nájezd — 207 000 km</span></div><div class="condition-item"><span data-ua="Комплект ременя ГРМ замінений на 200 000 км" data-cz="Sada rozvodového řemene vyměněna při 200 000 km">Sada rozvodového řemene vyměněna při 200 000 km</span></div><div class="condition-item"><span data-ua="Передні та задні сидіння в ідеальному стані, без потертостей і дефектів" data-cz="Přední i zadní sedadla v perfektním stavu, bez opotřebení a vad">Přední i zadní sedadla v perfektním stavu, bez opotřebení a vad</span></div><div class="condition-item"><span data-ua="Автомобіль технічно повністю справний" data-cz="Vozidlo je technicky zcela v pořádku">Vozidlo je technicky zcela v pořádku</span></div><div class="condition-item"><span data-ua="Кузов у хорошому стані" data-cz="Karoserie v dobrém stavu">Karoserie v dobrém stavu</span></div><div class="condition-item"><span data-ua="Готовий до експлуатації без додаткових вкладень" data-cz="Připraveno k provozu bez dalších investic">Připraveno k provozu bez dalších investic</span></div></div>
 </div></section>
 
-<section class="car-section reveal"><div class="container">
+<section class="car-section car-section--last reveal"><div class="container">
   <div class="car-bottom-cta">
     <div>
       <h3><span data-ua="Зацікавило це авто?" data-cz="Máte zájem o toto auto?">Máte zájem o toto auto?</span></h3>
@@ -690,7 +692,7 @@ ul { list-style:none; }
       <a href="#" onclick="openContactPopup(event)" class="btn btn-primary" data-ua="Зв'язатися" data-cz="Kontaktovat">Kontaktovat</a>
     </div>
   </div>
-  <div class="back-link-wrap"><a href="katalog.html" class="back-link" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div>
+  <div class="back-link-wrap reveal"><a href="katalog.html" class="back-link" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div>
 </div></section>
 
 <footer class="footer" id="kontakt">
