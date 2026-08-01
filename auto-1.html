@@ -484,6 +484,14 @@ ul { list-style:none; }
 .gallery-arrow.prev { left:14px; }
 .gallery-arrow.next { right:14px; }
 .gallery-counter { position:absolute; bottom:12px; right:14px; background:rgba(10,10,15,0.65); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:4px 12px; font-size:16px; color:var(--gray-lt); z-index:5; }
+.car-gallery-main img { cursor:zoom-in; }
+.photo-lightbox { position:fixed; inset:0; background:rgba(6,4,10,0.97); z-index:2000; display:none; align-items:center; justify-content:center; touch-action:pan-y; }
+.photo-lightbox.open { display:flex; }
+.photo-lightbox img { max-width:92vw; max-height:88vh; object-fit:contain; border-radius:8px; user-select:none; -webkit-user-drag:none; }
+.lightbox-close { position:absolute; top:18px; right:18px; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#fff; font-size:22px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:2001; }
+.lightbox-close:hover { background:rgba(123,53,193,0.55); border-color:var(--violet); }
+.photo-lightbox .gallery-counter { top:18px; left:18px; bottom:auto; right:auto; }
+@media (max-width:768px) { .photo-lightbox .gallery-arrow { display:none; } }
 .car-gallery-thumbs { display:flex; gap:10px; margin-top:12px; overflow-x:auto; scrollbar-width:none; padding-bottom:4px; }
 .car-gallery-thumbs::-webkit-scrollbar { display:none; }
 .car-gallery-thumbs img { width:72px; height:54px; object-fit:cover; border-radius:6px; flex-shrink:0; cursor:pointer; border:1.5px solid transparent; opacity:0.6; transition:opacity 0.2s, border-color 0.2s; }
@@ -515,14 +523,14 @@ ul { list-style:none; }
 .feature-tag { display:flex; align-items:center; gap:6px; font-size:16px; color:var(--gray-lt); background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:20px; padding:7px 14px; }
 .feature-tag::before { content:'✓'; color:var(--violet); font-weight:700; }
 
-.specs-table { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; max-width:900px; }
+.specs-table { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; max-width:900px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:var(--radius); padding:8px 32px; }
 @media (max-width:640px) { .specs-table { grid-template-columns:1fr; } }
 .specs-row { display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--border); font-size:16px; }
 .specs-row dt { color:var(--gray); }
 .specs-row dd { color:var(--white); font-weight:600; text-align:right; }
 
 .condition-list { display:flex; flex-direction:column; gap:10px; max-width:900px; }
-.condition-item { display:flex; align-items:flex-start; gap:10px; font-size:16px; color:var(--gray-lt); line-height:1.6; }
+.condition-item { display:flex; align-items:flex-start; gap:10px; font-size:16px; color:var(--gray-lt); line-height:1.6; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:16px; padding:14px 18px; }
 .condition-item::before { content:'✓'; color:var(--violet); font-weight:700; flex-shrink:0; }
 
 .car-bottom-cta { background:var(--bg2); border-radius:var(--radius); padding:40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:20px; max-width:900px; }
@@ -631,6 +639,14 @@ ul { list-style:none; }
       </div>
       <div class="car-gallery-thumbs"><img loading="lazy" src="images/car1-1.jpg" width="576" height="768" class="active" onclick="setMainPhoto(0, this)"><img loading="lazy" src="images/car1-2.jpg" width="576" height="768" class="" onclick="setMainPhoto(1, this)"><img loading="lazy" src="images/car1-3.jpg" width="576" height="768" class="" onclick="setMainPhoto(2, this)"><img loading="lazy" src="images/car1-4.jpg" width="576" height="768" class="" onclick="setMainPhoto(3, this)"><img loading="lazy" src="images/car1-5.jpg" width="384" height="512" class="" onclick="setMainPhoto(4, this)"><img loading="lazy" src="images/car1-6.jpg" width="384" height="512" class="" onclick="setMainPhoto(5, this)"><img loading="lazy" src="images/car1-7.jpg" width="384" height="512" class="" onclick="setMainPhoto(6, this)"><img loading="lazy" src="images/car1-8.jpg" width="384" height="512" class="" onclick="setMainPhoto(7, this)"><img loading="lazy" src="images/car1-9.jpg" width="384" height="512" class="" onclick="setMainPhoto(8, this)"><img loading="lazy" src="images/car1-10.jpg" width="768" height="576" class="" onclick="setMainPhoto(9, this)"><img loading="lazy" src="images/car1-11.jpg" width="576" height="768" class="" onclick="setMainPhoto(10, this)"></div>
     </div>
+
+<div class="photo-lightbox" id="photoLightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Zavřít">&times;</button>
+  <div class="gallery-arrow prev" onclick="shiftLightbox(-1)">&#8249;</div>
+  <div class="gallery-arrow next" onclick="shiftLightbox(1)">&#8250;</div>
+  <div class="gallery-counter" id="lightboxCounter">1 / 11</div>
+  <img id="lightboxImg" src="" alt="">
+</div>
     <div class="car-info-panel">
       <div class="car-info-eyebrow reveal">Škoda</div>
       <h1 class="car-info-title reveal reveal-delay-1">Superb III Combi <span style="color:var(--violet)">2.0 TDI DSG</span></h1>
@@ -743,6 +759,75 @@ function shiftPhoto(dir) {
   let i = (carPhotoIdx + dir + carPhotos.length) % carPhotos.length;
   setMainPhoto(i);
 }
+
+// Свайп пальцем прямо в рамці галереї
+(function() {
+  const main = document.querySelector('.car-gallery-main');
+  if (!main) return;
+  let startX = 0, startY = 0, tracking = false;
+  main.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    tracking = true;
+  }, { passive: true });
+  main.addEventListener('touchend', e => {
+    if (!tracking) return;
+    tracking = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+      shiftPhoto(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+})();
+
+// Повноекранний перегляд фото (тап по фото — відкрити, свайп — гортати, тап поза фото/хрестик — закрити)
+function openLightbox() {
+  const lb = document.getElementById('photoLightbox');
+  const img = document.getElementById('lightboxImg');
+  const c = document.getElementById('lightboxCounter');
+  if (!lb || !img) return;
+  img.src = carPhotos[carPhotoIdx];
+  if (c) c.textContent = (carPhotoIdx + 1) + ' / ' + carPhotos.length;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  const lb = document.getElementById('photoLightbox');
+  if (!lb) return;
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function shiftLightbox(dir) {
+  shiftPhoto(dir);
+  const img = document.getElementById('lightboxImg');
+  const c = document.getElementById('lightboxCounter');
+  if (img) img.src = carPhotos[carPhotoIdx];
+  if (c) c.textContent = (carPhotoIdx + 1) + ' / ' + carPhotos.length;
+}
+(function() {
+  const mainImg = document.getElementById('mainPhoto');
+  if (mainImg) mainImg.addEventListener('click', openLightbox);
+  const lb = document.getElementById('photoLightbox');
+  if (!lb) return;
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  const img = document.getElementById('lightboxImg');
+  let startX = 0, tracking = false;
+  img.addEventListener('touchstart', e => { startX = e.touches[0].clientX; tracking = true; }, { passive: true });
+  img.addEventListener('touchend', e => {
+    if (!tracking) return;
+    tracking = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) shiftLightbox(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  img.addEventListener('click', () => closeLightbox());
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') shiftLightbox(-1);
+    if (e.key === 'ArrowRight') shiftLightbox(1);
+  });
+})();
 </script>
 
 <script>
