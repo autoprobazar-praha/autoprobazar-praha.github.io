@@ -74,7 +74,7 @@ ul { list-style:none; }
 .navbar.nav-hidden .nav-links,
 .navbar.nav-hidden .nav-socials,
 .navbar.nav-hidden .ctrl-divider,
-.navbar.nav-hidden .lang-toggle { opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
+.navbar.nav-hidden .lang-switch { opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .navbar .nav-logo, .navbar .nav-links, .navbar .nav-socials, .navbar .ctrl-divider, .navbar .lang-toggle { transition:opacity 0.25s ease; }
 .navbar.nav-hidden .burger { display:flex; background:rgba(10,10,14,0.55); border-radius:8px; }
 @keyframes navDrop { from { opacity:0; transform:translateY(-100%); } to { opacity:1; transform:translateY(0); } }
@@ -787,6 +787,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const saved = localStorage.getItem('lang') || 'cz';
   setLang(saved);
 });
+
+// Навбар: повне меню видно нагорі сторінки, далі лишається бургер + мова (як на головній)
+(function() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+  let ticking = false;
+  function updateNav() {
+    if (window.scrollY > 80) {
+      navbar.classList.add('nav-hidden');
+    } else {
+      navbar.classList.remove('nav-hidden');
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateNav);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateNav();
+})();
+
 
 function openContactPopup(e) {
   if (e) e.preventDefault();
