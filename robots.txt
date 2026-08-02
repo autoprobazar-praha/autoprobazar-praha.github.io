@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://autoprobazar-praha.github.io/sitemap.xml
