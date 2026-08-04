@@ -17,7 +17,9 @@
 <!-- GA4: вставити тег тут -->
 <!-- Meta Pixel: вставити тег тут -->
 <script>
-if (sessionStorage.getItem('autoprobazar_seen')) {
+var navEntries = performance.getEntriesByType('navigation');
+var isReload = navEntries.length && navEntries[0].type === 'reload';
+if (sessionStorage.getItem('autoprobazar_seen') && !isReload) {
   document.documentElement.classList.add('returning-visit');
 } else {
   sessionStorage.setItem('autoprobazar_seen', '1');
