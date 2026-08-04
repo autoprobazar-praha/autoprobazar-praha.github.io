@@ -877,13 +877,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   function updateNav() {
     if (window.innerWidth > 768) {
       navLogo.style.opacity = '';
-      navLogo.style.pointerEvents = '';
       ticking = false;
       return;
     }
     const targetY = target.getBoundingClientRect().top + window.scrollY;
     const progress = Math.min(Math.max(window.scrollY / targetY, 0), 1);
-    const minOpacity = 0.45;
+    const minOpacity = 0.65;
     const opacity = 1 - progress * (1 - minOpacity);
     navLogo.style.opacity = opacity;
     ticking = false;
