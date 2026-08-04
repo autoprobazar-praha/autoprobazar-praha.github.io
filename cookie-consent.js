@@ -38,25 +38,25 @@
       #cookie-consent-banner {
         position: fixed; left: 0; right: 0; bottom: 0; z-index: 99999;
         background: #14101c; border-top: 1px solid rgba(255,255,255,0.08);
-        padding: 20px 24px; font-family: 'Inter', sans-serif;
-        display: flex; flex-wrap: wrap; gap: 16px 24px;
+        padding: 12px 20px; font-family: 'Inter', sans-serif;
+        display: flex; flex-wrap: wrap; gap: 10px 20px;
         align-items: center; justify-content: space-between;
         box-shadow: 0 -8px 30px rgba(0,0,0,0.45);
       }
-      #cookie-consent-banner .cc-text { flex: 1 1 340px; color: #b8b8cc; font-size: 14px; line-height: 1.6; }
-      #cookie-consent-banner .cc-text strong { color: #fff; display: block; font-size: 15px; margin-bottom: 4px; }
+      #cookie-consent-banner .cc-text { flex: 1 1 340px; color: #b8b8cc; font-size: 13px; line-height: 1.45; }
+      #cookie-consent-banner .cc-text strong { color: #fff; display: inline; font-size: 13px; margin-right: 4px; }
       #cookie-consent-banner .cc-text a { color: #a58ac9; text-decoration: underline; }
-      #cookie-consent-banner .cc-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+      #cookie-consent-banner .cc-btns { display: flex; gap: 8px; flex-wrap: wrap; }
       #cookie-consent-banner button {
-        font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
-        padding: 11px 20px; border-radius: 8px; cursor: pointer; border: 1px solid transparent;
+        font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+        padding: 8px 16px; border-radius: 8px; cursor: pointer; border: 1px solid transparent;
         transition: opacity .2s;
       }
       #cookie-consent-banner button:hover { opacity: .85; }
       #cc-accept-all { background: #7a5a9e; color: #fff; }
       #cc-reject-all { background: transparent; color: #b8b8cc; border-color: rgba(255,255,255,0.18); }
       @media (max-width: 640px) {
-        #cookie-consent-banner { padding: 16px; }
+        #cookie-consent-banner { padding: 12px 16px; }
         #cookie-consent-banner .cc-btns { width: 100%; }
         #cookie-consent-banner .cc-btns button { flex: 1; }
       }
@@ -126,7 +126,12 @@
       return;
     }
     if (saved === "rejected") return;
-    buildBanner();
+    // Wait until the preloader has faded and the hero entrance animation
+    // (logo, title, subtitle, buttons, checks) has finished settling
+    // before showing the banner, so it doesn't appear over an empty screen.
+    var isReturningVisit = document.documentElement.classList.contains("returning-visit");
+    var delay = isReturningVisit ? 1200 : 4500;
+    setTimeout(buildBanner, delay);
   }
 
   if (document.readyState === "loading") {
