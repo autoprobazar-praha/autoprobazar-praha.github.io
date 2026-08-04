@@ -867,5 +867,27 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     <button type="button" class="contact-popup-close" onclick="closeContactPopup()" data-ua="Скасувати" data-cz="Zrušit">Zrušit</button>
   </div>
 </div>
+<script>
+// Навбар: логотип плавно тане під час скролу, зникає до появи каталогу авто
+(function() {
+  const navLogo = document.querySelector('.nav-logo');
+  const target = document.querySelector('.catalog-grid');
+  if (!navLogo || !target) return;
+  let ticking = false;
+  function updateNav() {
+    const targetY = target.getBoundingClientRect().top + window.scrollY;
+    const progress = Math.min(Math.max(window.scrollY / targetY, 0), 1);
+    const opacity = 1 - progress;
+    navLogo.style.opacity = opacity;
+    navLogo.style.pointerEvents = opacity < 0.05 ? 'none' : '';
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateNav); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', updateNav);
+  updateNav();
+})();
+</script>
 <script src="cookie-consent.js" defer></script>
 </body></html>
