@@ -961,9 +961,9 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     }
     const targetY = target.getBoundingClientRect().top + window.scrollY;
     const progress = Math.min(Math.max(window.scrollY / targetY, 0), 1);
-    const opacity = 1 - progress;
+    const minOpacity = 0.45;
+    const opacity = 1 - progress * (1 - minOpacity);
     navLogo.style.opacity = opacity;
-    navLogo.style.pointerEvents = opacity < 0.05 ? 'none' : '';
     ticking = false;
   }
   window.addEventListener('scroll', () => {
