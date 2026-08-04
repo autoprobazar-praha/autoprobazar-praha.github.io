@@ -951,6 +951,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   if (!navLogo || !target) return;
   let ticking = false;
   function updateNav() {
+    if (window.innerWidth > 768) {
+      navLogo.style.opacity = '';
+      navLogo.style.pointerEvents = '';
+      ticking = false;
+      return;
+    }
     const targetY = target.getBoundingClientRect().top + window.scrollY;
     const progress = Math.min(Math.max(window.scrollY / targetY, 0), 1);
     const opacity = 1 - progress;
