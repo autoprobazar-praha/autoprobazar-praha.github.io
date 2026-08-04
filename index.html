@@ -114,8 +114,6 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 .nav-inner { display:flex; align-items:center; height:100%; }
 .nav-logo { font-family:var(--font-head); font-size:21px; font-weight:700; letter-spacing:0.3px; color:var(--white); flex-shrink:0; margin-right:48px; display:flex; align-items:center; transition:opacity 0.2s; }
 .nav-logo:hover { opacity:0.75; }
-.navbar.nav-logo-hidden .nav-logo { opacity:0; pointer-events:none; }
-.nav-logo { transition:opacity 0.25s ease; }
 .nav-logo span { font-weight:400; color:var(--violet); }
 @media (max-width:768px) { .nav-logo { margin-right:0; font-size:17px; } }
 .nav-links { display:flex; gap:32px; flex:1; }
@@ -1074,15 +1072,18 @@ function slideCards(dir) {
   }, { passive: true });
 })();
 
-// Навбар: логотип ховається після hero, решта меню лишається завжди
+// Навбар: логотип плавно тане під час скролу, зникає до появи каталогу авто
 (function() {
-  const navbar = document.querySelector('.navbar');
-  const hero = document.querySelector('.hero');
-  if (!navbar || !hero) return;
+  const navLogo = document.querySelector('.nav-logo');
+  const target = document.getElementById('auta');
+  if (!navLogo || !target) return;
   let ticking = false;
   function updateNav() {
-    const heroHeight = hero.offsetHeight;
-    navbar.classList.toggle('nav-logo-hidden', window.scrollY > heroHeight - 80);
+    const targetY = target.offsetTop;
+    const progress = Math.min(Math.max(window.scrollY / targetY, 0), 1);
+    const opacity = 1 - progress;
+    navLogo.style.opacity = opacity;
+    navLogo.style.pointerEvents = opacity < 0.05 ? 'none' : '';
     ticking = false;
   }
   window.addEventListener('scroll', () => {
@@ -1091,6 +1092,7 @@ function slideCards(dir) {
       ticking = true;
     }
   }, { passive: true });
+  window.addEventListener('resize', updateNav);
   updateNav();
 })();
 
