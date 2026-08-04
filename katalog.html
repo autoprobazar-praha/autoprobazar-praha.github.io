@@ -116,7 +116,7 @@ ul { list-style:none; }
 .lang-option .flag { width:22px; height:22px; flex-shrink:0; }
 .flag { display:inline-block; border-radius:50%; overflow:hidden; }
 .flag svg { width:100%; height:100%; display:block; }
-.nav-social-btn { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; color:var(--gray-lt); transition:color 0.2s, background 0.2s, border-color 0.2s; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); cursor:pointer; text-decoration:none; }
+.nav-social-btn { display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; color:var(--gray-lt); transition:color 0.2s, background 0.2s, border-color 0.2s; background:rgba(255,255,255,0.09); border:1px solid rgba(255,255,255,0.22); cursor:pointer; text-decoration:none; }
 .nav-social-btn:hover { color:var(--white); background:rgba(168,85,247,0.14); border-color:rgba(168,85,247,0.4); }
 .nav-social-btn svg { width:16px; height:16px; }
 .ctrl-divider { width:1px; height:18px; background:rgba(255,255,255,0.12); flex-shrink:0; }
@@ -357,7 +357,7 @@ ul { list-style:none; }
 .footer-cols-grid { display:contents; }
 .footer-col { display:flex; flex-direction:column; }
 .footer-col ul { flex:1; margin:0; padding:0; }
-.footer-social-pills { display:flex; flex-direction:row; gap:12px; margin-top:2px; }
+.footer-social-pills { display:flex; flex-direction:row; gap:16px; margin-top:2px; }
 .footer-col--contact { align-items:flex-start; }
 .social-btn--footer { font-size:16px; padding:7px 14px; min-width:160px; }
 .hours { font-size:16px; color:var(--gray-lt); line-height:1.5; }
@@ -440,7 +440,9 @@ ul { list-style:none; }
   .footer-top .footer-col--contact { align-items:center; }
   .footer-top .footer-social-pills { justify-content:center; }
   .footer-top .footer-col ul li { padding:3px 0; white-space:nowrap; }
-  .footer-social-pills { gap:6px; }
+  .footer-social-pills { gap:14px; }
+  .footer-social-pills .nav-social-btn { width:38px; height:38px; }
+  .footer-social-pills .nav-social-btn svg { width:18px; height:18px; }
   .footer::before { background-position:40% top, 40% top !important; filter:brightness(1.05) contrast(1.1) saturate(1.25); }
   .footer::after { background:linear-gradient(180deg, var(--bg) 0%, rgba(19,12,26,0.62) 130px, rgba(19,12,26,0.62) calc(100% - 260px), var(--bg) 100%) !important; }
   .social-btn--footer { font-size:16px; padding:7px 10px; min-width:170px; }

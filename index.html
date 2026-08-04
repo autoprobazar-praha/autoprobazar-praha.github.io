@@ -79,7 +79,7 @@ ul { list-style:none; }
 
 
 /* NAVBAR */
-.navbar { position:fixed; top:0; left:0; right:0; z-index:100; background:transparent; height:52px; opacity:0; animation:navDrop 0.6s cubic-bezier(0.16,1,0.3,1) 3.3s forwards; transition:opacity 0.3s ease; }
+.navbar { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(10,10,15,0.72); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); box-shadow:0 8px 24px rgba(0,0,0,0.35); height:52px; opacity:0; animation:navDrop 0.6s cubic-bezier(0.16,1,0.3,1) 3.3s forwards; transition:opacity 0.3s ease; }
 .navbar.nav-hidden .nav-logo,
 .navbar.nav-hidden .nav-links,
 .navbar.nav-hidden .ctrl-divider,
@@ -1070,30 +1070,6 @@ function slideCards(dir) {
       ticking = true;
     }
   }, { passive: true });
-})();
-
-// Навбар: повне меню видно тільки на hero, далі лишається бургер + мова
-(function() {
-  const navbar = document.querySelector('.navbar');
-  const hero = document.querySelector('.hero');
-  if (!navbar || !hero) return;
-  let ticking = false;
-  function updateNav() {
-    const heroHeight = hero.offsetHeight;
-    if (window.scrollY > heroHeight - 80) {
-      navbar.classList.add('nav-hidden');
-    } else {
-      navbar.classList.remove('nav-hidden');
-    }
-    ticking = false;
-  }
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(updateNav);
-      ticking = true;
-    }
-  }, { passive: true });
-  updateNav();
 })();
 
 // Фікс: слайдер не перехоплює вертикальний скрол сторінки
