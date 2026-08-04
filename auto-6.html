@@ -173,7 +173,7 @@ ul { list-style:none; }
 /* NAVBAR mobile */
 .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; }
 .burger span { display:block; width:22px; height:2px; background:var(--white); border-radius:2px; transition:transform 0.25s, opacity 0.25s; }
-.mobile-menu { position:fixed; inset:0; background:rgba(10,7,14,0.94); z-index:110; display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.3s ease; }
+.mobile-menu { position:fixed; inset:0; background:radial-gradient(circle at 50% 50%, #18101f 0%, #120c19 50%, #0a0a0f 100%); z-index:110; display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.3s ease; }
 .mobile-menu.open { opacity:1; pointer-events:auto; }
 .mobile-menu-links { display:flex; flex-direction:column; align-items:center; gap:38px; }
 .mobile-menu a { font-family:var(--font-body); font-size:20px; font-weight:500; color:var(--gray-lt); letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; }
@@ -350,6 +350,8 @@ ul { list-style:none; }
 .footer-phone, .footer-phone:link, .footer-phone:visited, .footer-phone:active { color:var(--gray-lt) !important; }
 .footer-phone { font-family:var(--font-body); font-size:16px; font-weight:400; display:block; margin-bottom:14px; transition:color 0.2s; letter-spacing:0; text-decoration:none; white-space:nowrap; }
 .footer-phone:hover { color:var(--violet); }
+.footer-address { font-family:var(--font-body); font-size:16px; color:var(--gray-lt); display:block; margin-bottom:14px; text-decoration:none; transition:color 0.2s; }
+.footer-address:hover { color:var(--violet); }
 .footer-cols-grid { display:contents; }
 .footer-col { display:flex; flex-direction:column; }
 .footer-col ul { flex:1; margin:0; padding:0; }
@@ -639,6 +641,7 @@ ul { list-style:none; }
   <a href="index.html#onas" onclick="toggleMenu()" data-ua="ПРО НАС" data-cz="O NÁS">O NÁS</a>
   <a href="#" onclick="toggleMenu(); openContactPopup(event)" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a>
   <a href="index.html#kontakt-form" onclick="toggleMenu()" data-ua="ЗВ'ЯЗАТИСЯ" data-cz="NAPSAT NÁM">NAPSAT NÁM</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Nedokon%C4%8Den%C3%A1+1236%2C+198+00+Praha+14" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()" data-ua="НА КАРТІ" data-cz="ZOBRAZIT NA MAPĚ">ZOBRAZIT NA MAPĚ</a>
 </div>
 <div class="mobile-menu-socials">
   <a href="https://instagram.com/klubey_" target="_blank" class="nav-social-btn" aria-label="Instagram" rel="noopener noreferrer">
@@ -736,6 +739,7 @@ ul { list-style:none; }
       <div class="footer-col footer-col--contact reveal reveal-delay-2">
         <h4 data-ua="Контакт" data-cz="Kontakt">Kontakt</h4>
         <a href="#" onclick="openContactPopup(event)" class="footer-phone">+420 608 698 655</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Nedokon%C4%8Den%C3%A1+1236%2C+198+00+Praha+14" target="_blank" rel="noopener noreferrer" class="footer-address">Nedokončená 1236, Praha</a>
         <div class="footer-social-pills">
           <a href="https://instagram.com/klubey_" target="_blank" class="nav-social-btn" aria-label="Instagram" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
