@@ -113,9 +113,12 @@ html.returning-visit .hero-btns { animation-delay:0.7s !important; }
 html.returning-visit .hero-checks, html.returning-visit .navbar { animation-delay:0.85s !important; }
 .nav-inner { display:flex; align-items:center; height:100%; }
 .nav-logo { font-family:var(--font-head); font-size:21px; font-weight:700; letter-spacing:0.3px; color:var(--white); flex-shrink:0; margin-right:48px; display:flex; align-items:center; transition:opacity 0.2s; }
+.nav-logo img { height:30px; width:auto; display:block; }
+.preloader-logo img { height:clamp(50px,11vw,160px); width:auto; display:block; }
+.footer-logo img { height:34px; width:auto; display:block; }
 .nav-logo:hover { opacity:0.75; }
 .nav-logo span { font-weight:400; color:var(--violet); }
-@media (max-width:768px) { .nav-logo { margin-right:0; font-size:17px; } }
+@media (max-width:768px) { .nav-logo { margin-right:0; font-size:17px; } .nav-logo img { height:24px; } }
 .nav-links { display:flex; gap:32px; flex:1; }
 .nav-links a { font-family:var(--font-body); font-size:16px; font-weight:500; color:var(--gray-lt); transition:color 0.2s; }
 .nav-links a:hover { color:var(--white); }
@@ -374,7 +377,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 .footer::after { content:''; position:absolute; inset:0; z-index:1; background: linear-gradient(180deg, var(--bg) 0%, rgba(19,12,26,0.62) 130px, rgba(19,12,26,0.62) calc(100% - 70px), var(--bg) 100%); }
 .footer .container { position:relative; z-index:2; }
 .footer-top { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:56px; margin-bottom:48px; align-items:stretch; }
-.footer-logo { font-family:var(--font-head); font-size:26px; font-weight:900; text-transform:uppercase; margin-bottom:14px; }
+.footer-logo { font-family:var(--font-head); font-size:26px; font-weight:900; text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
 .footer-logo span { color:var(--violet); }
 .footer-logo em { font-style:normal; color:var(--gray-lt); font-weight:600; }
 .footer-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; max-width:260px; }
@@ -515,13 +518,13 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 
 <!-- PRELOADER -->
 <div class="preloader" id="preloader">
-  <div class="preloader-logo"><b>Auto</b><span>Pro</span><b>Bazar</b></div>
+  <div class="preloader-logo"><img src="images/logo-autoprobazar.png" alt="AutoProBazar"></div>
 </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="container nav-inner">
-    <a href="#" class="nav-logo"><b>Auto</b><span>Pro</span><b>Bazar</b></a>
+    <a href="#" class="nav-logo"><img src="images/logo-autoprobazar.png" alt="AutoProBazar"></a>
     <ul class="nav-links">
       <li><a href="katalog.html" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a></li>
       <li><a href="#odtah" data-ua="ЕВАКУАТОР" data-cz="ODTAH">ODTAH</a></li>
@@ -890,7 +893,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
   <div class="container">
     <div class="footer-top">
       <div class="reveal">
-        <div class="footer-logo">AUTO<span>PRO</span>BAZAR <em>Praha</em></div>
+        <div class="footer-logo"><img src="images/logo-autoprobazar.png" alt="AutoProBazar"><em>Praha</em></div>
         <p class="footer-desc"
           data-ua="Продаж авто в Празі. Довоз з Європи. Евакуатор по всій Чехії."
           data-cz="Prodej aut v Praze. Dovoz z Evropy. Odtahová služba po celé České republice.">Prodej aut v Praze. Dovoz z Evropy. Odtahová služba po celé České republice.</p>
