@@ -39,14 +39,14 @@
 .vyhody-item.reveal { transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1), border-color 0.25s, background 0.25s; }
 .vyhody-item:hover { border-color:rgba(168,85,247,0.4); background:rgba(255,255,255,0.06); }
 .vyhody-title { font-family:var(--font-head); font-size:18px; font-weight:600; color:var(--white); margin-bottom:8px; }
-.vyhody-desc { font-size:16px; color:var(--gray); line-height:1.7; }
+.vyhody-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; }
 @media (max-width:768px) { .vyhody-grid { grid-template-columns:1fr; gap:16px; margin-top:24px; } }
 
 .onas-heading { font-family:var(--font-head); font-size:clamp(36px,4vw,56px); font-weight:700; line-height:1.1; margin-bottom:24px; color:var(--white); }
 .onas-heading span { color:var(--violet); }
 /* ONAS CARDS */
 .onas-cards { display:flex; flex-direction:column; gap:10px; margin-top:24px; }
-.onas-card { padding:16px 20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:10px; font-size:16px; color:var(--gray); line-height:1.55; transition:border-color 0.25s, background 0.25s; cursor:default; }
+.onas-card { padding:16px 20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:10px; font-size:16px; color:var(--gray-lt); line-height:1.5; transition:border-color 0.25s, background 0.25s; cursor:default; }
 .onas-card:hover { border-color:rgba(168,85,247,0.4); background:rgba(255,255,255,0.06); }
 .onas-card.reveal { transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1), border-color 0.25s, background 0.25s; }
 .onas-card b { font-family:var(--font-head); color:var(--white); font-weight:600; letter-spacing:0.01em; }
@@ -72,7 +72,6 @@ ul { list-style:none; }
 .navbar { position:fixed; top:0; left:0; right:0; z-index:100; background:transparent; height:52px; opacity:0; animation:navDrop 0.6s cubic-bezier(0.16,1,0.3,1) 0.85s forwards; transition:opacity 0.3s ease; }
 .navbar.nav-hidden .nav-logo,
 .navbar.nav-hidden .nav-links,
-.navbar.nav-hidden .nav-socials,
 .navbar.nav-hidden .ctrl-divider,
 .navbar.nav-hidden .lang-switch { opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .navbar .nav-logo, .navbar .nav-links, .navbar .nav-socials, .navbar .ctrl-divider, .navbar .lang-toggle { transition:opacity 0.25s ease; }
@@ -153,7 +152,7 @@ ul { list-style:none; }
 .hero-title .line1 { display:block; color:var(--white); font-size:clamp(40px,7vw,84px); opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 2.5s forwards; }
 .hero-title .line2 { display:block; color:var(--violet); font-size:clamp(36px,5vw,68px); margin-top:14px; font-weight:600; opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 2.7s forwards; }
 
-.hero-sub { font-size:16px; color:var(--gray); max-width:520px; margin-bottom:40px; line-height:1.75; opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 2.9s forwards; }
+.hero-sub { font-size:16px; color:var(--gray-lt); max-width:520px; margin-bottom:40px; line-height:1.5; opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 2.9s forwards; }
 .hero-btns { display:flex; gap:14px; flex-wrap:wrap; opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 3.1s forwards; }
 @keyframes riseUp { from { opacity:0; transform:translateY(60px); } to { opacity:1; transform:translateY(0); } }
 
@@ -217,11 +216,11 @@ ul { list-style:none; }
 .car-make { font-size:16px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--violet); margin-bottom:2px; }
 .car-model { font-family:var(--font-head); font-size:21px; font-weight:800; text-transform:uppercase; color:var(--white); margin-bottom:6px; }
 .car-specs { display:flex; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
-.car-spec { font-size:16px; color:var(--gray); display:flex; align-items:center; gap:4px; }
-.car-spec::before { content:''; width:3px; height:3px; border-radius:50%; background:var(--purple); display:block; }
+.car-spec { font-size:16px; color:var(--gray-lt); display:flex; align-items:center; gap:4px; }
+.car-spec::before { content:''; width:3px; height:3px; border-radius:50%; background:var(--gray-lt); display:block; }
 .car-price-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-right:5px; }
 .car-price { font-family:var(--font-head); font-size:24px; font-weight:800; color:var(--white); display:flex; align-items:baseline; gap:6px; }
-.car-price span { font-size:16px; color:var(--gray); font-family:var(--font-body); font-weight:400; }
+.car-price span { font-size:16px; color:var(--gray-lt); font-family:var(--font-body); font-weight:400; }
 .car-more-arrow { color:var(--gray-lt); font-size:26px; line-height:1; display:inline-flex; flex-shrink:0; transition:color 0.2s; }
 .car-card:hover .car-more-arrow { color:var(--white); animation:carArrowPulse 1.6s ease-in-out infinite; }
 @media (max-width:768px) {
@@ -259,7 +258,7 @@ ul { list-style:none; }
 .emergency-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
 .emergency-img { border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; }
 .emergency-img img { width:100%; height:100%; object-fit:cover; }
-.emergency-desc { font-size:16px; color:var(--gray-lt); line-height:1.7; margin-bottom:32px; max-width:460px; }
+.emergency-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; margin-bottom:32px; max-width:460px; }
 .emergency-call {
   display:inline-flex; align-items:center; gap:12px;
   font-family:var(--font-head); font-size:clamp(28px,3vw,42px); font-weight:900;
@@ -268,7 +267,7 @@ ul { list-style:none; }
   margin-bottom:16px; transition:background 0.2s;
 }
 .emergency-call:hover { background:var(--purple-lt); }
-.emergency-note { font-size:16px; color:var(--gray); line-height:1.6; }
+.emergency-note { font-size:16px; color:var(--gray-lt); line-height:1.5; }
 .odtah { background:var(--bg2); }
 .odtah-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
 .accordion { display:flex; flex-direction:column; gap:16px; }
@@ -287,7 +286,7 @@ ul { list-style:none; }
 .acc-arrow::before { content:''; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid var(--gray-lt); margin-top:1px; }
 .acc-item.open .acc-arrow::before { border-top-color:var(--violet); }
 .acc-body { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
-.acc-body p { font-size:16px; color:var(--gray); line-height:1.65; padding:0 20px 20px 56px; opacity:0; transform:translateY(10px); transition:opacity 0.4s ease, transform 0.4s ease; }
+.acc-body p { font-size:16px; color:var(--gray-lt); line-height:1.5; padding:0 20px 20px 56px; opacity:0; transform:translateY(10px); transition:opacity 0.4s ease, transform 0.4s ease; }
 .acc-item.open .acc-body { max-height:170px; }
 .acc-item.open .acc-body p { opacity:1; transform:translateY(0); transition-delay:0.15s; }
 
@@ -306,7 +305,7 @@ ul { list-style:none; }
 .step:last-child .step-line { display:none; }
 .step-body { padding-top:10px; }
 .step-title { font-family:var(--font-head); font-size:20px; font-weight:600; color:var(--white); margin-bottom:8px; }
-.step-desc { font-size:16px; color:var(--gray); line-height:1.7; }
+.step-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; }
 
 /* ODTAH BG SECTION */
 .odtah-new { background: var(--bg); padding: 96px 0; }
@@ -319,8 +318,8 @@ ul { list-style:none; }
 .odtah-step-num { width:28px; height:28px; border-radius:50%; border:1.5px solid var(--purple); display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-size:12px; font-weight:600; color:var(--purple-lt); flex-shrink:0; margin-top:3px; }
 .odtah-step-body {}
 .odtah-step-title { font-family:var(--font-head); font-size:20px; font-weight:600; color:var(--white); margin-bottom:4px; }
-.odtah-step-desc { font-size:16px; color:var(--gray); line-height:1.7; }
-.odtah-coverage { font-size:16px; color:var(--gray-lt); margin-bottom:32px; }
+.odtah-step-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; }
+.odtah-coverage { font-size:16px; color:var(--gray-lt); line-height:1.5; margin-bottom:32px; }
 .odtah-coverage b { color:var(--white); }
 @media (max-width:768px) {
   .odtah-new-inner { grid-template-columns:1fr; gap:40px; }
@@ -333,7 +332,7 @@ ul { list-style:none; }
 .onas-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
 .onas-img { border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; }
 .onas-img img { width:100%; height:100%; object-fit:cover; }
-.onas-text p { font-size:16px; color:var(--gray-lt); line-height:1.8; margin-bottom:18px; max-width:440px; }
+.onas-text p { font-size:16px; color:var(--gray-lt); line-height:1.5; margin-bottom:18px; max-width:440px; }
 .socials { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:28px; }
 .social-btn { display:inline-flex; align-items:center; gap:7px; padding:9px 16px; border-radius:7px; background:var(--bg3); border:1px solid var(--border); font-size:16px; font-weight:600; color:var(--gray-lt); line-height:1; transition:all 0.2s; }
 .social-btn:hover { border-color:var(--violet); color:var(--violet); }
@@ -349,7 +348,7 @@ ul { list-style:none; }
 .footer-logo { font-family:var(--font-head); font-size:26px; font-weight:900; text-transform:uppercase; margin-bottom:14px; }
 .footer-logo span { color:var(--violet); }
 .footer-logo em { font-style:normal; color:var(--gray-lt); font-weight:600; }
-.footer-desc { font-size:16px; color:var(--gray); line-height:1.7; max-width:260px; }
+.footer-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; max-width:260px; }
 .footer-col h4 { font-size:16px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--violet); margin-bottom:10px; }
 .footer-col ul li { padding:3px 0; font-size:16px; color:var(--gray-lt); }
 .footer-phone, .footer-phone:link, .footer-phone:visited, .footer-phone:active { color:var(--white) !important; }
@@ -361,7 +360,7 @@ ul { list-style:none; }
 .footer-social-pills { display:flex; flex-direction:row; gap:12px; margin-top:2px; }
 .footer-col--contact { align-items:flex-start; }
 .social-btn--footer { font-size:16px; padding:7px 14px; min-width:160px; }
-.hours { font-size:16px; color:var(--gray); line-height:1.8; }
+.hours { font-size:16px; color:var(--gray-lt); line-height:1.5; }
 .footer-bottom { display:flex; justify-content:space-between; align-items:center; }
 .footer-copy { font-size:14px; color:var(--gray); }
 .footer-socials { display:flex; gap:18px; }
@@ -385,7 +384,7 @@ ul { list-style:none; }
   margin:24px 0; color:var(--white);
 }
 .contact-form-title span { color:var(--violet); }
-.contact-form-desc { font-size:16px; color:var(--gray); line-height:1.8; flex:1; }
+.contact-form-desc { font-size:16px; color:var(--gray-lt); line-height:1.5; flex:1; }
 .contact-form { display:flex; flex-direction:column; gap:12px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 .form-group { display:flex; flex-direction:column; gap:5px; }
@@ -402,7 +401,7 @@ ul { list-style:none; }
 .form-select { cursor:pointer; appearance:none; }
 .form-textarea { resize:vertical; min-height:80px; }
 .form-submit { align-self:flex-start; gap:10px; }
-.form-note { font-size:16px; color:var(--gray); }
+.form-note { font-size:16px; color:var(--gray-lt); }
 @media (max-width:960px) { 
   .contact-form-wrap { grid-template-columns:1fr; gap:32px; padding:32px 0 0 0; }
   
@@ -412,12 +411,12 @@ ul { list-style:none; }
 .rec-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:22px; display:flex; flex-direction:column; gap:12px; }
 .rec-card:hover { border-color:rgba(168,85,247,0.4); }
 .rec-stars { color:var(--violet); font-size:13px; letter-spacing:2px; }
-.rec-text { font-size:16px; color:var(--gray-lt); line-height:1.65; font-style:italic; flex:1; }
+.rec-text { font-size:16px; color:var(--gray-lt); line-height:1.5; font-style:italic; flex:1; }
 .rec-bottom { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:8px; }
 .rec-person { display:flex; align-items:center; gap:10px; }
 .rec-avatar { width:34px; height:34px; border-radius:50%; background:var(--violet-dim); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:var(--violet); flex-shrink:0; }
 .rec-name { font-size:16px; font-weight:600; color:var(--white); }
-.rec-service { font-size:16px; color:var(--gray); }
+.rec-service { font-size:16px; color:var(--gray-lt); }
 .rec-photo { width:90px !important; height:60px !important; border-radius:6px; overflow:hidden; flex-shrink:0; border:1px solid var(--border); }
 .rec-photo img { width:90px !important; height:60px !important; max-width:90px !important; max-height:60px !important; object-fit:cover; display:block; }
 @media (max-width:960px) { .rec-grid { grid-template-columns:1fr 1fr; } } @media (max-width:600px) { .rec-grid { grid-template-columns:1fr; } }
@@ -565,7 +564,7 @@ ul { list-style:none; }
 .contact-popup { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:32px; max-width:360px; width:100%; text-align:center; transform:translateY(12px); transition:transform 0.25s ease; }
 .contact-popup-overlay.open .contact-popup { transform:translateY(0); }
 .contact-popup-title { font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:8px; }
-.contact-popup-sub { font-size:15px; color:var(--gray); margin-bottom:24px; }
+.contact-popup-sub { font-size:15px; color:var(--gray-lt); margin-bottom:24px; }
 .contact-popup-btns { display:flex; flex-direction:column; gap:12px; }
 .contact-popup-btn { display:flex; align-items:center; justify-content:center; gap:10px; padding:13px 20px; border-radius:8px; font-family:var(--font-body); font-size:16px; font-weight:600; text-decoration:none; transition:all 0.2s; }
 .contact-popup-btn svg { width:18px; height:18px; flex-shrink:0; }
@@ -583,7 +582,7 @@ ul { list-style:none; }
 
 <nav class="navbar">
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo"><b>Auto</b><span>ProBazar</span></a>
+    <a href="index.html" class="nav-logo"><b>Auto</b><span>Pro</span><b>Bazar</b></a>
     <ul class="nav-links">
       <li><a href="index.html" data-ua="ГОЛОВНА" data-cz="DOMŮ">DOMŮ</a></li>
       <li><a href="katalog.html" class="active" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a></li>
@@ -644,7 +643,7 @@ ul { list-style:none; }
           <div class="car-make">Škoda</div>
           <div class="car-model">Superb III Combi</div>
           <div class="car-specs"><span class="car-spec" data-ua="2020 · 207 000 км · Дизель" data-cz="2020 · 207 000 km · Diesel">2020 · 207 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray-lt);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
     </div>
@@ -655,7 +654,7 @@ ul { list-style:none; }
           <div class="car-make">Volkswagen</div>
           <div class="car-model">Passat B8 Variant</div>
           <div class="car-specs"><span class="car-spec" data-ua="2019 · 220 000 км · Дизель" data-cz="2019 · 220 000 km · Diesel">2019 · 220 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray-lt);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
     </div>
@@ -666,7 +665,7 @@ ul { list-style:none; }
           <div class="car-make">Volkswagen</div>
           <div class="car-model">Caddy Maxi</div>
           <div class="car-specs"><span class="car-spec" data-ua="2015 · 270 000 км · Дизель" data-cz="2015 · 270 000 km · Diesel">2015 · 270 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray-lt);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
     </div>
@@ -677,7 +676,7 @@ ul { list-style:none; }
           <div class="car-make">Škoda</div>
           <div class="car-model">Octavia III Combi</div>
           <div class="car-specs"><span class="car-spec" data-ua="2013 · 239 000 км · Дизель" data-cz="2013 · 239 000 km · Diesel">2013 · 239 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
+          <div class="car-price-row"><div class="car-price" style="font-size:16px;color:var(--gray-lt);font-weight:400;" data-ua="Ціна за запитом" data-cz="Cena na dotaz">Cena na dotaz</div><span class="car-more-arrow">&#8594;</span></div>
         </div>
       </a>
     </div>
@@ -709,7 +708,7 @@ ul { list-style:none; }
   <div class="container">
     <div class="footer-top">
       <div class="reveal">
-        <div class="footer-logo">AUTO<span>BAZAR</span> <em>Praha</em></div>
+        <div class="footer-logo">AUTO<span>PRO</span>BAZAR <em>Praha</em></div>
         <p class="footer-desc"
           data-ua="Продаж авто в Празі. Довоз з Європи. Евакуатор по всій Чехії."
           data-cz="Prodej aut v Praze. Dovoz z Evropy. Odtahová služba po celé České republice.">Prodej aut v Praze. Dovoz z Evropy. Odtahová služba po celé České republice.</p>
