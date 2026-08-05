@@ -220,10 +220,8 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* Peek fade на правому краї */
 .cars-slider-wrap::after { content:''; position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to left, var(--bg) 0%, transparent 100%); pointer-events:none; z-index:5; }
 .car-card { background:transparent; border:none; border-radius:0; overflow:visible; padding:0; transition:transform 0.18s ease-out; flex:0 0 300px; position:relative; z-index:1; }
-#carCardOne { opacity:0; transform:translateY(60px); }
-#carCardOne.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
-#carCardTwo { opacity:0; }
-#carCardTwo.visible { opacity:1; transition:opacity 1.4s ease; }
+#carCardOne, #carCardTwo { opacity:0; transform:translateY(24px); }
+#carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-link { display:block; text-decoration:none; color:inherit; }
 .car-img { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius); border:1px solid var(--border); transition:border-color 0.18s, box-shadow 0.18s; }
@@ -1113,7 +1111,7 @@ function slideCards(dir) {
   updateNav();
 })();
 
-// Картки авто 1 і 2: картка 1 з'являється разом із заголовком, картка 2 - через 1с після картки 1
+// Картки авто 1 і 2: з'являються разом, тим самим "виринаючим" ефектом
 (function() {
   const heading = document.querySelector('#auta .section-title');
   const card1 = document.getElementById('carCardOne');
@@ -1124,7 +1122,7 @@ function slideCards(dir) {
       if (entry.isIntersecting) {
         setTimeout(() => {
           card1.classList.add('visible');
-          setTimeout(() => card2.classList.add('visible'), 1000);
+          card2.classList.add('visible');
         }, 150);
         observer.disconnect();
       }
