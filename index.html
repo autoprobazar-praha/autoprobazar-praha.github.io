@@ -263,7 +263,8 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* SCROLL ANIMATION */
 .reveal { opacity:0; transform:translateY(32px); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .reveal.visible { opacity:1; transform:translateY(0); }
-.odtah-new-photo.reveal, .onas-img.reveal { transform:translateY(65px); transition:opacity 2.3s cubic-bezier(0.7,0,0.84,0), transform 2.3s cubic-bezier(0.45,0.05,0.3,1); transition-delay:0.25s; }
+.odtah-new-photo.reveal, .onas-img.reveal { transform:translateY(60px); transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+.odtah-new-photo.reveal-delay-4.visible, .onas-img.reveal-delay-4.visible { transition-delay:0.4s; }
 .odtah-new-photo.reveal.visible, .onas-img.reveal.visible { transform:translateY(0); }
 .reveal-delay-1 { transition-delay:0.1s; }
 .reveal-delay-2 { transition-delay:0.2s; }
@@ -740,7 +741,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
       </div>
       </div>
     </div>
-    <div class="cars-cta">
+    <div class="cars-cta reveal">
       <a href="katalog.html" class="btn btn-primary btn-compact"
         data-ua="Усі автомобілі →"
         data-cz="Všechna auta →">Všechna auta →</a>
@@ -815,7 +816,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
           <span data-ua="ВИКЛИКАТИ ЕВАКУАТОР" data-cz="ZAVOLAT ODTAH">ZAVOLAT ODTAH</span>
         </a>
       </div>
-      <div class="odtah-new-photo reveal">
+      <div class="odtah-new-photo reveal reveal-delay-4">
         <img loading="lazy" width="1600" height="1280" src="images/odtah-photo.jpg" alt="OdtahPRO evakuátor Praha">
       </div>
     </div>
