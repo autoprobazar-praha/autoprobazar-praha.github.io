@@ -223,9 +223,9 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 #carCardOne, #carCardTwo { opacity:0; transform:translateY(70px); }
 @media (min-width:1025px) {
   #carCardThree, #carCardFour { opacity:0; transform:translateY(70px); }
-  #carCardThree.visible, #carCardFour.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.42,0,1,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+  #carCardThree.visible, #carCardFour.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.5,0,0.75,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 }
-#carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.42,0,1,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+#carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.5,0,0.75,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-link { display:block; text-decoration:none; color:inherit; }
 .car-img { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius); border:1px solid var(--border); transition:border-color 0.18s, box-shadow 0.18s; }
@@ -263,7 +263,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* SCROLL ANIMATION */
 .reveal { opacity:0; transform:translateY(32px); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .reveal.visible { opacity:1; transform:translateY(0); }
-.odtah-new-photo.reveal, .onas-img.reveal { transform:translateY(70px); transition:opacity 1.8s cubic-bezier(0.42,0,1,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+.odtah-new-photo.reveal, .onas-img.reveal { transform:translateY(70px); transition:opacity 1.8s cubic-bezier(0.5,0,0.75,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .odtah-new-photo.reveal.visible, .onas-img.reveal.visible { transform:translateY(0); }
 .odtah-new-photo.reveal.visible, .onas-img.reveal.visible { transform:translateY(0); }
 .reveal-delay-1 { transition-delay:0.1s; }
