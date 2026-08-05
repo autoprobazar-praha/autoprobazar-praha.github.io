@@ -221,6 +221,10 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 .cars-slider-wrap::after { content:''; position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to left, var(--bg) 0%, transparent 100%); pointer-events:none; z-index:5; }
 .car-card { background:transparent; border:none; border-radius:0; overflow:visible; padding:0; transition:transform 0.18s ease-out; flex:0 0 300px; position:relative; z-index:1; }
 #carCardOne, #carCardTwo { opacity:0; transform:translateY(60px); }
+@media (min-width:1025px) {
+  #carCardThree, #carCardFour { opacity:0; transform:translateY(60px); }
+  #carCardThree.visible, #carCardFour.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+}
 #carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-link { display:block; text-decoration:none; color:inherit; }
@@ -668,7 +672,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-3">
+      <div class="car-card reveal reveal-delay-3" id="carCardThree">
         <a href="auto-3.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car3-1.jpg" width="458" height="407" alt="Volkswagen Caddy Maxi">
@@ -685,7 +689,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-4">
+      <div class="car-card reveal reveal-delay-4" id="carCardFour">
         <a href="auto-4.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car4-1.jpg" width="458" height="407" alt="Škoda Octavia III Combi">
@@ -1111,17 +1115,23 @@ function slideCards(dir) {
   updateNav();
 })();
 
-// Картки авто 1 і 2: з'являються разом, тим самим "виринаючим" ефектом
+// Картки авто: на мобільному 1-2 з'являються разом, на десктопі 1-4
 (function() {
   const target = document.querySelector('.cars-slider-wrap');
   const card1 = document.getElementById('carCardOne');
   const card2 = document.getElementById('carCardTwo');
+  const card3 = document.getElementById('carCardThree');
+  const card4 = document.getElementById('carCardFour');
   if (!target || !card1 || !card2) return;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         card1.classList.add('visible');
         card2.classList.add('visible');
+        if (window.innerWidth >= 1025) {
+          if (card3) card3.classList.add('visible');
+          if (card4) card4.classList.add('visible');
+        }
         observer.disconnect();
       }
     });
