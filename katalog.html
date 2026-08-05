@@ -837,7 +837,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeContact
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  });
+});
 
 // Підсвічуємо картку авто, яка зараз по центру екрана (мобільний скрол каталогу)
 (function() {
