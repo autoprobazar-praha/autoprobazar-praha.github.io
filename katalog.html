@@ -477,6 +477,9 @@ ul { list-style:none; }
 
 /* ===== CATALOG PAGE ===== */
 .catalog-header { padding:96px 0 40px; }
+.catalog-h1-anim { opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 0.1s forwards; }
+.catalog-count-anim { opacity:0; animation:riseUp 2s cubic-bezier(0.16,1,0.3,1) 0.3s forwards; }
+.catalog-grid .car-card.reveal { transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .catalog-header h1 { font-family:var(--font-head); font-size:clamp(34px,4.2vw,52px); font-weight:700; margin-top:8px; }
 .catalog-header h1 span { color:var(--violet); }
 .catalog-count { font-size:16px; color:var(--gray); margin-top:10px; }
@@ -651,8 +654,8 @@ ul { list-style:none; }
 </div>
 
 <section class="catalog-header"><div class="container">
-  <h1 class="reveal reveal-delay-1"><span data-ua="Каталог" data-cz="Katalog">Katalog</span> <span style="color:var(--violet)" data-ua="авто" data-cz="aut">aut</span></h1>
-  <p class="catalog-count reveal reveal-delay-2">6<span data-ua=" автомобілів у наявності" data-cz=" vozidel skladem"> vozidel skladem</span></p>
+  <h1 class="catalog-h1-anim"><span data-ua="Каталог" data-cz="Katalog">Katalog</span> <span style="color:var(--violet)" data-ua="авто" data-cz="aut">aut</span></h1>
+  <p class="catalog-count catalog-count-anim">6<span data-ua=" автомобілів у наявності" data-cz=" vozidel skladem"> vozidel skladem</span></p>
 </div></section>
 <section><div class="container">
   <div class="catalog-grid">
