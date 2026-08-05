@@ -220,7 +220,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* Peek fade на правому краї */
 .cars-slider-wrap::after { content:''; position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to left, var(--bg) 0%, transparent 100%); pointer-events:none; z-index:5; }
 .car-card { background:transparent; border:none; border-radius:0; overflow:visible; padding:0; transition:transform 0.18s ease-out; flex:0 0 300px; position:relative; z-index:1; }
-#carCardOne, #carCardTwo { opacity:0; transform:translateY(24px); }
+#carCardOne, #carCardTwo { opacity:0; transform:translateY(40px); }
 #carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-link { display:block; text-decoration:none; color:inherit; }
@@ -1113,22 +1113,20 @@ function slideCards(dir) {
 
 // Картки авто 1 і 2: з'являються разом, тим самим "виринаючим" ефектом
 (function() {
-  const heading = document.querySelector('#auta .section-title');
+  const target = document.querySelector('.cars-slider-wrap');
   const card1 = document.getElementById('carCardOne');
   const card2 = document.getElementById('carCardTwo');
-  if (!heading || !card1 || !card2) return;
+  if (!target || !card1 || !card2) return;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          card1.classList.add('visible');
-          card2.classList.add('visible');
-        }, 150);
+        card1.classList.add('visible');
+        card2.classList.add('visible');
         observer.disconnect();
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -15% 0px' });
-  observer.observe(heading);
+  }, { threshold: 0.4 });
+  observer.observe(target);
 })();
 
 // Фікс: слайдер не перехоплює вертикальний скрол сторінки
