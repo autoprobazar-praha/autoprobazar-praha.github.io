@@ -220,6 +220,8 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* Peek fade на правому краї */
 .cars-slider-wrap::after { content:''; position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to left, var(--bg) 0%, transparent 100%); pointer-events:none; z-index:5; }
 .car-card { background:transparent; border:none; border-radius:0; overflow:visible; padding:0; transition:transform 0.18s ease-out; flex:0 0 300px; position:relative; z-index:1; }
+#carCardOne, #carCardTwo { opacity:0; transform:translateY(24px); }
+#carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-link { display:block; text-decoration:none; color:inherit; }
 .car-img { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius); border:1px solid var(--border); transition:border-color 0.18s, box-shadow 0.18s; }
@@ -631,7 +633,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
       <button class="slider-btn prev" onclick="slideCards(-1)">&#8592;</button>
       <button class="slider-btn next" onclick="slideCards(1)">&#8594;</button>
       <div class="cars-slider" id="carsSlider">
-      <div class="car-card reveal reveal-delay-1">
+      <div class="car-card" id="carCardOne">
         <a href="auto-1.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car1-1.jpg" width="576" height="768" alt="Škoda Superb III Combi">
@@ -648,7 +650,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-2">
+      <div class="car-card" id="carCardTwo">
         <a href="auto-2.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car2-1.jpg" width="576" height="768" alt="Volkswagen Passat B8 Variant">
@@ -804,8 +806,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
             </div>
           </div>
         </div>
-        <a href="#" onclick="openContactPopup(event)" class="btn btn-primary reveal reveal-delay-3" style="display:inline-flex; align-items:center; gap:10px; margin-top:48px;">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        <a href="#" onclick="openContactPopup(event)" class="btn btn-primary reveal reveal-delay-3" style="margin-top:48px;">
           <span data-ua="ВИКЛИКАТИ ЕВАКУАТОР" data-cz="ZAVOLAT ODTAH">ZAVOLAT ODTAH</span>
         </a>
       </div>
@@ -1107,6 +1108,26 @@ function slideCards(dir) {
   }, { passive: true });
   window.addEventListener('resize', updateNav);
   updateNav();
+})();
+
+// Картки авто 1 і 2: картка 1 з'являється разом із заголовком, картка 2 - через 1с після картки 1
+(function() {
+  const heading = document.querySelector('#auta .section-title');
+  const card1 = document.getElementById('carCardOne');
+  const card2 = document.getElementById('carCardTwo');
+  if (!heading || !card1 || !card2) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          card1.classList.add('visible');
+          setTimeout(() => card2.classList.add('visible'), 1000);
+        }, 150);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -15% 0px' });
+  observer.observe(heading);
 })();
 
 // Фікс: слайдер не перехоплює вертикальний скрол сторінки
