@@ -220,12 +220,12 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* Peek fade на правому краї */
 .cars-slider-wrap::after { content:''; position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to left, var(--bg) 0%, transparent 100%); pointer-events:none; z-index:5; }
 .car-card { background:transparent; border:none; border-radius:0; overflow:visible; padding:0; transition:transform 0.18s ease-out; flex:0 0 300px; position:relative; z-index:1; }
-#carCardOne, #carCardTwo { opacity:0; transform:translateY(60px); }
+#carCardOne, #carCardTwo { opacity:0; transform:translateY(70px); }
 @media (min-width:1025px) {
-  #carCardThree, #carCardFour { opacity:0; transform:translateY(60px); }
-  #carCardThree.visible, #carCardFour.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+  #carCardThree, #carCardFour { opacity:0; transform:translateY(70px); }
+  #carCardThree.visible, #carCardFour.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.4,0,0.6,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 }
-#carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
+#carCardOne.visible, #carCardTwo.visible { opacity:1; transform:translateY(0); transition:opacity 1.8s cubic-bezier(0.4,0,0.6,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-link { display:block; text-decoration:none; color:inherit; }
 .car-img { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius); border:1px solid var(--border); transition:border-color 0.18s, box-shadow 0.18s; }
@@ -263,8 +263,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
 /* SCROLL ANIMATION */
 .reveal { opacity:0; transform:translateY(32px); transition:opacity 1.8s cubic-bezier(0.45,0.05,0.3,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .reveal.visible { opacity:1; transform:translateY(0); }
-.odtah-new-photo.reveal, .onas-img.reveal { transform:translateY(60px); transition:opacity 1.8s cubic-bezier(0.7,0,0.84,0), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
-.odtah-new-photo.reveal-delay-4.visible, .onas-img.reveal-delay-4.visible { transition-delay:0.4s; }
+.odtah-new-photo.reveal, .onas-img.reveal { transform:translateY(70px); transition:opacity 1.8s cubic-bezier(0.4,0,0.6,1), transform 1.8s cubic-bezier(0.45,0.05,0.3,1); }
 .odtah-new-photo.reveal.visible, .onas-img.reveal.visible { transform:translateY(0); }
 .reveal-delay-1 { transition-delay:0.1s; }
 .reveal-delay-2 { transition-delay:0.2s; }
@@ -816,7 +815,7 @@ html.returning-visit .hero-checks, html.returning-visit .navbar { animation-dela
           <span data-ua="ВИКЛИКАТИ ЕВАКУАТОР" data-cz="ZAVOLAT ODTAH">ZAVOLAT ODTAH</span>
         </a>
       </div>
-      <div class="odtah-new-photo reveal reveal-delay-4">
+      <div class="odtah-new-photo reveal reveal-delay-3">
         <img loading="lazy" width="1600" height="1280" src="images/odtah-photo.jpg" alt="OdtahPRO evakuátor Praha">
       </div>
     </div>
