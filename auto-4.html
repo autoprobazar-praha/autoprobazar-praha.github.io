@@ -92,7 +92,7 @@ ul { list-style:none; }
 @keyframes preloaderOut { from { opacity:1; } to { opacity:0; } }
 @media (prefers-reduced-motion: reduce) {
   .preloader { display:none; }
-  .hero-eyebrow, .hero-title .line1, .hero-title .line2, .hero-sub, .hero-btns, .hero-checks, .navbar, .hero-video { animation:none !important; opacity:1 !important; transform:none !important; }
+  .hero-eyebrow, .hero-title .line1, .hero-title .line2, .hero-sub, .hero-btns, .hero-checks, .navbar { animation:none !important; opacity:1 !important; transform:none !important; }
 }
 .nav-inner { display:flex; align-items:center; height:100%; }
 .nav-logo { font-family:var(--font-head); font-size:21px; font-weight:700; letter-spacing:0.3px; color:var(--white); flex-shrink:0; margin-right:48px; display:flex; align-items:center; }
@@ -129,22 +129,6 @@ ul { list-style:none; }
 
 /* HERO */
 .hero { min-height:100vh; display:flex; flex-direction:column; position:relative; overflow:hidden; padding-top:64px; align-items:stretch; background:var(--bg); }
-.hero-video { position:absolute; top:0; right:0; height:100%; width:auto; max-width:none; object-fit:contain; filter:saturate(0.9) brightness(0.92) contrast(1.05);
-  -webkit-mask-image:linear-gradient(to right, transparent 0%, black 18%);
-  mask-image:linear-gradient(to right, transparent 0%, black 18%);
-  will-change:transform, opacity; transform-origin:center top;
-  opacity:0; animation:heroVideoReveal 1.4s cubic-bezier(0.16,1,0.3,1) 2.3s forwards;
-}
-@keyframes heroVideoReveal { from { opacity:0; } to { opacity:1; } }
-@media (min-width:769px) {
-  .hero-video { transform-origin:100% 100%; transform:scale(1.07); }
-}
-@media (max-width:768px) {
-  .hero-video { height:100%; top:0; bottom:auto; width:135%; right:-12%; object-fit:cover; object-position:75% center;
-    -webkit-mask-image:linear-gradient(to right, transparent 0%, black 30%);
-    mask-image:linear-gradient(to right, transparent 0%, black 30%);
-  }
-}
 .hero-overlay { position:absolute; inset:0; background:linear-gradient(105deg,rgba(6,6,10,0.92) 0%,rgba(14,6,28,0.72) 50%,rgba(6,6,10,0.5) 100%), linear-gradient(to top, rgba(6,6,10,0.75) 0%, transparent 140px); }
 .hero-content { position:relative; z-index:2; flex:1; padding:60px 32px 40px 32px; display:flex; flex-direction:column; justify-content:center; max-width:1200px; width:100%; margin:0 auto; will-change:transform, opacity; }
 @media (max-width:768px) { .hero { min-height:auto; } .hero-eyebrow { margin-bottom:28px; } .hero-title { margin-bottom:32px; } .hero-sub { margin-bottom:32px; } .section { padding:48px 0; } }
@@ -667,7 +651,7 @@ ul { list-style:none; }
         <img id="mainPhoto" src="images/car4-1.jpg" width="458" height="407" alt="Škoda Octavia III Combi 2.0 TDI DSG">
         <div class="gallery-arrow prev" onclick="shiftPhoto(-1)">&#8249;</div><div class="gallery-arrow next" onclick="shiftPhoto(1)">&#8250;</div><div class="gallery-counter" id="galleryCounter">1 / 4</div>
       </div>
-      <div class="car-gallery-thumbs"><img loading="lazy" src="images/car4-1.jpg" width="458" height="407" class="active" onclick="setMainPhoto(0, this)"><img loading="lazy" src="images/car4-2.jpg" width="422" height="584" class="" onclick="setMainPhoto(1, this)"><img loading="lazy" src="images/car4-3.jpg" width="422" height="584" class="" onclick="setMainPhoto(2, this)"><img loading="lazy" src="images/car4-4.jpg" width="351" height="486" class="" onclick="setMainPhoto(3, this)"></div>
+      <div class="car-gallery-thumbs"><img loading="lazy" alt="Škoda Octavia III Combi 2.0 TDI DSG — фото 1" src="images/car4-1.jpg" width="458" height="407" class="active" onclick="setMainPhoto(0, this)"><img loading="lazy" alt="Škoda Octavia III Combi 2.0 TDI DSG — фото 2" src="images/car4-2.jpg" width="422" height="584" class="" onclick="setMainPhoto(1, this)"><img loading="lazy" alt="Škoda Octavia III Combi 2.0 TDI DSG — фото 3" src="images/car4-3.jpg" width="422" height="584" class="" onclick="setMainPhoto(2, this)"><img loading="lazy" alt="Škoda Octavia III Combi 2.0 TDI DSG — фото 4" src="images/car4-4.jpg" width="351" height="486" class="" onclick="setMainPhoto(3, this)"></div>
     </div>
 
 <div class="photo-lightbox" id="photoLightbox">
