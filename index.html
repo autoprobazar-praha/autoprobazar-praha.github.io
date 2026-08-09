@@ -87,7 +87,7 @@ ul { list-style:none; }
 .navbar.nav-hidden .ctrl-divider,
 .navbar.nav-hidden .lang-switch { opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .navbar .nav-logo, .navbar .nav-links, .navbar .nav-socials, .navbar .ctrl-divider, .navbar .lang-switch { transition:opacity 0.25s ease; }
-.navbar.nav-hidden .burger { display:flex; background:rgba(10,10,14,0.55); border-radius:8px; }
+@media (max-width:768px) { .navbar.nav-hidden .burger { display:flex; background:rgba(10,10,14,0.55); border-radius:8px; } }
 @keyframes navDrop { from { opacity:0; transform:translateY(-100%); } to { opacity:1; transform:translateY(0); } }
 
 /* PRELOADER */
@@ -509,7 +509,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
 
 /* === FAB contact button (redesign) === */
 .contact-fab { position:fixed; bottom:22px; right:20px; width:52px; height:52px; border-radius:50%; background:radial-gradient(circle at 50% 50%, var(--violet-dim) 0%, #170e26 45%, var(--purple) 100%); border:1.5px solid rgba(80,40,120,0.6); color:white; display:flex; align-items:center; justify-content:center; z-index:250; cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,0.5); transition:box-shadow 0.2s, border-color 0.2s; }
-@media (min-width:769px) { .contact-fab { bottom:28px; right:calc(32px + max(0px, (100vw - 1200px) / 2)); } }
+@media (min-width:769px) { .contact-fab { bottom:28px; right:calc(6px + max(0px, (100vw - 1200px) / 2)); } }
 .contact-fab:hover { border-color:var(--violet); box-shadow:0 8px 28px rgba(0,0,0,0.55), 0 0 0 1px rgba(122,90,158,0.3); }
 .contact-fab svg { width:24px; height:24px; transition:transform 0.25s ease; }
 .contact-fab.open svg.icon-dots { display:none; }
