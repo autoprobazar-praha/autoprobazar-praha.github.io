@@ -572,7 +572,7 @@ ul { list-style:none; }
 .navbar.nav-hidden { transform:translateY(-100%); }
 .navbar { transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease; }
 .navbar.nav-ready { animation:none; opacity:1; }
-.contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, rgba(36,24,49,0.55) 0%, rgba(21,14,31,0.55) 55%, rgba(10,10,15,0.55) 100%); backdrop-filter:blur(10px); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
+.contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, rgba(36,24,49,0.9) 0%, rgba(21,14,31,0.9) 55%, rgba(10,10,15,0.9) 100%); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .contact-popup-overlay.open { opacity:1; pointer-events:auto; }
 .contact-popup { position:fixed; bottom:92px; right:20px; display:flex; flex-direction:column; align-items:flex-end; gap:16px; opacity:0; transform:translateY(10px); transition:transform 0.25s ease, opacity 0.25s ease; }
 .contact-popup-overlay.open .contact-popup { transform:translateY(0); opacity:1; }
