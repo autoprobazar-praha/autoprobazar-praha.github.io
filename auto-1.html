@@ -574,7 +574,7 @@ ul { list-style:none; }
 .navbar.nav-hidden { transform:translateY(-100%); }
 .navbar { transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease; }
 .navbar.nav-ready { animation:none; opacity:1; }
-.contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, rgba(36,24,49,0.95) 0%, rgba(21,14,31,0.95) 55%, rgba(10,10,15,0.95) 100%); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
+.contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, #241831 0%, #150e1f 55%, #0a0a0f 100%); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .contact-popup-overlay.open { opacity:1; pointer-events:auto; }
 .contact-popup { position:fixed; bottom:92px; right:20px; display:flex; flex-direction:column; align-items:flex-end; gap:16px; opacity:0; transform:translateY(10px); transition:transform 0.25s ease, opacity 0.25s ease; }
 .contact-popup-overlay.open .contact-popup { transform:translateY(0); opacity:1; }
@@ -711,11 +711,11 @@ ul { list-style:none; }
 <footer class="footer" id="kontakt">
   <div class="container">
     <div class="footer-top">
-      <div class="reveal">
+      <div class="reveal footer-col">
         <div class="footer-logo">Auto<span>Pro</span>Bazar <em>Praha</em></div>
         <p class="footer-desc"
-          data-ua="Продаж авто в Празі. Довоз з Європи. Евакуатор по всій Чехії."
-          data-cz="Prodej aut v Praze. Dovoz z Evropy. Odtahová služba po celé České republice.">Prodej aut v Praze. Dovoz z Evropy. Odtahová služba po celé České republice.</p>
+          data-ua="Продаж авто в Празі.<br>Довоз з Європи.<br>Евакуатор по всій ЧР."
+          data-cz="Prodej aut v Praze.<br>Dovoz z Evropy.<br>Odtahová služba po celé ČR.">Prodej aut v Praze.<br>Dovoz z Evropy.<br>Odtahová služba po celé ČR.</p>
       </div>
       <div class="footer-cols-grid">
       <div class="footer-col reveal reveal-delay-1">
