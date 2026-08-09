@@ -100,11 +100,11 @@ ul { list-style:none; }
 .nav-logo:hover img { transform:scale(1.08); }
 .nav-logo span { font-weight:400; color:var(--violet); }
 @media (max-width:768px) { .nav-logo { margin-right:0; font-size:17px; } .nav-logo img { height:32px; } }
-.nav-links { display:flex; gap:32px; flex:1; }
+.nav-links { display:flex; gap:32px; }
 .nav-links a { font-family:var(--font-body); font-size:16px; font-weight:500; color:var(--gray-lt); transition:color 0.2s; }
 .nav-links a:hover { color:var(--white); }
 .nav-links a.active { color:var(--violet); }
-.nav-right { margin-left:auto; display:flex; align-items:center; gap:16px; }
+.nav-right { margin-left:32px; display:flex; align-items:center; gap:16px; }
 .header-controls { display:flex; align-items:center; gap:10px; }
 .nav-socials { display:flex; align-items:center; gap:2px; }
 .lang-switch { position:relative; }
@@ -563,14 +563,15 @@ ul { list-style:none; }
 .contact-popup-btn--form:hover { background:rgba(255,255,255,0.08); color:#fff; }
 
 /* === FAB contact button (redesign) === */
-.contact-fab { position:fixed; bottom:22px; right:20px; width:52px; height:52px; border-radius:50%; background:rgba(8,5,18,0.92); border:1.5px solid rgba(80,40,120,0.6); color:#fff; display:flex; align-items:center; justify-content:center; z-index:250; cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,0.45); transition:background 0.2s, border-color 0.2s; }
-.contact-fab:hover { background:rgba(8,5,18,0.98); border-color:var(--violet); }
+.contact-fab { position:fixed; bottom:22px; right:20px; width:52px; height:52px; border-radius:50%; background:#3d2a52; border:1px solid rgba(255,255,255,0.1); color:#fff; display:flex; align-items:center; justify-content:center; z-index:250; cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,0.5); transition:background 0.2s, border-color 0.2s; }
+.contact-fab:hover { background:#4a3564; border-color:rgba(255,255,255,0.18); }
 .contact-fab svg { width:24px; height:24px; transition:transform 0.25s ease; }
 .contact-fab.open svg.icon-dots { display:none; }
 .contact-fab svg.icon-close { display:none; }
 .contact-fab.open svg.icon-close { display:block; }
 .navbar.nav-hidden { transform:translateY(-100%); }
 .navbar { transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease; }
+.navbar.nav-ready { animation:none; }
 .contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, #241831 0%, #150e1f 55%, #0a0a0f 100%); background-color:rgba(10,8,15,0.9); backdrop-filter:blur(10px); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .contact-popup-overlay.open { opacity:1; pointer-events:auto; }
 .contact-popup { position:fixed; bottom:92px; right:20px; display:flex; flex-direction:column; align-items:flex-end; gap:16px; opacity:0; transform:translateY(10px); transition:transform 0.25s ease, opacity 0.25s ease; }
@@ -918,6 +919,17 @@ setTimeout(() => {
   var lastScroll = window.scrollY || 0;
   var navbarEl = document.querySelector('.navbar');
   var ticking = false;
+  // Вимикаємо вхідну анімацію появи (navDrop) одразу після її завершення,
+  // щоб вона більше не перекривала transform для ховання при скролі
+  if (navbarEl) {
+    navbarEl.addEventListener('animationend', function(e){
+      if (e.animationName === 'navDrop') {
+        navbarEl.classList.add('nav-ready');
+      }
+    });
+    // На випадок якщо animationend не спрацював (напр. елемент вже видимий) - підстраховка за таймером
+    setTimeout(function(){ navbarEl.classList.add('nav-ready'); }, 5000);
+  }
   window.addEventListener('scroll', function(){
     if (!navbarEl) return;
     if (!ticking) {
