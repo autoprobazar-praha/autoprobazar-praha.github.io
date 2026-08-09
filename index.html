@@ -517,7 +517,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
 .navbar.nav-hidden { transform:translateY(-100%); }
 .navbar { transition:transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease; }
 .navbar.nav-ready { animation:none; opacity:1; }
-.contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, rgba(36,24,49,0.9) 0%, rgba(21,14,31,0.9) 55%, rgba(10,10,15,0.9) 100%); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
+.contact-popup-overlay { position:fixed; inset:0; background:radial-gradient(circle at 85% 90%, rgba(36,24,49,0.95) 0%, rgba(21,14,31,0.95) 55%, rgba(10,10,15,0.95) 100%); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
 .contact-popup-overlay.open { opacity:1; pointer-events:auto; }
 .contact-popup { position:fixed; bottom:92px; right:20px; display:flex; flex-direction:column; align-items:flex-end; gap:16px; opacity:0; transform:translateY(10px); transition:transform 0.25s ease, opacity 0.25s ease; }
 .contact-popup-overlay.open .contact-popup { transform:translateY(0); opacity:1; }
@@ -542,7 +542,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
       <li><a href="katalog.html" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a></li>
       <li><a href="#odtah" data-ua="ЕВАКУАТОР" data-cz="ODTAH">ODTAH</a></li>
       <li><a href="#onas" data-ua="ПРО НАС" data-cz="O NÁS">O NÁS</a></li>
-      <li><a href="#" onclick="openContactPopup(event)" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a></li>
+      <li><a href="#kontakt-info" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a></li>
     </ul>
     <div class="nav-right">
       <div class="header-controls">
@@ -576,7 +576,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
   <a href="katalog.html" onclick="toggleMenu()" data-ua="КАТАЛОГ АВТО" data-cz="KATALOG AUT">KATALOG AUT</a>
   <a href="#odtah" onclick="toggleMenu()" data-ua="ЕВАКУАТОР" data-cz="ODTAH">ODTAH</a>
   <a href="#onas" onclick="toggleMenu()" data-ua="ПРО НАС" data-cz="O NÁS">O NÁS</a>
-  <a href="#" onclick="toggleMenu(); openContactPopup(event)" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a>
+  <a href="#kontakt-info" onclick="toggleMenu()" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a>
   <a href="#" onclick="toggleMenu(); goToContactForm(event)" data-ua="ЗВ'ЯЗАТИСЯ" data-cz="NAPSAT NÁM">NAPSAT NÁM</a>
   <a href="https://www.google.com/maps/search/?api=1&query=Nedokon%C4%8Den%C3%A1+1236%2C+198+00+Praha+14" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()" data-ua="НА КАРТІ" data-cz="ZOBRAZIT NA MAPĚ">ZOBRAZIT NA MAPĚ</a>
 </div>
@@ -916,7 +916,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
           <li data-ua="Евакуатор: 24/7" data-cz="Odtah: 24/7">Odtah: 24/7</li>
         </ul>
       </div>
-      <div class="footer-col footer-col--contact reveal reveal-delay-2">
+      <div class="footer-col footer-col--contact reveal reveal-delay-2" id="kontakt-info">
         <h4 data-ua="Контакт" data-cz="Kontakt">Kontakt</h4>
         <a href="#" onclick="openContactPopup(event)" class="footer-phone">+420 608 698 655</a>
         <a href="mailto:groupavtopro@gmail.com" class="footer-phone">groupavtopro@gmail.com</a>
