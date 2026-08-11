@@ -658,7 +658,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
       <button class="slider-btn prev" onclick="slideCards(-1)">&#8592;</button>
       <button class="slider-btn next" onclick="slideCards(1)">&#8594;</button>
       <div class="cars-slider" id="carsSlider">
-      <div class="car-card" id="carCardOne">
+      <div class="car-card reveal" id="carCardOne">
         <a href="auto-1.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car1-1.jpg" width="576" height="768" alt="Škoda Superb III Combi">
@@ -675,7 +675,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
         </div>
         </a>
       </div>
-      <div class="car-card" id="carCardTwo">
+      <div class="car-card reveal" id="carCardTwo">
         <a href="auto-2.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car2-1.jpg" width="800" height="600" alt="Škoda Octavia RS Combi">
@@ -692,7 +692,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-3" id="carCardThree">
+      <div class="car-card reveal" id="carCardThree">
         <a href="auto-3.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car3-1.jpg" width="800" height="600" alt="Volkswagen Passat B7 Variant">
@@ -709,7 +709,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-4" id="carCardFour">
+      <div class="car-card reveal" id="carCardFour">
         <a href="auto-4.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car4-1.jpg" width="458" height="407" alt="Škoda Octavia III Combi">
@@ -726,7 +726,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-5">
+      <div class="car-card reveal">
         <a href="auto-5.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car5-1.jpg" width="458" height="407" alt="Škoda Superb Laurin & Klement">
@@ -743,7 +743,7 @@ html.returning-visit .hero-btns, html.returning-visit .navbar { animation-delay:
         </div>
         </a>
       </div>
-      <div class="car-card reveal reveal-delay-6">
+      <div class="car-card reveal">
         <a href="auto-6.html" class="car-link">
         <div class="car-img">
           <img loading="lazy" src="images/car6-1.jpg" width="733" height="652" alt="BMW X5 3.0d (E53)">
@@ -1140,29 +1140,9 @@ function slideCards(dir) {
   updateNav();
 })();
 
-// Картки авто: на мобільному 1-2 з'являються разом, на десктопі 1-4
-(function() {
-  const target = document.querySelector('.cars-slider-wrap');
-  const card1 = document.getElementById('carCardOne');
-  const card2 = document.getElementById('carCardTwo');
-  const card3 = document.getElementById('carCardThree');
-  const card4 = document.getElementById('carCardFour');
-  if (!target || !card1 || !card2) return;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        card1.classList.add('visible');
-        card2.classList.add('visible');
-        if (window.innerWidth >= 1025) {
-          if (card3) card3.classList.add('visible');
-          if (card4) card4.classList.add('visible');
-        }
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.4 });
-  observer.observe(target);
-})();
+// Картки авто тепер анімуються через загальний revealObserver нижче —
+// кожна картка з'являється сама, коли реально потрапляє у видиму область
+// (в тому числі при горизонтальному скролі), синхронно із заголовком секції.
 
 // Фікс: слайдер не перехоплює вертикальний скрол сторінки
 // Горизонтальний скрол каталогу тепер повністю нативний (трекпад/стрілки), без перехоплення wheel-подій
