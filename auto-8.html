@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Каталог авто — AutoProBazar Praha</title>
-<meta name="description" content="Katalog prověřených ojetých vozidel AutoProBazar Praha — Škoda, Volkswagen, BMW. Auta z Evropy, odtahová služba 24/7 po celé ČR.">
+<title>Škoda Superb 2.0 TDI Automat — AutoProBazar Praha</title>
+<meta name="description" content="Škoda Superb 2.0 TDI 125 kW, automat, 234 000 km, diesel. Bohatá výbava, kožený interiér. Prověřené vozidlo v Praze od AutoProBazar Praha.">
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:title" content="Katalog aut — AutoProBazar Praha">
-<meta property="og:description" content="Katalog prověřených ojetých vozidel AutoProBazar Praha — Škoda, Volkswagen, BMW. Auta z Evropy, odtahová služba 24/7 po celé ČR.">
+<meta property="og:title" content="Škoda Superb 2.0 TDI Automat — AutoProBazar Praha">
+<meta property="og:description" content="Škoda Superb 2.0 TDI 125 kW, automat, 234 000 km, diesel. Bohatá výbava, kožený interiér. Prověřené vozidlo v Praze od AutoProBazar Praha.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://autoprobazar-praha.github.io/katalog.html">
-<link rel="canonical" href="https://autoprobazar-praha.github.io/katalog.html">
+<meta property="og:url" content="https://autoprobazar-praha.github.io/auto-8.html">
+<link rel="canonical" href="https://autoprobazar-praha.github.io/auto-8.html">
 <meta property="og:image" content="https://autoprobazar-praha.github.io/images/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <!-- GA4: вставити тег тут -->
@@ -190,37 +190,30 @@ ul { list-style:none; }
 /* Peek fade на правому краї */
 .cars-slider-wrap::after { content:''; position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to left, var(--bg) 0%, transparent 100%); pointer-events:none; z-index:5; }
 .car-card { background:transparent; border:none; border-radius:0; overflow:visible; padding:0; transition:transform 0.18s ease-out; flex:0 0 300px; position:relative; z-index:1; }
-.car-card.reveal:hover { transform:translateY(-10px); z-index:10; transition:transform 0.18s ease-out; }
+.car-card.reveal:hover { transform:translateY(-10px); z-index:10; }
 .car-card:hover .car-btn { background:rgba(123,53,193,0.2); color:var(--white); border-color:rgba(168,85,247,0.5); }
 .car-img { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius); border:1px solid var(--border); transition:border-color 0.18s, box-shadow 0.18s; }
 .car-card:hover .car-img { border-color:rgba(147,75,220,0.55); box-shadow:0 18px 32px rgba(40,20,60,0.55), 0 6px 16px rgba(90,45,130,0.4); }
-@media (max-width:768px) {
-  .car-card.active .car-img { border-color:rgba(147,75,220,0.55); box-shadow:0 18px 32px rgba(40,20,60,0.55), 0 6px 16px rgba(90,45,130,0.4); }
-}
 .car-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s ease-out; }
 .car-card.reveal:hover .car-img img { transform:scale(1.18); }
-.car-info { padding:16px 16px 18px; }
-.car-make { font-size:16px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--violet); margin-bottom:2px; }
-.car-model { font-family:var(--font-head); font-size:21px; font-weight:800; text-transform:uppercase; color:var(--white); margin-bottom:6px; }
-.car-specs { display:flex; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+.car-info { padding:16px 2px 4px; }
+.car-make { font-size:16px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--violet); margin-bottom:3px; }
+.car-model { font-family:var(--font-head); font-size:21px; font-weight:800; text-transform:uppercase; color:var(--white); margin-bottom:10px; }
+.car-specs { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
 .car-spec { font-size:16px; color:var(--gray-lt); display:flex; align-items:center; gap:4px; }
 .car-spec::before { content:''; width:3px; height:3px; border-radius:50%; background:var(--gray-lt); display:block; }
-.car-price-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-right:5px; }
-.car-price { font-family:var(--font-head); font-size:24px; font-weight:800; color:var(--white); display:flex; align-items:baseline; gap:6px; }
+.car-price { font-family:var(--font-head); font-size:24px; font-weight:800; color:var(--white); margin-bottom:14px; }
 .car-price span { font-size:16px; color:var(--gray-lt); font-family:var(--font-body); font-weight:400; }
-.car-more-arrow { color:var(--gray-lt); font-size:26px; line-height:1; display:inline-flex; flex-shrink:0; transition:color 0.2s; }
-.car-card:hover .car-more-arrow { color:var(--white); animation:carArrowPulse 1.6s ease-in-out infinite; }
-@media (max-width:768px) {
-  .car-more-arrow { opacity:0.55; transform:scale(0.85); transition:opacity 0.35s ease, transform 0.35s ease, color 0.2s; }
-  .car-card.active .car-more-arrow { animation:carArrowPulse 1.6s ease-in-out infinite; }
-}
-@keyframes carArrowPulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.55; transform:scale(0.85); } }
+.car-btn { display:block; width:100%; padding:11px; background:transparent; border:1px solid var(--border); border-radius:var(--radius); color:var(--gray-lt); font-size:16px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; text-align:center; cursor:pointer; transition:all 0.2s; }
+.car-btn:hover { background:var(--violet-dim); color:var(--white); border-color:var(--violet); }
 .cars-cta { text-align:left; margin-top:16px; }
 .cars-cta a { display:inline-block; }
 @media (max-width:768px) { .cars-cta { margin-top:16px; } }
 
 /* SCROLL ANIMATION */
 .reveal { opacity:0; transform:translateY(32px); transition:opacity 1.2s cubic-bezier(0.45,0.05,0.3,1), transform 1.2s cubic-bezier(0.45,0.05,0.3,1); }
+.car-gallery-photo.reveal { transform:translateY(70px); transition:opacity 1.2s cubic-bezier(0.5,0,0.75,0), transform 1.2s cubic-bezier(0.45,0.05,0.3,1); }
+.car-gallery-photo.reveal.visible { transform:translateY(0); }
 .reveal.visible { opacity:1; transform:translateY(0); }
 .reveal-delay-1 { transition-delay:0.1s; }
 .reveal-delay-2 { transition-delay:0.2s; }
@@ -229,12 +222,14 @@ ul { list-style:none; }
 .reveal-delay-5 { transition-delay:0.5s; }
 .reveal-delay-6 { transition-delay:0.6s; }
 .btn.reveal { transition:opacity 1.2s cubic-bezier(0.45,0.05,0.3,1), transform 1.2s cubic-bezier(0.45,0.05,0.3,1), background 0.2s, border-color 0.2s, color 0.2s; }
-.car-card.reveal-delay-1.visible { transition-delay:0.15s; }
-.car-card.reveal-delay-2.visible { transition-delay:0.3s; }
-.car-card.reveal-delay-3.visible { transition-delay:0.45s; }
-.car-card.reveal-delay-4.visible { transition-delay:0.6s; }
-.car-card.reveal-delay-5.visible { transition-delay:0.75s; }
-.car-card.reveal-delay-6.visible { transition-delay:0.9s; }
+.car-card.reveal { transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.18s ease-out; transition-delay:0s, 0s; }
+.car-card.reveal.visible { transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.18s ease-out; }
+.car-card.reveal-delay-1.visible { transition-delay:0.15s, 0s; }
+.car-card.reveal-delay-2.visible { transition-delay:0.3s, 0s; }
+.car-card.reveal-delay-3.visible { transition-delay:0.45s, 0s; }
+.car-card.reveal-delay-4.visible { transition-delay:0.6s, 0s; }
+.car-card.reveal-delay-5.visible { transition-delay:0.75s, 0s; }
+.car-card.reveal-delay-6.visible { transition-delay:0.9s, 0s; }
 .form-select { appearance:none; background-image:none; cursor:pointer; padding-right:40px; }
 .form-select.placeholder { color:var(--gray); }
 .form-select-wrap { position:relative; }
@@ -456,17 +451,13 @@ ul { list-style:none; }
 
 /* ===== BREADCRUMB ===== */
 .breadcrumb { padding:96px 0 0; }
-.breadcrumb a { font-size:16px; color:var(--gray); display:inline-flex; align-items:center; gap:8px; transition:color 0.2s; }
+.breadcrumb a { font-size:16px; color:var(--gray); display:inline-flex; align-items:center; gap:8px; }
+.breadcrumb a:not(.reveal) { transition:color 0.2s; }
+.breadcrumb a.reveal { transition:opacity 1.2s cubic-bezier(0.45,0.05,0.3,1), transform 1.2s cubic-bezier(0.45,0.05,0.3,1), color 0.2s; }
 .breadcrumb a:hover { color:var(--violet); }
 
 /* ===== CATALOG PAGE ===== */
 .catalog-header { padding:96px 0 40px; }
-@keyframes fadeInSlow { from { opacity:0; } to { opacity:1; } }
-@keyframes riseUp70 { from { transform:translateY(70px); } to { transform:translateY(0); } }
-.catalog-h1-anim { opacity:0; animation:fadeInSlow 1.2s cubic-bezier(0.5,0,0.75,0) 0.1s forwards, riseUp70 1.2s cubic-bezier(0.45,0.05,0.3,1) 0.1s forwards; }
-.catalog-count-anim { opacity:0; animation:fadeInSlow 1.2s cubic-bezier(0.5,0,0.75,0) 0.3s forwards, riseUp70 1.2s cubic-bezier(0.45,0.05,0.3,1) 0.3s forwards; }
-.catalog-grid .car-card.reveal { transform:translateY(70px); transition:opacity 1.2s cubic-bezier(0.5,0,0.75,0), transform 1.2s cubic-bezier(0.45,0.05,0.3,1); }
-.catalog-grid .car-card.reveal.visible { transform:translateY(0); }
 .catalog-header h1 { font-family:var(--font-head); font-size:clamp(34px,4.2vw,52px); font-weight:700; margin-top:8px; }
 .catalog-header h1 span { color:var(--violet); }
 .catalog-count { font-size:16px; color:var(--gray); margin-top:10px; }
@@ -483,12 +474,20 @@ ul { list-style:none; }
 .car-gallery-wrap > * { min-width:0; }
 @media (max-width:900px) { .car-gallery-wrap { grid-template-columns:1fr; gap:32px; } }
 .car-gallery-main { aspect-ratio:4/3; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); background:var(--bg2); position:relative; }
-.car-gallery-main img { width:100%; height:100%; object-fit:cover; }
+.car-gallery-main img { width:100%; height:100%; object-fit:cover; transition:opacity .18s ease; }
 .gallery-arrow { position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; background:rgba(10,10,15,0.65); border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:5; transition:background 0.2s, border-color 0.2s; }
 .gallery-arrow:hover { background:rgba(123,53,193,0.55); border-color:var(--violet); }
 .gallery-arrow.prev { left:14px; }
 .gallery-arrow.next { right:14px; }
 .gallery-counter { position:absolute; bottom:12px; right:14px; background:rgba(10,10,15,0.65); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:4px 12px; font-size:16px; color:var(--gray-lt); z-index:5; }
+.car-gallery-main img { cursor:zoom-in; }
+.photo-lightbox { position:fixed; inset:0; background:rgba(6,4,10,0.97); z-index:2000; display:none; align-items:center; justify-content:center; touch-action:pan-y pinch-zoom; }
+.photo-lightbox.open { display:flex; }
+.photo-lightbox img { max-width:92vw; max-height:88vh; object-fit:contain; border-radius:8px; user-select:none; -webkit-user-drag:none; transition:opacity .18s ease; }
+.lightbox-close { position:absolute; top:18px; right:18px; width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#fff; font-size:22px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:2001; }
+.lightbox-close:hover { background:rgba(123,53,193,0.55); border-color:var(--violet); }
+.photo-lightbox .gallery-counter { top:18px; left:18px; bottom:auto; right:auto; }
+@media (max-width:768px) { .photo-lightbox .gallery-arrow { display:none; } }
 .car-gallery-thumbs { display:flex; gap:10px; margin-top:12px; overflow-x:auto; scrollbar-width:none; padding-bottom:4px; }
 .car-gallery-thumbs::-webkit-scrollbar { display:none; }
 .car-gallery-thumbs img { width:72px; height:54px; object-fit:cover; border-radius:6px; flex-shrink:0; cursor:pointer; border:1.5px solid transparent; opacity:0.6; transition:opacity 0.2s, border-color 0.2s; }
@@ -499,6 +498,7 @@ ul { list-style:none; }
 .car-info-panel { display:flex; flex-direction:column; gap:20px; }
 .car-info-eyebrow { font-size:16px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--violet); }
 .car-info-title { font-family:var(--font-head); font-size:clamp(28px,3.2vw,40px); font-weight:700; line-height:1.15; }
+
 .car-info-price { font-family:var(--font-head); font-size:32px; font-weight:800; color:var(--white); }
 .car-info-price .old-price { font-family:var(--font-body); font-size:16px; font-weight:400; color:var(--gray); text-decoration:line-through; margin-left:10px; }
 .car-info-price .price-note { font-family:var(--font-body); font-size:16px; font-weight:400; color:var(--gray); }
@@ -510,27 +510,28 @@ ul { list-style:none; }
 
 /* ===== CAR DETAIL: SECTIONS ===== */
 .car-section { padding:0 0 56px; }
+.car-section--last { padding-bottom:32px; }
 .car-section h2 { font-family:var(--font-head); font-size:clamp(22px,2.4vw,30px); font-weight:700; margin-bottom:20px; }
 .car-desc-text { font-size:18px; color:var(--gray-lt); line-height:1.9; max-width:900px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; }
 
 .feature-group { margin-bottom:24px; }
 .feature-group:last-child { margin-bottom:0; }
 .feature-group h3 { font-family:var(--font-head); font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--violet); margin-bottom:12px; }
-.feature-tags { display:flex; flex-wrap:wrap; gap:8px; }
+.feature-tags { display:flex; flex-wrap:wrap; gap:8px; max-width:900px; }
 .feature-tag { display:flex; align-items:center; gap:6px; font-size:16px; color:var(--gray-lt); background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:20px; padding:7px 14px; }
 .feature-tag::before { content:'✓'; color:var(--violet); font-weight:700; }
 
-.specs-table { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; max-width:900px; }
+.specs-table { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; max-width:900px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:var(--radius); padding:8px 32px; }
 @media (max-width:640px) { .specs-table { grid-template-columns:1fr; } }
 .specs-row { display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--border); font-size:16px; }
 .specs-row dt { color:var(--gray-lt); }
 .specs-row dd { color:var(--white); font-weight:600; text-align:right; }
 
-.condition-list { display:flex; flex-direction:column; gap:10px; max-width:700px; }
-.condition-item { display:flex; align-items:flex-start; gap:10px; font-size:16px; color:var(--gray-lt); line-height:1.6; }
+.condition-list { display:flex; flex-direction:column; gap:10px; max-width:900px; }
+.condition-item { display:flex; align-items:flex-start; gap:10px; font-size:16px; color:var(--gray-lt); line-height:1.6; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:16px; padding:14px 18px; }
 .condition-item::before { content:'✓'; color:var(--violet); font-weight:700; flex-shrink:0; }
 
-.car-bottom-cta { background:var(--bg2); border-radius:var(--radius); padding:40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:20px; }
+.car-bottom-cta { background:var(--bg2); border-radius:var(--radius); padding:40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:20px; max-width:900px; }
 .car-bottom-cta > div:first-child { flex:1 1 320px; min-width:0; }
 .car-bottom-cta h3 { font-family:var(--font-head); font-size:24px; font-weight:700; }
 .car-bottom-cta p { font-size:16px; color:var(--gray); margin-top:6px; }
@@ -546,8 +547,9 @@ ul { list-style:none; }
   .car-quick-specs { gap:8px; }
   .car-quick-spec { font-size:16px; padding:7px 10px; }
   .gallery-arrow { width:36px; height:36px; font-size:16px; }
-  .catalog-grid { gap:72px 16px; padding-bottom:36px; }
+  .catalog-grid { gap:20px 16px; padding-bottom:56px; }
   .car-section { padding-bottom:40px; }
+  .car-section--last { padding-bottom:20px; }
   .car-bottom-cta { padding:28px 20px; }
   .car-desc-text { padding:20px; font-size:17px; }
   .car-bottom-cta-btns { flex-shrink:1; width:100%; }
@@ -662,99 +664,69 @@ ul { list-style:none; }
 </div>
 </div>
 
-<section class="catalog-header"><div class="container">
-  <h1 class="catalog-h1-anim"><span data-ua="Каталог" data-cz="Katalog">Katalog</span> <span style="color:var(--violet)" data-ua="авто" data-cz="aut">aut</span></h1>
+<section class="breadcrumb"><div class="container"><a href="katalog.html" class="reveal" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div></section>
+
+<section class="car-detail-top"><div class="container">
+  <div class="car-gallery-wrap">
+    <div class="reveal reveal-delay-2 car-gallery-photo">
+      <div class="car-gallery-main">
+        <img id="mainPhoto" src="images/car8-1.jpg" width="800" height="600" alt="Škoda Superb 2.0 TDI">
+        <div class="gallery-arrow prev" onclick="shiftPhoto(-1)">&#8249;</div><div class="gallery-arrow next" onclick="shiftPhoto(1)">&#8250;</div><div class="gallery-counter" id="galleryCounter">1 / 15</div>
+      </div>
+      <div class="car-gallery-thumbs"><img loading="lazy" alt="Škoda Superb 2.0 TDI — екстер'єр спереду зліва" src="images/car8-1.jpg" width="800" height="600" class="active" onclick="setMainPhoto(0, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — екстер'єр спереду, ближче" src="images/car8-2.jpg" width="800" height="600" class="" onclick="setMainPhoto(1, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — екстер'єр ззаду справа" src="images/car8-3.jpg" width="800" height="600" class="" onclick="setMainPhoto(2, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — екстер'єр ззаду зліва" src="images/car8-4.jpg" width="800" height="600" class="" onclick="setMainPhoto(3, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — панель дверей та кнопки вікон" src="images/car8-5.jpg" width="800" height="600" class="" onclick="setMainPhoto(4, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — кермо та приладова панель" src="images/car8-6.jpg" width="800" height="600" class="" onclick="setMainPhoto(5, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — кермо та важіль АКПП" src="images/car8-7.jpg" width="800" height="600" class="" onclick="setMainPhoto(6, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — мультимедіа та центральна консоль" src="images/car8-8.jpg" width="800" height="600" class="" onclick="setMainPhoto(7, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — передні сидіння, крупний план" src="images/car8-9.jpg" width="800" height="600" class="" onclick="setMainPhoto(8, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — передні сидіння" src="images/car8-10.jpg" width="800" height="600" class="" onclick="setMainPhoto(9, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — задні сидіння" src="images/car8-11.jpg" width="800" height="600" class="" onclick="setMainPhoto(10, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — передні сидіння, інший ракурс" src="images/car8-12.jpg" width="800" height="600" class="" onclick="setMainPhoto(11, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — відчинені двері, екстер'єр" src="images/car8-13.jpg" width="800" height="600" class="" onclick="setMainPhoto(12, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — кнопка відкривання багажника" src="images/car8-14.jpg" width="800" height="600" class="" onclick="setMainPhoto(13, this)"><img loading="lazy" alt="Škoda Superb 2.0 TDI — панель дверей, крупний план" src="images/car8-15.jpg" width="800" height="600" class="" onclick="setMainPhoto(14, this)"></div>
+    </div>
+
+<div class="photo-lightbox" id="photoLightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Zavřít">&times;</button>
+  <div class="gallery-arrow prev" onclick="shiftLightbox(-1)">&#8249;</div>
+  <div class="gallery-arrow next" onclick="shiftLightbox(1)">&#8250;</div>
+  <div class="gallery-counter" id="lightboxCounter">1 / 1</div>
+  <img id="lightboxImg" src="" alt="">
+</div>
+    <div class="car-info-panel">
+      <div class="car-info-eyebrow reveal">Škoda</div>
+      <h1 class="car-info-title reveal reveal-delay-1">Superb <br class="title-break"><span style="color:var(--violet)">2.0 TDI Automat</span></h1>
+      <div class="car-info-price reveal reveal-delay-2">165 000 Kč</div>
+      <div class="car-quick-specs reveal reveal-delay-3"><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span data-ua="2011" data-cz="2011">2011</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-ua="234 000 км" data-cz="234 000 km">234 000 km</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15M4 21h10M18 8l2 2v6a1.5 1.5 0 0 1-3 0v-2h-2"/></svg><span data-ua="Дизель" data-cz="Diesel">Diesel</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg><span data-ua="Автомат DSG, 6-ступенева" data-cz="Automat DSG, 6stupňový">Automat DSG, 6stupňový</span></div><div class="car-quick-spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg><span data-ua="125 кВт (170 к.с.)" data-cz="125 kW (170 k)">125 kW (170 k)</span></div></div>
+      <div class="car-cta-row reveal reveal-delay-4">
+        <a href="#" onclick="openContactPopup(event)" class="btn btn-primary" data-ua="Зв'язатися" data-cz="Kontaktovat">Kontaktovat</a>
+      </div>
+      <div class="car-note reveal reveal-delay-5"><span data-ua="Кузов" data-cz="Karoserie">Karoserie</span>: <span data-ua="Універсал (Combi)" data-cz="Kombi">Kombi</span> · <span data-ua="Двигун" data-cz="Motor">Motor</span>: 2.0 TDI</div>
+    </div>
+  </div>
 </div></section>
-<section><div class="container">
-  <div class="catalog-grid">
-    <div class="car-card reveal reveal-delay-1">
-      <a href="auto-1.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car1-1.jpg" width="576" height="768" alt="Škoda Superb III Combi"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Superb III Combi</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2020 · 207 000 км · Дизель" data-cz="2020 · 207 000 km · Diesel">2020 · 207 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">318 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
+
+<section class="car-section"><div class="container">
+  <h2 class="reveal"><span data-ua="Опис автомобіля" data-cz="Popis vozidla">Popis vozidla</span></h2>
+  <p class="car-desc-text reveal reveal-delay-1"><span data-ua="Škoda Superb 2011 року з дизельним двигуном 2.0 TDI (125 кВт) та автоматичною коробкою передач. Пробіг 234 000 км. Автомобіль у гарному та доглянутому стані, на 18-дюймових литих дисках, з дуже хорошою комплектацією. Шкіряний салон, сидіння з електрорегулюванням і пам'яттю, підігрів сидінь, безключовий доступ, ксенонові фари. Комфортний і просторий автомобіль з багатою комплектацією, готовий до експлуатації. Пройдено нову СТК." data-cz="Škoda Superb z roku 2011 s naftovým motorem 2.0 TDI (125 kW) a automatickou převodovkou. Najeto 234 000 km. Vůz je v pěkném a zachovalém stavu, na 18'' alu kolech a s velmi dobrou výbavou. Kožený interiér, elektricky nastavitelná sedadla s pamětí, vyhřívaná sedadla, bezklíčový přístup, xenonové světlomety. Komfortní a prostorný vůz s bohatou výbavou, připravený k provozu. Nová STK.">Škoda Superb z roku 2011 s naftovým motorem 2.0 TDI (125 kW) a automatickou převodovkou. Najeto 234 000 km. Vůz je v pěkném a zachovalém stavu, na 18'' alu kolech a s velmi dobrou výbavou. Kožený interiér, elektricky nastavitelná sedadla s pamětí, vyhřívaná sedadla, bezklíčový přístup, xenonové světlomety. Komfortní a prostorný vůz s bohatou výbavou, připravený k provozu. Nová STK.</span></p>
+</div></section>
+
+<section class="car-section"><div class="container">
+  <h2 class="reveal"><span data-ua="Комплектація" data-cz="Výbava">Výbava</span></h2>
+  <div class="feature-group reveal"><h3><span data-ua="Комфорт" data-cz="Komfort">Komfort</span></h3><div class="feature-tags"><div class="feature-tag"><span data-ua="Автоматична коробка передач" data-cz="Automatická převodovka">Automatická převodovka</span></div><div class="feature-tag"><span data-ua="18'' литі диски" data-cz="18'' alu kola">18'' alu kola</span></div><div class="feature-tag"><span data-ua="Шкіряний салон" data-cz="Kožený interiér">Kožený interiér</span></div><div class="feature-tag"><span data-ua="Безключовий доступ" data-cz="Bezklíčový přístup">Bezklíčový přístup</span></div><div class="feature-tag"><span data-ua="Електрорегулювання сидінь з пам'яттю" data-cz="Elektricky nastavitelná sedadla s pamětí">Elektricky nastavitelná sedadla s pamětí</span></div><div class="feature-tag"><span data-ua="Підігрів сидінь" data-cz="Vyhřívaná sedadla">Vyhřívaná sedadla</span></div><div class="feature-tag"><span data-ua="Великий мультимедійний дисплей" data-cz="Velký multimediální systém">Velký multimediální systém</span></div><div class="feature-tag"><span data-ua="Електропривід кришки багажника" data-cz="Elektrické víko kufru">Elektrické víko kufru</span></div><div class="feature-tag"><span data-ua="Електрорегулювання та складання дзеркал" data-cz="Elektricky sklopná zrcátka">Elektricky sklopná zrcátka</span></div></div></div><div class="feature-group reveal reveal-delay-2"><h3><span data-ua="Безпека" data-cz="Bezpečnost">Bezpečnost</span></h3><div class="feature-tags"><div class="feature-tag"><span data-ua="Ксенонові фари" data-cz="Xenonové světlomety">Xenonové světlomety</span></div><div class="feature-tag"><span data-ua="Парктроніки спереду і ззаду" data-cz="Parkovací senzory vpředu i vzadu">Parkovací senzory vpředu i vzadu</span></div><div class="feature-tag"><span data-ua="ABS" data-cz="ABS">ABS</span></div><div class="feature-tag"><span data-ua="ESP" data-cz="ESP">ESP</span></div><div class="feature-tag"><span data-ua="Подушки безпеки" data-cz="Airbagy">Airbagy</span></div><div class="feature-tag"><span data-ua="ISOFIX" data-cz="ISOFIX">ISOFIX</span></div></div></div>
+</div></section>
+
+<section class="car-section"><div class="container">
+  <h2 class="reveal"><span data-ua="Технічні характеристики" data-cz="Technické parametry">Technické parametry</span></h2>
+  <div class="specs-table reveal reveal-delay-1"><div class="specs-row"><dt><span data-ua="Об'єм двигуна" data-cz="Objem motoru">Objem motoru</span></dt><dd><span data-ua="1 968 см³" data-cz="1 968 см³">1 968 см³</span></dd></div><div class="specs-row"><dt><span data-ua="Потужність" data-cz="Výkon">Výkon</span></dt><dd><span data-ua="125 кВт (170 к.с.)" data-cz="125 kW (170 k)">125 kW (170 k)</span></dd></div><div class="specs-row"><dt><span data-ua="Крутний момент" data-cz="Točivý moment">Točivý moment</span></dt><dd><span data-ua="350 Нм" data-cz="350 Нм">350 Нм</span></dd></div><div class="specs-row"><dt><span data-ua="Привід" data-cz="Pohon">Pohon</span></dt><dd><span data-ua="Передній" data-cz="Přední">Přední</span></dd></div><div class="specs-row"><dt><span data-ua="Коробка передач" data-cz="Převodovka">Převodovka</span></dt><dd><span data-ua="6-ступенева автоматична DSG" data-cz="6stupňová automatická DSG">6stupňová automatická DSG</span></dd></div><div class="specs-row"><dt><span data-ua="Максимальна швидкість" data-cz="Maximální rychlost">Maximální rychlost</span></dt><dd><span data-ua="218 км/год" data-cz="218 km/h">218 km/h</span></dd></div><div class="specs-row"><dt><span data-ua="Розгін 0–100 км/год" data-cz="Zrychlení 0–100 km/h">Zrychlení 0–100 km/h</span></dt><dd><span data-ua="8,9 с" data-cz="8,9 s">8,9 s</span></dd></div><div class="specs-row"><dt><span data-ua="Середня витрата пального" data-cz="Průměrná spotřeba paliva">Průměrná spotřeba paliva</span></dt><dd><span data-ua="5,2–5,6 л/100 км" data-cz="5,2–5,6 л/100 км">5,2–5,6 л/100 км</span></dd></div><div class="specs-row"><dt><span data-ua="Паливний бак" data-cz="Palivová nádrž">Palivová nádrž</span></dt><dd><span data-ua="60 л" data-cz="60 л">60 л</span></dd></div><div class="specs-row"><dt><span data-ua="Об'єм багажника" data-cz="Objem kufru">Objem kufru</span></dt><dd><span data-ua="603 л" data-cz="603 л">603 л</span></dd></div></div>
+</div></section>
+
+<section class="car-section"><div class="container">
+  <h2 class="reveal"><span data-ua="Стан автомобіля" data-cz="Stav vozidla">Stav vozidla</span></h2>
+  <div class="condition-list reveal reveal-delay-1"><div class="condition-item"><span data-ua="Пробіг — 234 000 км" data-cz="Nájezd — 234 000 km">Nájezd — 234 000 km</span></div><div class="condition-item"><span data-ua="Нова СТК" data-cz="Nová STK">Nová STK</span></div><div class="condition-item"><span data-ua="Гарний і доглянутий стан" data-cz="Pěkný a zachovalý stav">Pěkný a zachovalý stav</span></div><div class="condition-item"><span data-ua="Дуже хороша комплектація" data-cz="Velmi dobrá výbava">Velmi dobrá výbava</span></div><div class="condition-item"><span data-ua="Автомобіль повністю готовий до експлуатації" data-cz="Vozidlo plně připraveno k provozu">Vozidlo plně připraveno k provozu</span></div></div>
+</div></section>
+
+<section class="car-section car-section--last reveal"><div class="container">
+  <div class="car-bottom-cta">
+    <div>
+      <h3><span data-ua="Зацікавило це авто?" data-cz="Máte zájem o toto auto?">Máte zájem o toto auto?</span></h3>
+      <p><span data-ua="Напишіть нам або зателефонуйте — відповідаємо протягом кількох годин." data-cz="Napište nám nebo zavolejte — odpovídáme během několika hodin.">Napište nám nebo zavolejte — odpovídáme během několika hodin.</span></p>
     </div>
-    <div class="car-card reveal reveal-delay-2">
-      <a href="auto-2.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car2-1.jpg" width="800" height="600" alt="Škoda Octavia RS Combi"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Octavia RS Combi</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2015 · 286 000 км · Дизель" data-cz="2015 · 286 000 km · Diesel">2015 · 286 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">187 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
+    <div class="car-bottom-cta-btns">
+      <a href="#" onclick="openContactPopup(event)" class="btn btn-primary" data-ua="Зв'язатися" data-cz="Kontaktovat">Kontaktovat</a>
     </div>
-    <div class="car-card reveal reveal-delay-3">
-      <a href="auto-3.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car3-1.jpg" width="800" height="600" alt="Mercedes-Benz GLE 400 d 4MATIC Coupé"></div>
-        <div class="car-info">
-          <div class="car-make">Mercedes-Benz</div>
-          <div class="car-model">GLE 400 d Coupé</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2020 · 221 000 км · Дизель" data-cz="2020 · 221 000 km · Diesel">2020 · 221 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">1 100 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
-    </div>
-    <div class="car-card reveal reveal-delay-1">
-      <a href="auto-4.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car4-1.jpg" width="800" height="600" alt="Škoda Octavia II RS 2.0 TDI"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Octavia II RS</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2009 · 203 000 км · Дизель" data-cz="2009 · 203 000 km · Diesel">2009 · 203 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">199 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
-    </div>
-    <div class="car-card reveal reveal-delay-2">
-      <a href="auto-5.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car5-1.jpg" width="800" height="600" alt="Škoda Superb Sedan 2.0 TDI"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Superb Sedan</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2020 · 270 000 км · Дизель" data-cz="2020 · 270 000 km · Diesel">2020 · 270 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">270 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
-    </div>
-    <div class="car-card reveal reveal-delay-3">
-      <a href="auto-6.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car6-1.jpg" width="800" height="600" alt="Škoda Octavia II 2.0 TDI"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Octavia II</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2011 · 239 000 км · Дизель" data-cz="2011 · 239 000 km · Diesel">2011 · 239 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">125 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
-    </div>
-    <div class="car-card reveal reveal-delay-1">
-      <a href="auto-7.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car7-1.jpg" width="800" height="600" alt="Škoda Superb 2.0 TDI"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Superb</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2011 · 277 000 км · Дизель" data-cz="2011 · 277 000 km · Diesel">2011 · 277 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">145 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
-    </div>
-    <div class="car-card reveal reveal-delay-2">
-      <a href="auto-8.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="images/car8-1.jpg" width="800" height="600" alt="Škoda Superb 2.0 TDI"></div>
-        <div class="car-info">
-          <div class="car-make">Škoda</div>
-          <div class="car-model">Superb</div>
-          <div class="car-specs"><span class="car-spec" data-ua="2011 · 234 000 км · Дизель" data-cz="2011 · 234 000 km · Diesel">2011 · 234 000 km · Diesel</span></div>
-          <div class="car-price-row"><div class="car-price">165 000 Kč</div><span class="car-more-arrow">&#8594;</span></div>
-        </div>
-      </a>
-    </div></div>
+  </div>
+  <div class="back-link-wrap reveal"><a href="katalog.html" class="back-link" data-ua="← Всі автомобілі" data-cz="← Všechna auta">← Všechna auta</a></div>
 </div></section>
 
 <footer class="footer" id="kontakt">
@@ -810,6 +782,111 @@ ul { list-style:none; }
 </div>
 
 <script>
+const carPhotos = ["images/car8-1.jpg", "images/car8-2.jpg", "images/car8-3.jpg", "images/car8-4.jpg", "images/car8-5.jpg", "images/car8-6.jpg", "images/car8-7.jpg", "images/car8-8.jpg", "images/car8-9.jpg", "images/car8-10.jpg", "images/car8-11.jpg", "images/car8-12.jpg", "images/car8-13.jpg", "images/car8-14.jpg", "images/car8-15.jpg"];
+let carPhotoIdx = 0;
+function crossfadeSrc(img, newSrc) {
+  img.style.opacity = '0';
+  setTimeout(() => {
+    img.src = newSrc;
+    requestAnimationFrame(() => { img.style.opacity = '1'; });
+  }, 90);
+}
+function setMainPhoto(i, el) {
+  carPhotoIdx = i;
+  crossfadeSrc(document.getElementById('mainPhoto'), carPhotos[i]);
+  document.querySelectorAll('.car-gallery-thumbs img').forEach(t => t.classList.remove('active'));
+  if (el) el.classList.add('active');
+  else document.querySelectorAll('.car-gallery-thumbs img')[i]?.classList.add('active');
+  const c = document.getElementById('galleryCounter');
+  if (c) c.textContent = (i+1) + ' / ' + carPhotos.length;
+}
+function shiftPhoto(dir) {
+  let i = (carPhotoIdx + dir + carPhotos.length) % carPhotos.length;
+  setMainPhoto(i);
+}
+
+// Свайп пальцем прямо в рамці галереї
+(function() {
+  const main = document.querySelector('.car-gallery-main');
+  if (!main) return;
+  let startX = 0, startY = 0, tracking = false;
+  main.addEventListener('touchstart', e => {
+    if (e.touches.length !== 1) { tracking = false; return; }
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    tracking = true;
+  }, { passive: true });
+  main.addEventListener('touchmove', e => {
+    if (e.touches.length > 1) tracking = false;
+  }, { passive: true });
+  main.addEventListener('touchend', e => {
+    if (!tracking) return;
+    tracking = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+      shiftPhoto(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+})();
+
+// Повноекранний перегляд фото (тап по фото — відкрити, свайп — гортати, тап поза фото/хрестик — закрити)
+function openLightbox() {
+  const lb = document.getElementById('photoLightbox');
+  const img = document.getElementById('lightboxImg');
+  const c = document.getElementById('lightboxCounter');
+  if (!lb || !img) return;
+  img.src = carPhotos[carPhotoIdx];
+  if (c) c.textContent = (carPhotoIdx + 1) + ' / ' + carPhotos.length;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  const lb = document.getElementById('photoLightbox');
+  if (!lb) return;
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function shiftLightbox(dir) {
+  shiftPhoto(dir);
+  const img = document.getElementById('lightboxImg');
+  const c = document.getElementById('lightboxCounter');
+  if (img) crossfadeSrc(img, carPhotos[carPhotoIdx]);
+  if (c) c.textContent = (carPhotoIdx + 1) + ' / ' + carPhotos.length;
+}
+(function() {
+  const mainImg = document.getElementById('mainPhoto');
+  if (mainImg) mainImg.addEventListener('click', openLightbox);
+  const lb = document.getElementById('photoLightbox');
+  if (!lb) return;
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  const img = document.getElementById('lightboxImg');
+  let startX = 0, tracking = false;
+  img.addEventListener('touchstart', e => {
+    if (e.touches.length !== 1) { tracking = false; return; }
+    startX = e.touches[0].clientX;
+    tracking = true;
+  }, { passive: true });
+  img.addEventListener('touchmove', e => {
+    if (e.touches.length > 1) tracking = false;
+  }, { passive: true });
+  img.addEventListener('touchend', e => {
+    if (!tracking) return;
+    tracking = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) shiftLightbox(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  img.addEventListener('click', () => closeLightbox());
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') shiftLightbox(-1);
+    if (e.key === 'ArrowRight') shiftLightbox(1);
+  });
+})();
+</script>
+
+<script>
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   const burger = document.querySelector('.burger');
@@ -856,56 +933,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function openContactPopup(e) {
   if (e) e.preventDefault();
+  const lang = localStorage.getItem('lang') || 'ua';
+  const eyebrow = document.querySelector('.car-info-eyebrow');
+  const title = document.querySelector('.car-info-title');
+  const carName = (eyebrow ? eyebrow.textContent.trim() + ' ' : '') + (title ? title.textContent.trim() : '');
+  const text = (lang === 'ua' ? 'Цікавить ' : 'Zajímá mě ') + carName;
+  const waLink = document.getElementById('waPopupLink');
+  if (waLink) waLink.href = 'https://wa.me/420608698655?text=' + encodeURIComponent(text);
   document.getElementById('contactPopup').classList.add('open');
-  var fab = document.getElementById('contactFab');
-  if (fab) fab.classList.add('open');
+  const fabEl = document.getElementById('contactFab');
+  if (fabEl) fabEl.classList.add('open');
 }
 function closeContactPopup() {
   document.getElementById('contactPopup').classList.remove('open');
-  var fab = document.getElementById('contactFab');
-  if (fab) fab.classList.remove('open');
+  const fabEl2 = document.getElementById('contactFab');
+  if (fabEl2) fabEl2.classList.remove('open');
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeContactPopup(); });
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+}, { threshold: 0.1 });
 setTimeout(() => {
   requestAnimationFrame(() => {
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   });
 }, 400);
-
-// Підсвічуємо картку авто, яка зараз по центру екрана (мобільний скрол каталогу)
-(function() {
-  const cards = Array.from(document.querySelectorAll('.catalog-grid .car-card'));
-  if (!cards.length) return;
-
-  function updateActiveCard() {
-    if (window.innerWidth > 768) return;
-    const centerY = window.innerHeight / 2;
-    let closest = null;
-    let closestDist = Infinity;
-    cards.forEach(card => {
-      const r = card.getBoundingClientRect();
-      const cardCenter = r.top + r.height / 2;
-      const dist = Math.abs(cardCenter - centerY);
-      if (dist < closestDist) { closestDist = dist; closest = card; }
-    });
-    cards.forEach(card => card.classList.toggle('active', card === closest));
-  }
-
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => { updateActiveCard(); ticking = false; });
-      ticking = true;
-    }
-  }, { passive: true });
-  window.addEventListener('resize', updateActiveCard);
-  window.addEventListener('load', updateActiveCard);
-  setTimeout(updateActiveCard, 300);
-})();
 </script>
 <div class="contact-popup-overlay" id="contactPopup" onclick="if(event.target===this) closeContactPopup()">
   <div class="contact-popup">
@@ -913,7 +966,7 @@ setTimeout(() => {
       <span class="contact-popup-label">Zavolat</span>
       <span class="contact-popup-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span>
     </a>
-    <a href="https://wa.me/420608698655" target="_blank" rel="noopener noreferrer" class="contact-popup-btn">
+    <a href="#" id="waPopupLink" target="_blank" rel="noopener noreferrer" class="contact-popup-btn">
       <span class="contact-popup-label">WhatsApp</span>
       <span class="contact-popup-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.08L2 22l5.05-1.32A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.15c-1.68 0-3.24-.48-4.56-1.31l-.33-.2-3.11.82.83-3.03-.21-.34A8.14 8.14 0 0 1 3.85 12c0-4.5 3.65-8.15 8.15-8.15S20.15 7.5 20.15 12 16.5 20.15 12 20.15zm4.48-6.13c-.25-.12-1.45-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.77.95-.14.16-.28.18-.53.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.52.12.16 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg></span>
     </a>
@@ -931,11 +984,12 @@ setTimeout(() => {
   <svg class="icon-dots" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
   <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
 </button>
+
 <script>
-// Навбар: логотип плавно тане під час скролу, зникає до появи каталогу авто
+// Навбар: логотип плавно тане під час скролу, зникає до появи фото й опису авто
 (function() {
   const navLogo = document.querySelector('.nav-logo');
-  const target = document.querySelector('.catalog-grid');
+  const target = document.querySelector('.car-gallery-wrap');
   if (!navLogo || !target) return;
   let ticking = false;
   function updateNav() {
