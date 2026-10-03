@@ -1,0 +1,258 @@
+{
+  "make": "Škoda",
+  "model": "Superb III Combi",
+  "variant": "2.0 TDI DSG",
+  "price": 318000,
+  "year": 2020,
+  "mileage": 207000,
+  "fuel": "diesel",
+  "transmission": {
+    "cz": "Automat DSG, 7stupňový",
+    "ua": "Автомат DSG, 7-ступенева"
+  },
+  "power_kw": 140,
+  "body": {
+    "cz": "Kombi",
+    "ua": "Універсал (Combi)"
+  },
+  "engine": "2.0 TDI",
+  "added": "2026-09-15",
+  "meta_description": "Škoda Superb III Combi 2020, 2.0 TDI DSG, 207 000 km, diesel. Prověřené vozidlo v Praze od AutoProBazar Praha.",
+  "photos": [
+    {
+      "src": "/images/car1-1.jpg",
+      "width": 576,
+      "height": 768
+    },
+    {
+      "src": "/images/car1-2.jpg",
+      "width": 576,
+      "height": 768
+    },
+    {
+      "src": "/images/car1-3.jpg",
+      "width": 576,
+      "height": 768
+    },
+    {
+      "src": "/images/car1-4.jpg",
+      "width": 576,
+      "height": 768
+    },
+    {
+      "src": "/images/car1-5.jpg",
+      "width": 384,
+      "height": 512
+    },
+    {
+      "src": "/images/car1-6.jpg",
+      "width": 384,
+      "height": 512
+    },
+    {
+      "src": "/images/car1-7.jpg",
+      "width": 384,
+      "height": 512
+    },
+    {
+      "src": "/images/car1-8.jpg",
+      "width": 384,
+      "height": 512
+    },
+    {
+      "src": "/images/car1-9.jpg",
+      "width": 384,
+      "height": 512
+    },
+    {
+      "src": "/images/car1-10.jpg",
+      "width": 768,
+      "height": 576
+    },
+    {
+      "src": "/images/car1-11.jpg",
+      "width": 576,
+      "height": 768
+    }
+  ],
+  "description": {
+    "cz": "Škoda Superb III Combi z roku 2020 s výkonným a úsporným naftovým motorem 2.0 TDI (140 kW) a automatickou převodovkou DSG. Vozidlo je v perfektním technickém i vizuálním stavu, plně připraveno k provozu. Při nájezdu 200 000 km byla vyměněna sada rozvodového řemene. Interiér je velmi udržovaný — přední i zadní sedadla bez opotřebení a vad. Karoserie je v dobrém stavu, bílá barva zdůrazňuje elegantní design modelu. Superb v provedení Combi kombinuje vysokou úroveň komfortu, moderní výbavu a jeden z největších zavazadlových prostorů ve své třídě — ideální volba pro rodinné výlety i každodenní použití.",
+    "ua": "Škoda Superb III Combi 2020 року з потужним і економічним дизельним двигуном 2.0 TDI (140 кВт) та автоматичною коробкою передач DSG. Автомобіль у відмінному технічному та візуальному стані, повністю готовий до експлуатації. На пробігу 200 000 км виконано заміну комплекту ременя ГРМ. Салон доглянутий — передні та задні сидіння без потертостей і дефектів. Кузов у гарному стані, білий колір підкреслює елегантний дизайн моделі. Superb у кузові Combi поєднує високий рівень комфорту, сучасне оснащення та один із найбільших багажників у своєму класі — ідеальний вибір як для сімейних подорожей, так і для щоденного використання."
+  },
+  "comfort": [
+    {
+      "cz": "Automatická převodovka DSG",
+      "ua": "Автоматична коробка передач DSG"
+    },
+    {
+      "cz": "Vyhřívání předních sedadel",
+      "ua": "Підігрів передніх сидінь"
+    },
+    {
+      "cz": "Vyhřívání čelního skla",
+      "ua": "Підігрів лобового скла"
+    },
+    {
+      "cz": "Multifunkční volant",
+      "ua": "Багатофункціональне кермо"
+    },
+    {
+      "cz": "Dvouzónová klimatizace",
+      "ua": "Двозонний клімат-контроль"
+    },
+    {
+      "cz": "Velký multimediální displej",
+      "ua": "Великий мультимедійний дисплей"
+    },
+    {
+      "cz": "Přední loketní opěrka",
+      "ua": "Передній центральний підлокітник"
+    },
+    {
+      "cz": "Elektrická okna",
+      "ua": "Електросклопідйомники"
+    },
+    {
+      "cz": "Elektrické ovládání zrcátek",
+      "ua": "Електрорегулювання дзеркал"
+    }
+  ],
+  "safety": [
+    {
+      "cz": "Full LED světlomety",
+      "ua": "Full LED оптика"
+    },
+    {
+      "cz": "ABS",
+      "ua": "ABS"
+    },
+    {
+      "cz": "ESP",
+      "ua": "ESP"
+    },
+    {
+      "cz": "Airbagy",
+      "ua": "Подушки безпеки"
+    },
+    {
+      "cz": "ISOFIX",
+      "ua": "ISOFIX"
+    },
+    {
+      "cz": "Parkovací senzory",
+      "ua": "Парктроніки"
+    },
+    {
+      "cz": "Asistenční systémy řidiče",
+      "ua": "Системи допомоги водію"
+    }
+  ],
+  "specs": [
+    {
+      "label": {
+        "cz": "Objem motoru",
+        "ua": "Об'єм двигуна"
+      },
+      "value": {
+        "cz": "1 968 см³",
+        "ua": "1 968 см³"
+      }
+    },
+    {
+      "label": {
+        "cz": "Výkon",
+        "ua": "Потужність"
+      },
+      "value": {
+        "cz": "140 kW (190 k)",
+        "ua": "140 кВт (190 к.с.)"
+      }
+    },
+    {
+      "label": {
+        "cz": "Točivý moment",
+        "ua": "Крутний момент"
+      },
+      "value": {
+        "cz": "400 Нм",
+        "ua": "400 Нм"
+      }
+    },
+    {
+      "label": {
+        "cz": "Pohon",
+        "ua": "Привід"
+      },
+      "value": {
+        "cz": "Přední",
+        "ua": "Передній"
+      }
+    },
+    {
+      "label": {
+        "cz": "Převodovka",
+        "ua": "Коробка передач"
+      },
+      "value": {
+        "cz": "7stupňová automatická DSG",
+        "ua": "7-ступенева автоматична DSG"
+      }
+    },
+    {
+      "label": {
+        "cz": "Palivová nádrž",
+        "ua": "Паливний бак"
+      },
+      "value": {
+        "cz": "66 л",
+        "ua": "66 л"
+      }
+    },
+    {
+      "label": {
+        "cz": "Průměrná spotřeba paliva",
+        "ua": "Середня витрата пального"
+      },
+      "value": {
+        "cz": "4,8–5,5 л/100 км",
+        "ua": "4,8–5,5 л/100 км"
+      }
+    },
+    {
+      "label": {
+        "cz": "Objem kufru",
+        "ua": "Об'єм багажника"
+      },
+      "value": {
+        "cz": "660 л",
+        "ua": "660 л"
+      }
+    }
+  ],
+  "condition": [
+    {
+      "cz": "Nájezd — 207 000 km",
+      "ua": "Пробіг — 207 000 км"
+    },
+    {
+      "cz": "Sada rozvodového řemene vyměněna při 200 000 km",
+      "ua": "Комплект ременя ГРМ замінений на 200 000 км"
+    },
+    {
+      "cz": "Přední i zadní sedadla v perfektním stavu, bez opotřebení a vad",
+      "ua": "Передні та задні сидіння в ідеальному стані, без потертостей і дефектів"
+    },
+    {
+      "cz": "Vozidlo je technicky zcela v pořádku",
+      "ua": "Автомобіль технічно повністю справний"
+    },
+    {
+      "cz": "Karoserie v dobrém stavu",
+      "ua": "Кузов у хорошому стані"
+    },
+    {
+      "cz": "Připraveno k provozu bez dalších investic",
+      "ua": "Готовий до експлуатації без додаткових вкладень"
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "make": "Škoda",
+  "model": "Octavia RS Combi",
+  "variant": "2.0 TDI Manuál",
+  "price": 187000,
+  "year": 2015,
+  "mileage": 286000,
+  "fuel": "diesel",
+  "transmission": {
+    "cz": "Manuál",
+    "ua": "Механічна КПП"
+  },
+  "power_kw": 135,
+  "body": {
+    "cz": "Kombi",
+    "ua": "Універсал (Combi)"
+  },
+  "engine": "2.0 TDI",
+  "added": "2026-09-14",
+  "meta_description": "Škoda Octavia RS Combi 2015, 2.0 TDI 135 kW manuál, 286 000 km, diesel. Prověřené vozidlo v Praze od AutoProBazar Praha.",
+  "photos": [
+    {
+      "src": "/images/car2-1.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — екстер'єр спереду"
+    },
+    {
+      "src": "/images/car2-2.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — екстер'єр ззаду, крупний план"
+    },
+    {
+      "src": "/images/car2-3.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — екстер'єр ззаду, загальний план"
+    },
+    {
+      "src": "/images/car2-4.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — екстер'єр спереду, інший ракурс"
+    },
+    {
+      "src": "/images/car2-5.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — панель дверей та кнопки вікон"
+    },
+    {
+      "src": "/images/car2-6.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — аудіосистема Canton у дверях"
+    },
+    {
+      "src": "/images/car2-7.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — спортивні передні сидіння"
+    },
+    {
+      "src": "/images/car2-8.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — задні сидіння"
+    },
+    {
+      "src": "/images/car2-9.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — сабвуфер Canton у багажнику"
+    },
+    {
+      "src": "/images/car2-10.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — центральна консоль, мультимедіа та важіль КПП"
+    },
+    {
+      "src": "/images/car2-11.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia RS Combi 2.0 TDI — кермо та панель приладів"
+    }
+  ],
+  "description": {
+    "cz": "Škoda Octavia RS 2.0 TDI 135 kW, manuální převodovka, rok výroby 2015. Najeto 286 000 km. Vůz je po kompletním servisu, vyměněna řada komponentů — stačí nastoupit a jet bez dalších investic. Bohatá výbava: audiosystém Canton, vyhřívané čelní sklo i přední sedadla, automatická klimatizace Climatronic, tempomat, dešťový i světelný senzor a maximální LED/bi-xenonová optika.",
+    "ua": "Škoda Octavia RS 2.0 TDI 135 кВт, механічна коробка передач, 2015 рік випуску. Пробіг 286 000 км. Автомобіль пройшов повний сервіс, замінено низку компонентів — готовий сідати та їхати без додаткових вкладень. Багата комплектація: аудіосистема Canton, обігрів лобового скла та передніх сидінь, автоматичний клімат-контроль Climatronic, круїз-контроль, дощовий і світловий сенсори та максимальна LED/bi-xenonová оптика."
+  },
+  "comfort": [
+    {
+      "cz": "6stupňová manuální převodovka",
+      "ua": "6-ступенева механічна коробка передач"
+    },
+    {
+      "cz": "Audiosystém Canton",
+      "ua": "Аудіосистема Canton"
+    },
+    {
+      "cz": "Vyhřívané čelní sklo",
+      "ua": "Обігрів лобового скла"
+    },
+    {
+      "cz": "Vyhřívání předních sedadel",
+      "ua": "Підігрів передніх сидінь"
+    },
+    {
+      "cz": "Automatická klimatizace Climatronic",
+      "ua": "Автоматичний клімат-контроль Climatronic"
+    },
+    {
+      "cz": "Tempomat",
+      "ua": "Круїз-контроль"
+    },
+    {
+      "cz": "Dešťový senzor",
+      "ua": "Дощовий сенсор"
+    },
+    {
+      "cz": "Elektricky sklopná zrcátka",
+      "ua": "Електроскладання дзеркал"
+    },
+    {
+      "cz": "Velký multimediální displej",
+      "ua": "Великий мультимедійний дисплей"
+    },
+    {
+      "cz": "Multifunkční volant",
+      "ua": "Багатофункціональне кермо"
+    },
+    {
+      "cz": "Černý strop",
+      "ua": "Чорна стельова обшивка"
+    },
+    {
+      "cz": "Elektrická okna",
+      "ua": "Електросклопідйомники"
+    }
+  ],
+  "safety": [
+    {
+      "cz": "Maximální LED/bi-xenonová optika",
+      "ua": "Максимальна LED/bi-xenonová оптика"
+    },
+    {
+      "cz": "Světelný senzor — automatické rozsvěcení světel",
+      "ua": "Світловий сенсор — автоматичне вмикання світла"
+    },
+    {
+      "cz": "ABS",
+      "ua": "ABS"
+    },
+    {
+      "cz": "ESP",
+      "ua": "ESP"
+    },
+    {
+      "cz": "ISOFIX",
+      "ua": "ISOFIX"
+    },
+    {
+      "cz": "Airbagy",
+      "ua": "Подушки безпеки"
+    }
+  ],
+  "specs": [
+    {
+      "label": {
+        "cz": "Objem motoru",
+        "ua": "Об'єм двигуна"
+      },
+      "value": {
+        "cz": "1 968 см³",
+        "ua": "1 968 см³"
+      }
+    },
+    {
+      "label": {
+        "cz": "Výkon",
+        "ua": "Потужність"
+      },
+      "value": {
+        "cz": "135 kW (184 k)",
+        "ua": "135 кВт (184 к.с.)"
+      }
+    },
+    {
+      "label": {
+        "cz": "Točivý moment",
+        "ua": "Крутний момент"
+      },
+      "value": {
+        "cz": "380 Нм",
+        "ua": "380 Нм"
+      }
+    },
+    {
+      "label": {
+        "cz": "Pohon",
+        "ua": "Привід"
+      },
+      "value": {
+        "cz": "Přední",
+        "ua": "Передній"
+      }
+    },
+    {
+      "label": {
+        "cz": "Převodovka",
+        "ua": "Коробка передач"
+      },
+      "value": {
+        "cz": "6stupňová manuální",
+        "ua": "6-ступенева механічна"
+      }
+    },
+    {
+      "label": {
+        "cz": "Maximální rychlost",
+        "ua": "Максимальна швидкість"
+      },
+      "value": {
+        "cz": "231 km/h",
+        "ua": "231 км/год"
+      }
+    },
+    {
+      "label": {
+        "cz": "Zrychlení 0–100 km/h",
+        "ua": "Розгін 0–100 км/год"
+      },
+      "value": {
+        "cz": "8,2 s",
+        "ua": "8,2 с"
+      }
+    },
+    {
+      "label": {
+        "cz": "Průměrná spotřeba paliva",
+        "ua": "Середня витрата пального"
+      },
+      "value": {
+        "cz": "4,6–5,0 л/100 км",
+        "ua": "4,6–5,0 л/100 км"
+      }
+    },
+    {
+      "label": {
+        "cz": "Palivová nádrž",
+        "ua": "Паливний бак"
+      },
+      "value": {
+        "cz": "50 л",
+        "ua": "50 л"
+      }
+    },
+    {
+      "label": {
+        "cz": "Objem kufru",
+        "ua": "Об'єм багажника"
+      },
+      "value": {
+        "cz": "610 л",
+        "ua": "610 л"
+      }
+    }
+  ],
+  "condition": [
+    {
+      "cz": "Nájezd — 286 000 km",
+      "ua": "Пробіг — 286 000 км"
+    },
+    {
+      "cz": "Po kompletním servisu, vyměněna řada komponentů",
+      "ua": "Після повного сервісу, замінено низку компонентів"
+    },
+    {
+      "cz": "Bohatá výbava — Canton audio, vyhřívání skla i sedadel",
+      "ua": "Багата комплектація — Canton audio, обігрів скла і сидінь"
+    },
+    {
+      "cz": "Maximální LED/bi-xenonová optika",
+      "ua": "Максимальна LED/bi-xenonová оптика"
+    },
+    {
+      "cz": "Automatická klimatizace Climatronic",
+      "ua": "Автоматичний клімат-контроль Climatronic"
+    },
+    {
+      "cz": "Vozidlo plně připraveno k provozu",
+      "ua": "Автомобіль повністю готовий до експлуатації"
+    }
+  ]
+}
