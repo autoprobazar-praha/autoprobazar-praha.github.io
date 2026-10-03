@@ -85,7 +85,7 @@ collections:
         summary: "{{fields.src}}"
         fields:
           - { name: src, label: "Фото", widget: image, choose_url: false }
-          - { name: alt, label: "Підпис до фото (необов'язково)", widget: string, required: false }
+          - { name: alt, label: "Підпис до фото", widget: string, required: false }
       - name: description
         label: "Опис автомобіля"
         widget: object
@@ -150,7 +150,7 @@ collections:
         default: "{{now}}"
         hint: "Заповнюється сама. Новіші авто показуються на сайті першими."
       - name: meta_description
-        label: "Опис для Google (необов'язково)"
+        label: "Опис для Google"
         widget: text
         required: false
         hint: "Коротке речення для пошуку Google. Якщо залишити порожнім, сайт складе його сам."
