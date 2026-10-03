@@ -1,0 +1,387 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "GLE 400 d Coupé",
+  "variant": "4MATIC",
+  "price": 1100000,
+  "year": 2020,
+  "mileage": 221000,
+  "fuel": "diesel",
+  "transmission": {
+    "cz": "Automatická převodovka 9G-Tronic",
+    "ua": "Автоматична коробка передач 9G-Tronic"
+  },
+  "power_kw": 243,
+  "body": {
+    "cz": "SUV Coupé",
+    "ua": "SUV Coupé"
+  },
+  "engine": "3.0 Diesel",
+  "added": "2026-09-13",
+  "meta_description": "Mercedes-Benz GLE 400 d 4MATIC Coupé 2020, 3.0 diesel 243 kW, 221 000 km. Maximální výbava. Prověřené vozidlo v Praze od AutoProBazar Praha.",
+  "photos": [
+    {
+      "src": "/images/car3-1.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — екстер'єр спереду, інший ракурс"
+    },
+    {
+      "src": "/images/car3-2.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — екстер'єр спереду"
+    },
+    {
+      "src": "/images/car3-3.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — екстер'єр спереду зліва"
+    },
+    {
+      "src": "/images/car3-4.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — екстер'єр ззаду зліва"
+    },
+    {
+      "src": "/images/car3-5.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — екстер'єр ззаду, ближче"
+    },
+    {
+      "src": "/images/car3-6.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — приладова панель та кермо"
+    },
+    {
+      "src": "/images/car3-7.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — мультимедійний дисплей MBUX"
+    },
+    {
+      "src": "/images/car3-8.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — кермо та панель приладів, крупний план"
+    },
+    {
+      "src": "/images/car3-9.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — кнопки пам'яті сидінь у дверях"
+    },
+    {
+      "src": "/images/car3-10.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — екран камери кругового огляду 360°"
+    },
+    {
+      "src": "/images/car3-11.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — дзеркало та кнопки вікон"
+    },
+    {
+      "src": "/images/car3-12.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — панорамний дах"
+    },
+    {
+      "src": "/images/car3-13.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — складені задні сидіння"
+    },
+    {
+      "src": "/images/car3-14.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — акустична система в дверях"
+    },
+    {
+      "src": "/images/car3-15.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — задні сидіння"
+    },
+    {
+      "src": "/images/car3-16.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — багажник"
+    },
+    {
+      "src": "/images/car3-17.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — колесо та гальмівний супорт"
+    },
+    {
+      "src": "/images/car3-18.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Mercedes-Benz GLE 400 d 4MATIC Coupé — задній номерний знак та фаркоп"
+    }
+  ],
+  "description": {
+    "cz": "Mercedes-Benz GLE 400 d 4MATIC Coupé, rok výroby 2020. Najeto 221 000 km. Vůz v maximální výbavě — prakticky vše, co lze k tomuto modelu objednat pro komfort a bezpečnost. Silný 3,0litrový řadový šestiválec s výkonem 243 kW (330 k) a točivým momentem 700 Nm v kombinaci se stálým pohonem všech kol 4MATIC a 9stupňovou automatickou převodovkou 9G-Tronic zajišťuje jisté zrychlení 0–100 km/h přibližně za 5,7 s.",
+    "ua": "Mercedes-Benz GLE 400 d 4MATIC Coupé, рік випуску 2020. Пробіг 221 000 км. Автомобіль у максимальній комплектації — практично все, що можна було замовити для комфорту та безпеки. Потужний 3,0-літровий рядний шестициліндровий дизель віддачею 243 кВт (330 к.с.) і крутним моментом 700 Нм у поєднанні зі стабільним повним приводом 4MATIC та 9-ступеневим автоматом 9G-Tronic забезпечують впевнений розгін 0–100 км/год приблизно за 5,7 с."
+  },
+  "comfort": [
+    {
+      "cz": "9stupňová automatická převodovka 9G-Tronic",
+      "ua": "9-ступенева автоматична коробка передач 9G-Tronic"
+    },
+    {
+      "cz": "Kamera 360°",
+      "ua": "Камера кругового огляду 360°"
+    },
+    {
+      "cz": "Panoramatická střecha",
+      "ua": "Панорамний дах"
+    },
+    {
+      "cz": "Velký centrální touchpad / multimédia MBUX",
+      "ua": "Великий центральний тачпад / мультимедіа MBUX"
+    },
+    {
+      "cz": "Rozšířený digitální přístrojový štít",
+      "ua": "Розширена цифрова панель приладів"
+    },
+    {
+      "cz": "Paměť předních sedadel",
+      "ua": "Пам'ять передніх сидінь"
+    },
+    {
+      "cz": "Elektrické nastavení sedadel",
+      "ua": "Електричне регулювання сидінь"
+    },
+    {
+      "cz": "Vyhřívání předních sedadel",
+      "ua": "Підігрів передніх сидінь"
+    },
+    {
+      "cz": "Ventilace předních sedadel",
+      "ua": "Вентиляція передніх сидінь"
+    },
+    {
+      "cz": "Masážní funkce předních sedadel",
+      "ua": "Масаж передніх сидінь"
+    },
+    {
+      "cz": "Vyhřívání zadních sedadel",
+      "ua": "Підігрів задніх сидінь"
+    },
+    {
+      "cz": "4zónová klimatizace",
+      "ua": "4-зонний клімат-контроль"
+    },
+    {
+      "cz": "Elektrické ovládání víka kufru",
+      "ua": "Електропривід кришки багажника"
+    },
+    {
+      "cz": "Bezklíčový přístup / start",
+      "ua": "Безключовий доступ і запуск"
+    },
+    {
+      "cz": "Tažné zařízení",
+      "ua": "Фаркоп"
+    }
+  ],
+  "safety": [
+    {
+      "cz": "4MATIC — stálý pohon všech kol",
+      "ua": "4MATIC — стабільний повний привід"
+    },
+    {
+      "cz": "Maximální LED optika",
+      "ua": "Максимальна LED-оптика"
+    },
+    {
+      "cz": "Adaptivní tempomat",
+      "ua": "Адаптивний круїз-контроль"
+    },
+    {
+      "cz": "Asistent udržování v jízdním pruhu",
+      "ua": "Асистент утримання в смузі руху"
+    },
+    {
+      "cz": "Kontrola mrtvého úhlu",
+      "ua": "Контроль мертвих зон"
+    },
+    {
+      "cz": "Rozpoznávání dopravních značek",
+      "ua": "Розпізнавання дорожніх знаків"
+    },
+    {
+      "cz": "Rozpoznávání semaforů",
+      "ua": "Розпізнавання світлофорів"
+    },
+    {
+      "cz": "Systém varování před kolizí",
+      "ua": "Система попередження про зіткнення"
+    },
+    {
+      "cz": "Automatické nouzové brzdění",
+      "ua": "Автоматичне екстрене гальмування"
+    },
+    {
+      "cz": "Parkovací asistenti",
+      "ua": "Паркувальні асистенти"
+    },
+    {
+      "cz": "Přední a zadní parkovací senzory",
+      "ua": "Передні та задні парктроніки"
+    },
+    {
+      "cz": "ABS",
+      "ua": "ABS"
+    },
+    {
+      "cz": "ESP",
+      "ua": "ESP"
+    },
+    {
+      "cz": "Airbagy",
+      "ua": "Подушки безпеки"
+    },
+    {
+      "cz": "ISOFIX",
+      "ua": "ISOFIX"
+    }
+  ],
+  "specs": [
+    {
+      "label": {
+        "cz": "Objem motoru",
+        "ua": "Об'єм двигуна"
+      },
+      "value": {
+        "cz": "2 925 см³",
+        "ua": "2 925 см³"
+      }
+    },
+    {
+      "label": {
+        "cz": "Výkon",
+        "ua": "Потужність"
+      },
+      "value": {
+        "cz": "243 kW (330 k)",
+        "ua": "243 кВт (330 к.с.)"
+      }
+    },
+    {
+      "label": {
+        "cz": "Točivý moment",
+        "ua": "Крутний момент"
+      },
+      "value": {
+        "cz": "700 Нм",
+        "ua": "700 Нм"
+      }
+    },
+    {
+      "label": {
+        "cz": "Pohon",
+        "ua": "Привід"
+      },
+      "value": {
+        "cz": "4MATIC (stálý pohon všech kol)",
+        "ua": "4MATIC (стабільний повний привід)"
+      }
+    },
+    {
+      "label": {
+        "cz": "Převodovka",
+        "ua": "Коробка передач"
+      },
+      "value": {
+        "cz": "9stupňová automatická 9G-Tronic",
+        "ua": "9-ступенева автоматична 9G-Tronic"
+      }
+    },
+    {
+      "label": {
+        "cz": "Maximální rychlost",
+        "ua": "Максимальна швидкість"
+      },
+      "value": {
+        "cz": "240 km/h",
+        "ua": "240 км/год"
+      }
+    },
+    {
+      "label": {
+        "cz": "Zrychlení 0–100 km/h",
+        "ua": "Розгін 0–100 км/год"
+      },
+      "value": {
+        "cz": "přibližně 5,7 s",
+        "ua": "приблизно 5,7 с"
+      }
+    },
+    {
+      "label": {
+        "cz": "Průměrná spotřeba paliva",
+        "ua": "Середня витрата пального"
+      },
+      "value": {
+        "cz": "6,8–7,0 л/100 км",
+        "ua": "6,8–7,0 л/100 км"
+      }
+    },
+    {
+      "label": {
+        "cz": "Palivová nádrž",
+        "ua": "Паливний бак"
+      },
+      "value": {
+        "cz": "65 л",
+        "ua": "65 л"
+      }
+    },
+    {
+      "label": {
+        "cz": "Objem kufru",
+        "ua": "Об'єм багажника"
+      },
+      "value": {
+        "cz": "655 л",
+        "ua": "655 л"
+      }
+    }
+  ],
+  "condition": [
+    {
+      "cz": "Nájezd — 221 000 km",
+      "ua": "Пробіг — 221 000 км"
+    },
+    {
+      "cz": "Maximální výbava — kamera 360°, panoramatická střecha, masážní sedadla",
+      "ua": "Максимальна комплектація — камера 360°, панорамний дах, масажні сидіння"
+    },
+    {
+      "cz": "Adaptivní tempomat a kompletní bezpečnostní asistenty",
+      "ua": "Адаптивний круїз-контроль і повний пакет асистентів безпеки"
+    },
+    {
+      "cz": "4zónová klimatizace, vyhřívání i ventilace sedadel",
+      "ua": "4-зонний клімат-контроль, підігрів і вентиляція сидінь"
+    },
+    {
+      "cz": "Tažné zařízení",
+      "ua": "Фаркоп"
+    },
+    {
+      "cz": "Vozidlo plně připraveno k provozu",
+      "ua": "Автомобіль повністю готовий до експлуатації"
+    }
+  ]
+}

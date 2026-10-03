@@ -1,0 +1,305 @@
+{
+  "make": "Škoda",
+  "model": "Superb",
+  "variant": "2.0 TDI Automat",
+  "price": 165000,
+  "year": 2011,
+  "mileage": 234000,
+  "fuel": "diesel",
+  "transmission": {
+    "cz": "Automat DSG, 6stupňový",
+    "ua": "Автомат DSG, 6-ступенева"
+  },
+  "power_kw": 125,
+  "body": {
+    "cz": "Kombi",
+    "ua": "Універсал (Combi)"
+  },
+  "engine": "2.0 TDI",
+  "added": "2026-09-08",
+  "meta_description": "Škoda Superb 2.0 TDI 125 kW, automat, 234 000 km, diesel. Bohatá výbava, kožený interiér. Prověřené vozidlo v Praze od AutoProBazar Praha.",
+  "photos": [
+    {
+      "src": "/images/car8-1.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — екстер'єр спереду зліва"
+    },
+    {
+      "src": "/images/car8-2.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — екстер'єр спереду, ближче"
+    },
+    {
+      "src": "/images/car8-3.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — екстер'єр ззаду справа"
+    },
+    {
+      "src": "/images/car8-4.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — екстер'єр ззаду зліва"
+    },
+    {
+      "src": "/images/car8-5.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — панель дверей та кнопки вікон"
+    },
+    {
+      "src": "/images/car8-6.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — кермо та приладова панель"
+    },
+    {
+      "src": "/images/car8-7.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — кермо та важіль АКПП"
+    },
+    {
+      "src": "/images/car8-8.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — мультимедіа та центральна консоль"
+    },
+    {
+      "src": "/images/car8-9.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — передні сидіння, крупний план"
+    },
+    {
+      "src": "/images/car8-10.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — передні сидіння"
+    },
+    {
+      "src": "/images/car8-11.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — задні сидіння"
+    },
+    {
+      "src": "/images/car8-12.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — передні сидіння, інший ракурс"
+    },
+    {
+      "src": "/images/car8-13.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — відчинені двері, екстер'єр"
+    },
+    {
+      "src": "/images/car8-14.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — кнопка відкривання багажника"
+    },
+    {
+      "src": "/images/car8-15.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Superb 2.0 TDI — панель дверей, крупний план"
+    }
+  ],
+  "description": {
+    "cz": "Škoda Superb z roku 2011 s naftovým motorem 2.0 TDI (125 kW) a automatickou převodovkou. Najeto 234 000 km. Vůz je v pěkném a zachovalém stavu, na 18'' alu kolech a s velmi dobrou výbavou. Kožený interiér, elektricky nastavitelná sedadla s pamětí, vyhřívaná sedadla, bezklíčový přístup, xenonové světlomety. Komfortní a prostorný vůz s bohatou výbavou, připravený k provozu. Nová STK.",
+    "ua": "Škoda Superb 2011 року з дизельним двигуном 2.0 TDI (125 кВт) та автоматичною коробкою передач. Пробіг 234 000 км. Автомобіль у гарному та доглянутому стані, на 18-дюймових литих дисках, з дуже хорошою комплектацією. Шкіряний салон, сидіння з електрорегулюванням і пам'яттю, підігрів сидінь, безключовий доступ, ксенонові фари. Комфортний і просторий автомобіль з багатою комплектацією, готовий до експлуатації. Пройдено нову СТК."
+  },
+  "comfort": [
+    {
+      "cz": "Automatická převodovka",
+      "ua": "Автоматична коробка передач"
+    },
+    {
+      "cz": "18'' alu kola",
+      "ua": "18'' литі диски"
+    },
+    {
+      "cz": "Kožený interiér",
+      "ua": "Шкіряний салон"
+    },
+    {
+      "cz": "Bezklíčový přístup",
+      "ua": "Безключовий доступ"
+    },
+    {
+      "cz": "Elektricky nastavitelná sedadla s pamětí",
+      "ua": "Електрорегулювання сидінь з пам'яттю"
+    },
+    {
+      "cz": "Vyhřívaná sedadla",
+      "ua": "Підігрів сидінь"
+    },
+    {
+      "cz": "Velký multimediální systém",
+      "ua": "Великий мультимедійний дисплей"
+    },
+    {
+      "cz": "Elektrické víko kufru",
+      "ua": "Електропривід кришки багажника"
+    },
+    {
+      "cz": "Elektricky sklopná zrcátka",
+      "ua": "Електрорегулювання та складання дзеркал"
+    }
+  ],
+  "safety": [
+    {
+      "cz": "Xenonové světlomety",
+      "ua": "Ксенонові фари"
+    },
+    {
+      "cz": "Parkovací senzory vpředu i vzadu",
+      "ua": "Парктроніки спереду і ззаду"
+    },
+    {
+      "cz": "ABS",
+      "ua": "ABS"
+    },
+    {
+      "cz": "ESP",
+      "ua": "ESP"
+    },
+    {
+      "cz": "Airbagy",
+      "ua": "Подушки безпеки"
+    },
+    {
+      "cz": "ISOFIX",
+      "ua": "ISOFIX"
+    }
+  ],
+  "specs": [
+    {
+      "label": {
+        "cz": "Objem motoru",
+        "ua": "Об'єм двигуна"
+      },
+      "value": {
+        "cz": "1 968 см³",
+        "ua": "1 968 см³"
+      }
+    },
+    {
+      "label": {
+        "cz": "Výkon",
+        "ua": "Потужність"
+      },
+      "value": {
+        "cz": "125 kW (170 k)",
+        "ua": "125 кВт (170 к.с.)"
+      }
+    },
+    {
+      "label": {
+        "cz": "Točivý moment",
+        "ua": "Крутний момент"
+      },
+      "value": {
+        "cz": "350 Нм",
+        "ua": "350 Нм"
+      }
+    },
+    {
+      "label": {
+        "cz": "Pohon",
+        "ua": "Привід"
+      },
+      "value": {
+        "cz": "Přední",
+        "ua": "Передній"
+      }
+    },
+    {
+      "label": {
+        "cz": "Převodovka",
+        "ua": "Коробка передач"
+      },
+      "value": {
+        "cz": "6stupňová automatická DSG",
+        "ua": "6-ступенева автоматична DSG"
+      }
+    },
+    {
+      "label": {
+        "cz": "Maximální rychlost",
+        "ua": "Максимальна швидкість"
+      },
+      "value": {
+        "cz": "218 km/h",
+        "ua": "218 км/год"
+      }
+    },
+    {
+      "label": {
+        "cz": "Zrychlení 0–100 km/h",
+        "ua": "Розгін 0–100 км/год"
+      },
+      "value": {
+        "cz": "8,9 s",
+        "ua": "8,9 с"
+      }
+    },
+    {
+      "label": {
+        "cz": "Průměrná spotřeba paliva",
+        "ua": "Середня витрата пального"
+      },
+      "value": {
+        "cz": "5,2–5,6 л/100 км",
+        "ua": "5,2–5,6 л/100 км"
+      }
+    },
+    {
+      "label": {
+        "cz": "Palivová nádrž",
+        "ua": "Паливний бак"
+      },
+      "value": {
+        "cz": "60 л",
+        "ua": "60 л"
+      }
+    },
+    {
+      "label": {
+        "cz": "Objem kufru",
+        "ua": "Об'єм багажника"
+      },
+      "value": {
+        "cz": "603 л",
+        "ua": "603 л"
+      }
+    }
+  ],
+  "condition": [
+    {
+      "cz": "Nájezd — 234 000 km",
+      "ua": "Пробіг — 234 000 км"
+    },
+    {
+      "cz": "Nová STK",
+      "ua": "Нова СТК"
+    },
+    {
+      "cz": "Pěkný a zachovalý stav",
+      "ua": "Гарний і доглянутий стан"
+    },
+    {
+      "cz": "Velmi dobrá výbava",
+      "ua": "Дуже хороша комплектація"
+    },
+    {
+      "cz": "Vozidlo plně připraveno k provozu",
+      "ua": "Автомобіль повністю готовий до експлуатації"
+    }
+  ]
+}

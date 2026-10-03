@@ -1,0 +1,4 @@
+# Налаштування для Netlify: як збирати сайт
+[build]
+  command = "node build.js"
+  publish = "_site"

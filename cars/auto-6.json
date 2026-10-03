@@ -1,0 +1,267 @@
+{
+  "make": "Škoda",
+  "model": "Octavia II",
+  "variant": "2.0 TDI Automat",
+  "price": 125000,
+  "year": 2011,
+  "mileage": 239000,
+  "fuel": "diesel",
+  "transmission": {
+    "cz": "Automat DSG, 6stupňový",
+    "ua": "Автомат DSG, 6-ступенева"
+  },
+  "power_kw": 103,
+  "body": {
+    "cz": "Kombi",
+    "ua": "Універсал (Combi)"
+  },
+  "engine": "2.0 TDI",
+  "added": "2026-09-10",
+  "meta_description": "Škoda Octavia II 2011, 2.0 TDI 103 kW, automat, 239 000 km, diesel. Prověřené vozidlo v Praze od AutoProBazar Praha.",
+  "photos": [
+    {
+      "src": "/images/car6-1.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — екстер'єр спереду зліва"
+    },
+    {
+      "src": "/images/car6-2.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — екстер'єр ззаду зліва"
+    },
+    {
+      "src": "/images/car6-3.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — екстер'єр ззаду справа"
+    },
+    {
+      "src": "/images/car6-4.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — кермо та приладова панель"
+    },
+    {
+      "src": "/images/car6-5.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — панель приладів, пробіг"
+    },
+    {
+      "src": "/images/car6-6.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — панель дверей та кнопки вікон"
+    },
+    {
+      "src": "/images/car6-7.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — передні сидіння"
+    },
+    {
+      "src": "/images/car6-8.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — мультимедіа та важіль АКПП"
+    },
+    {
+      "src": "/images/car6-9.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — задні сидіння"
+    },
+    {
+      "src": "/images/car6-10.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "Škoda Octavia II 2.0 TDI — сервісна наклейка ГРМ у моторному відсіку"
+    }
+  ],
+  "description": {
+    "cz": "Škoda Octavia II z roku 2011 s úsporným a spolehlivým motorem 2.0 TDI (103 kW) a automatickou převodovkou. Najeto 239 000 km. Vozidlo je ve velmi zachovalém stavu, interiér je pěkný a čistý. Provedený servis: nová STK, nové rozvody, vyměněný olej v automatické převodovce — auto bylo pravidelně servisované a je připravené k běžnému používání. V ceně jsou 2 kompletní sady pneumatik.",
+    "ua": "Škoda Octavia II 2011 року з економічним і надійним двигуном 2.0 TDI (103 кВт) та автоматичною коробкою передач. Пробіг 239 000 км. Автомобіль у дуже доглянутому стані, салон охайний і чистий. Пройдено технічне обслуговування: нова СТК, нові ремені ГРМ, замінена олива в автоматичній коробці передач — авто регулярно обслуговувалося і готове до щоденної експлуатації. У комплекті — 2 повні комплекти шин."
+  },
+  "comfort": [
+    {
+      "cz": "Automatická převodovka",
+      "ua": "Автоматична коробка передач"
+    },
+    {
+      "cz": "Vyhřívaná přední sedadla",
+      "ua": "Підігрів передніх сидінь"
+    },
+    {
+      "cz": "Automatická klimatizace",
+      "ua": "Автоматичний клімат-контроль"
+    },
+    {
+      "cz": "Tempomat",
+      "ua": "Круїз-контроль"
+    },
+    {
+      "cz": "Zachovalý a čistý interiér",
+      "ua": "Доглянутий і чистий салон"
+    },
+    {
+      "cz": "2 kompletní sady pneumatik",
+      "ua": "2 повні комплекти шин"
+    }
+  ],
+  "safety": [
+    {
+      "cz": "Světelný senzor",
+      "ua": "Світловий сенсор"
+    },
+    {
+      "cz": "Dešťový senzor",
+      "ua": "Дощовий сенсор"
+    },
+    {
+      "cz": "ABS",
+      "ua": "ABS"
+    },
+    {
+      "cz": "ESP",
+      "ua": "ESP"
+    },
+    {
+      "cz": "Airbagy",
+      "ua": "Подушки безпеки"
+    },
+    {
+      "cz": "ISOFIX",
+      "ua": "ISOFIX"
+    }
+  ],
+  "specs": [
+    {
+      "label": {
+        "cz": "Objem motoru",
+        "ua": "Об'єм двигуна"
+      },
+      "value": {
+        "cz": "1 968 см³",
+        "ua": "1 968 см³"
+      }
+    },
+    {
+      "label": {
+        "cz": "Výkon",
+        "ua": "Потужність"
+      },
+      "value": {
+        "cz": "103 kW (140 k)",
+        "ua": "103 кВт (140 к.с.)"
+      }
+    },
+    {
+      "label": {
+        "cz": "Točivý moment",
+        "ua": "Крутний момент"
+      },
+      "value": {
+        "cz": "320 Нм",
+        "ua": "320 Нм"
+      }
+    },
+    {
+      "label": {
+        "cz": "Pohon",
+        "ua": "Привід"
+      },
+      "value": {
+        "cz": "Přední",
+        "ua": "Передній"
+      }
+    },
+    {
+      "label": {
+        "cz": "Převodovka",
+        "ua": "Коробка передач"
+      },
+      "value": {
+        "cz": "6stupňová automatická DSG",
+        "ua": "6-ступенева автоматична DSG"
+      }
+    },
+    {
+      "label": {
+        "cz": "Maximální rychlost",
+        "ua": "Максимальна швидкість"
+      },
+      "value": {
+        "cz": "207 km/h",
+        "ua": "207 км/год"
+      }
+    },
+    {
+      "label": {
+        "cz": "Zrychlení 0–100 km/h",
+        "ua": "Розгін 0–100 км/год"
+      },
+      "value": {
+        "cz": "9,7 s",
+        "ua": "9,7 с"
+      }
+    },
+    {
+      "label": {
+        "cz": "Průměrná spotřeba paliva",
+        "ua": "Середня витрата пального"
+      },
+      "value": {
+        "cz": "5,7–6,3 л/100 км",
+        "ua": "5,7–6,3 л/100 км"
+      }
+    },
+    {
+      "label": {
+        "cz": "Palivová nádrž",
+        "ua": "Паливний бак"
+      },
+      "value": {
+        "cz": "55 л",
+        "ua": "55 л"
+      }
+    },
+    {
+      "label": {
+        "cz": "Objem kufru",
+        "ua": "Об'єм багажника"
+      },
+      "value": {
+        "cz": "580 л",
+        "ua": "580 л"
+      }
+    }
+  ],
+  "condition": [
+    {
+      "cz": "Nájezd — 239 000 km",
+      "ua": "Пробіг — 239 000 км"
+    },
+    {
+      "cz": "Nová STK",
+      "ua": "Нова СТК"
+    },
+    {
+      "cz": "Nové rozvody",
+      "ua": "Нові ремені ГРМ"
+    },
+    {
+      "cz": "Vyměněný olej v automatické převodovce",
+      "ua": "Замінена олива в автоматичній коробці передач"
+    },
+    {
+      "cz": "Auto pravidelně servisované",
+      "ua": "Авто регулярно обслуговувалося"
+    },
+    {
+      "cz": "Vozidlo plně připraveno k provozu",
+      "ua": "Автомобіль повністю готовий до експлуатації"
+    }
+  ]
+}
