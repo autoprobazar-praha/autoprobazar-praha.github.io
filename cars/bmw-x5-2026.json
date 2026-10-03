@@ -1,0 +1,30 @@
+{
+  "added": "2026-10-03",
+  "photos": [
+    {
+      "src": "/images/cars/2026-10-03-21.45.27.png"
+    }
+  ],
+  "body": {
+    "cz": "Sedan",
+    "ua": "Sedan"
+  },
+  "engine": "3.0",
+  "transmission": {
+    "cz": "Automat DSG, 7stupňový",
+    "ua": "Automat DSG, 7stupňový"
+  },
+  "variant": "3.0",
+  "power_kw": 198,
+  "price": 25010,
+  "model": "X5",
+  "mileage": 120000,
+  "make": "BMW",
+  "safety": [],
+  "fuel": "diesel",
+  "description": {
+    "cz": "dfghnjm,",
+    "ua": "fcvgbhn"
+  },
+  "year": 2015
+}
