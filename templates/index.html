@@ -1330,5 +1330,29 @@ function closeWritePopup() {
   window.closeContactPopup = function () { if (orig) orig(); closeWritePopup(); };
 })();
 </script>
+
+<script>
+// Перехід на формуляр з інших сторінок (index.html#kontakt-form):
+// показуємо форму одразу і докручуємо точно до неї, коли сторінка довантажиться
+(function () {
+  if (location.hash !== '#kontakt-form') return;
+  var userMoved = false;
+  ['touchstart', 'wheel', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { userMoved = true; }, { once: true, passive: true });
+  });
+  function fix() {
+    if (userMoved) return;
+    var sec = document.getElementById('kontakt-form');
+    if (!sec) return;
+    sec.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    window.scrollTo(0, sec.getBoundingClientRect().top + window.pageYOffset);
+  }
+  fix();
+  document.addEventListener('DOMContentLoaded', fix);
+  window.addEventListener('load', function () { fix(); setTimeout(fix, 400); setTimeout(fix, 1200); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fix);
+  setTimeout(fix, 2500);
+})();
+</script>
 </body>
 </html>
