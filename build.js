@@ -114,12 +114,26 @@ function carPage(tpl, car) {
 }
 
 // ---------- картки для каталогу ----------
+// У картці до 5 фото: на телефоні гортаються пальцем убік, на комп'ютері — стрілками.
+// data-price / data-added / data-order потрібні для сортування в каталозі.
+const GALLERY_MAX = 5;
 function catalogCards(cars) {
   return cars.map((car, i) => {
-    const p = car.photos[0];
-    return `    <div class="car-card reveal reveal-delay-${(i % 3) + 1}">
+    const photos = car.photos.slice(0, GALLERY_MAX);
+    const alt = esc(`${car.make} ${car.model}`);
+    const imgs = photos.map((p, k) =>
+      `<img loading="lazy" src="${esc(photoSrc(p))}"${sizeAttrs(p)} alt="${k === 0 ? alt : `${alt} — ${k + 1}`}">`
+    ).join('');
+    const multi = photos.length > 1;
+    const gallery = multi
+      ? `<div class="car-img has-gallery"><div class="car-gallery-track">${imgs}</div>` +
+        `<button type="button" class="car-gal-btn car-gal-prev" aria-label="Předchozí foto" onclick="galStep(event,-1)">&#8249;</button>` +
+        `<button type="button" class="car-gal-btn car-gal-next" aria-label="Další foto" onclick="galStep(event,1)">&#8250;</button>` +
+        `<div class="car-dots">${photos.map((_, k) => `<span${k === 0 ? ' class="active"' : ''}></span>`).join('')}</div></div>`
+      : `<div class="car-img">${imgs}</div>`;
+    return `    <div class="car-card reveal reveal-delay-${(i % 3) + 1}" data-price="${Number(car.price) || 0}" data-added="${esc(car.added || '')}" data-order="${i}">
       <a href="${car.slug}.html" class="car-link">
-        <div class="car-img"><img loading="lazy" src="${esc(photoSrc(p))}"${sizeAttrs(p)} alt="${esc(`${car.make} ${car.model}`)}"></div>
+        ${gallery}
         <div class="car-info">
           <div class="car-make">${esc(car.make)}</div>
           <div class="car-model">${esc(car.model)}</div>
