@@ -622,6 +622,26 @@ body.menu-open .contact-fab { opacity:0; pointer-events:none; }
 .mobile-menu-links { flex:1 0 auto; gap:30px; padding:28px 0; }
 .mobile-menu a { font-size:18.5px; }
 .mobile-menu a.menu-action-first { margin-top:30px; }
+
+/* Каталог: кілька фото в картці */
+.car-gallery-track { display:flex; width:100%; height:100%; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scrollbar-width:none; -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; transition:transform 0.3s ease-out; }
+.car-gallery-track::-webkit-scrollbar { display:none; }
+.car-gallery-track img { flex:0 0 100%; width:100%; height:100%; object-fit:cover; scroll-snap-align:start; scroll-snap-stop:always; }
+.car-card.reveal:hover .has-gallery img { transform:none; }
+.car-card.reveal:hover .has-gallery .car-gallery-track { transform:scale(1.08); }
+.car-dots { position:absolute; left:0; right:0; bottom:10px; display:flex; justify-content:center; gap:6px; pointer-events:none; z-index:2; }
+.car-dots span { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.45); box-shadow:0 1px 3px rgba(0,0,0,0.4); transition:background 0.2s, transform 0.2s; }
+.car-dots span.active { background:#fff; transform:scale(1.3); }
+.car-gal-btn { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); background:rgba(10,10,15,0.6); color:#fff; font-size:22px; line-height:1; display:none; align-items:center; justify-content:center; z-index:3; cursor:pointer; opacity:0; transition:opacity 0.2s, background 0.2s; padding:0 0 3px; }
+.car-gal-btn:hover { background:rgba(122,90,158,0.85); }
+.car-gal-prev { left:10px; } .car-gal-next { right:10px; }
+@media (hover:hover) and (pointer:fine) { .car-gal-btn { display:flex; } .car-card:hover .car-gal-btn { opacity:1; } }
+/* Каталог: сортування */
+.catalog-sort { display:flex; align-items:center; gap:10px; margin-top:18px; }
+.catalog-sort label { font-family:var(--font-body); font-size:14px; color:var(--gray); letter-spacing:0.04em; }
+.catalog-sort select { appearance:none; -webkit-appearance:none; font-family:var(--font-body); font-size:15px; color:var(--white); background:rgba(255,255,255,0.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8b8cc' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center / 16px; border:1px solid rgba(255,255,255,0.18); border-radius:10px; padding:10px 40px 10px 14px; cursor:pointer; }
+.catalog-sort select:focus { outline:none; border-color:var(--violet); }
+.catalog-sort select option { background:#14101c; color:#fff; }
 </style>
 </head>
 <body>
@@ -686,6 +706,14 @@ body.menu-open .contact-fab { opacity:0; pointer-events:none; }
 
 <section class="catalog-header"><div class="container">
   <h1 class="catalog-h1-anim"><span data-ua="Каталог" data-cz="Katalog">Katalog</span> <span style="color:var(--violet)" data-ua="авто" data-cz="aut">aut</span></h1>
+  <div class="catalog-sort catalog-count-anim">
+    <label for="catalogSort" data-ua="Сортувати:" data-cz="Seřadit:">Seřadit:</label>
+    <select id="catalogSort" onchange="sortCatalog(this.value)">
+      <option value="new" data-ua="Найновіші" data-cz="Nejnovější">Nejnovější</option>
+      <option value="cheap" data-ua="Від найдешевших" data-cz="Od nejlevnějšího">Od nejlevnějšího</option>
+      <option value="exp" data-ua="Від найдорожчих" data-cz="Od nejdražšího">Od nejdražšího</option>
+    </select>
+  </div>
 </div></section>
 <section><div class="container">
   <div class="catalog-grid">
@@ -971,5 +999,33 @@ function closeWritePopup() {
   var orig = window.closeContactPopup;
   window.closeContactPopup = function () { if (orig) orig(); closeWritePopup(); };
 })();
+</script>
+
+<script>
+// Каталог: сортування авто
+function sortCatalog(mode) {
+  var grid = document.querySelector('.catalog-grid');
+  if (!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.car-card'));
+  cards.sort(function (a, b) {
+    if (mode === 'cheap') return a.dataset.price - b.dataset.price;
+    if (mode === 'exp') return b.dataset.price - a.dataset.price;
+    return a.dataset.order - b.dataset.order;
+  });
+  cards.forEach(function (c) { c.classList.add('visible'); grid.appendChild(c); });
+}
+// Каталог: фото в картці — крапки і стрілки
+function galStep(e, dir) {
+  e.preventDefault(); e.stopPropagation();
+  var track = e.currentTarget.parentNode.querySelector('.car-gallery-track');
+  track.scrollBy({ left: dir * track.clientWidth, behavior: 'smooth' });
+}
+document.querySelectorAll('.car-gallery-track').forEach(function (track) {
+  var dots = track.parentNode.querySelectorAll('.car-dots span');
+  track.addEventListener('scroll', function () {
+    var idx = Math.round(track.scrollLeft / track.clientWidth);
+    dots.forEach(function (d, k) { d.classList.toggle('active', k === idx); });
+  }, { passive: true });
+});
 </script>
 </body></html>
