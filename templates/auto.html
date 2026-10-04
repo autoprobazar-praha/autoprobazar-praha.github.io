@@ -603,6 +603,15 @@ ul { list-style:none; }
   .footer-col--contact .footer-address { grid-column:3; grid-row:4; margin:0; }
   .footer-col--contact .footer-social-pills { grid-column:3; grid-row:5; margin-top:14px; }
 }
+
+/* MOBILE MENU — починається під верхнім рядком, верхній рядок лишається видимим */
+@media (max-width:768px) {
+  .mobile-menu { inset:52px 0 0 0; z-index:99; }
+}
+/* «Napsat nám» і «Zobrazit na mapě» — окремою групою, з іконками */
+.mobile-menu a.menu-action { display:inline-flex; align-items:center; gap:10px; }
+.mobile-menu a.menu-action-first { margin-top:22px; }
+.mobile-menu a.menu-action svg { width:19px; height:19px; flex-shrink:0; color:var(--violet); }
 </style>
 </head>
 <body>
@@ -648,8 +657,8 @@ ul { list-style:none; }
   <a href="index.html#odtah" onclick="toggleMenu()" data-ua="ЕВАКУАТОР" data-cz="ODTAH">ODTAH</a>
   <a href="index.html#onas" onclick="toggleMenu()" data-ua="ПРО НАС" data-cz="O NÁS">O NÁS</a>
   <a href="#kontakt-info" onclick="toggleMenu()" data-ua="КОНТАКТИ" data-cz="KONTAKT">KONTAKT</a>
-  <a href="index.html#kontakt-form" onclick="toggleMenu()" data-ua="ЗВ'ЯЗАТИСЯ" data-cz="NAPSAT NÁM">NAPSAT NÁM</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=Nedokon%C4%8Den%C3%A1+1236%2C+198+00+Praha+14" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()" data-ua="НА КАРТІ" data-cz="ZOBRAZIT NA MAPĚ">ZOBRAZIT NA MAPĚ</a>
+  <a href="index.html#kontakt-form" onclick="toggleMenu()" class="menu-action menu-action-first"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span data-ua="ЗВ'ЯЗАТИСЯ" data-cz="NAPSAT NÁM">NAPSAT NÁM</span></a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Nedokon%C4%8Den%C3%A1+1236%2C+198+00+Praha+14" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()" class="menu-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-ua="НА КАРТІ" data-cz="ZOBRAZIT NA MAPĚ">ZOBRAZIT NA MAPĚ</span></a>
 </div>
 <div class="mobile-menu-socials">
   <a href="https://instagram.com/klubey_" target="_blank" class="nav-social-btn" aria-label="Instagram" rel="noopener noreferrer">
@@ -891,6 +900,7 @@ function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   const burger = document.querySelector('.burger');
   const isOpen = menu.classList.toggle('open');
+  if (isOpen) { const nb = document.querySelector('.navbar'); if (nb) nb.classList.remove('nav-hidden'); }
   document.body.style.overflow = isOpen ? 'hidden' : '';
   burger.innerHTML = isOpen
     ? '<span style="transform:rotate(45deg) translate(5px,5px)"></span><span style="opacity:0"></span><span style="transform:rotate(-45deg) translate(5px,-5px)"></span>'
