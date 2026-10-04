@@ -19,6 +19,8 @@
 <script>
 var navEntries = performance.getEntriesByType('navigation');
 var isReload = navEntries.length && navEntries[0].type === 'reload';
+// Після оновлення сторінки завжди починаємо з самого верху (з відео)
+if (isReload && 'scrollRestoration' in history) { history.scrollRestoration = 'manual'; window.scrollTo(0, 0); }
 if (sessionStorage.getItem('autoprobazar_seen') && !isReload) {
   document.documentElement.classList.add('returning-visit');
 } else {
@@ -1208,13 +1210,7 @@ function closeContactPopup() {
 function goToContactForm(e) {
   if (e) e.preventDefault();
   closeContactPopup();
-  document.querySelectorAll('#kontakt-form .reveal').forEach(function(el) {
-    el.classList.add('visible');
-  });
-  setTimeout(function() {
-    const el = document.getElementById('kontakt-form');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 150);
+  scrollToForm(true);
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeContactPopup(); });
 
@@ -1331,27 +1327,42 @@ function closeWritePopup() {
 })();
 </script>
 
+
 <script>
-// Перехід на формуляр з інших сторінок (index.html#kontakt-form):
-// показуємо форму одразу і докручуємо точно до неї, коли сторінка довантажиться
+// Прокрутка до формуляра, яка «доїжджає» точно, навіть якщо сторінка
+// ще довантажується (шрифти, фото) і вміст над формою трохи зсувається
+var formScrollTimers = [];
+function scrollToForm(smooth) {
+  var sec = document.getElementById('kontakt-form');
+  if (!sec) return;
+  sec.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+  formScrollTimers.forEach(clearTimeout); formScrollTimers = [];
+  var stopped = false;
+  function stop() { stopped = true; }
+  setTimeout(function () {
+    ['touchstart', 'wheel', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, stop, { once: true, passive: true });
+    });
+  }, 50);
+  function go(behavior) {
+    if (stopped) return;
+    var top = sec.getBoundingClientRect().top;
+    if (Math.abs(top) > 2) window.scrollTo({ top: top + window.pageYOffset, behavior: behavior });
+  }
+  go(smooth ? 'smooth' : 'auto');
+  [600, 1200, 2000, 3000].forEach(function (t) {
+    formScrollTimers.push(setTimeout(function () { go(smooth ? 'smooth' : 'auto'); }, t));
+  });
+}
+// Перехід на формуляр з інших сторінок (index.html#kontakt-form)
 (function () {
   if (location.hash !== '#kontakt-form') return;
-  var userMoved = false;
-  ['touchstart', 'wheel', 'keydown'].forEach(function (ev) {
-    window.addEventListener(ev, function () { userMoved = true; }, { once: true, passive: true });
-  });
-  function fix() {
-    if (userMoved) return;
-    var sec = document.getElementById('kontakt-form');
-    if (!sec) return;
-    sec.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
-    window.scrollTo(0, sec.getBoundingClientRect().top + window.pageYOffset);
-  }
-  fix();
-  document.addEventListener('DOMContentLoaded', fix);
-  window.addEventListener('load', function () { fix(); setTimeout(fix, 400); setTimeout(fix, 1200); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fix);
-  setTimeout(fix, 2500);
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  scrollToForm(false);
+  window.addEventListener('load', function () { scrollToForm(false); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { scrollToForm(false); });
+  // прибираємо #kontakt-form з адреси, щоб після оновлення сторінка починалась з початку
+  setTimeout(function () { history.replaceState(null, '', location.pathname + location.search); }, 3500);
 })();
 </script>
 </body>
